@@ -5,7 +5,7 @@ powercfg.exe —h off
 cleanmgr /sageset:l 
 cleanmgr /sagerun:l 
 cleanmgr.exe /AUTOCLEAN 
-winget install Brave.Brave MullvadVPN.MullvadBrowser Proton.ProtonVPN Proton.ProtonPass Microsoft.VisualStudioCode Fastfetch-cli.Fastfetch Microsoft.Powershell Microsoft.PowerShell.Preview Adobe.Acrobat.Reader.64-bit GitHub.GitHubDesktop Easeware.DriverEasy OBSProject.OBSStudio Notepad++.Notepad++ VideoLAN.VLC Git.Git M2Team.NanaZip 9WZDNCRD29V9
+winget install Brave.Brave MullvadVPN.MullvadBrowser MullvadVPN.MullvadVPN Microsoft.VisualStudioCode Fastfetch-cli.Fastfetch Microsoft.Powershell Microsoft.PowerShell.Preview Adobe.Acrobat.Reader.64-bit GitHub.GitHubDesktop Easeware.DriverEasy Notepad++.Notepad++ VideoLAN.VLC Git.Git M2Team.NanaZip 9WZDNCRD29V9
 & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/Raphire/Win11Debloat/master/Get.ps1")))  
 chkdsk /f
 chkdsk /r
