@@ -165,8 +165,7 @@ flathub () {
 	"org.ppsspp.PPSSPP"
         "org.ryujinx.Ryujinx"
 	"info.cemu.Cemu"
-        "app.xemu.xemu
-"
+        "app.xemu.xemu"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }
