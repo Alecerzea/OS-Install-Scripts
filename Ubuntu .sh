@@ -60,3 +60,53 @@ fi
 
 echo "[*] Decline telemetry"
 ubuntu-report -f send no
+
+flathub () {
+	log "flathub"
+	local -a flathub_install
+	flathub_install=(
+	"app.drey.Warp"
+	"com.github.finefindus.eyedropper"
+	"com.github.tchx84.Flatseal"
+	"com.github.wwmm.easyeffects"
+	"com.heroicgameslauncher.hgl"
+	"com.obsproject.Studio"
+	"com.obsproject.Studio.Plugin.OBSVkCapture"
+	"com.transmissionbt.Transmission"
+	"com.usebottles.bottles"
+	"com.valvesoftware.Steam"
+	"net.davidotek.pupgui2"
+	"network.loki.Session"
+	"org.blender.Blender"
+	"org.freedesktop.Platform.VulkanLayer.MangoHud"
+	"org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
+	"org.getmonero.Monero"
+	"org.gnome.Calculator"
+	"org.gnome.Calendar"
+	"org.gnome.Characters"
+	"org.gnome.Evince"
+	"org.gnome.Extensions"
+	"org.gnome.Loupe"
+	"org.gnome.Maps"
+	"org.gnome.World.PikaBackup"
+	"org.inkscape.Inkscape"
+	"org.kde.krita"
+	"org.keepassxc.KeePassXC"
+	"org.pipewire.Helvum"
+	"org.signal.Signal"
+	"re.sonny.Junction"
+        "net.davidotek.pupgui2"
+	"com.microsoft.Edge"
+        "com.google.Chrome"
+	"org.mozilla.firefox"
+        "com.protonvpn.www"
+	"org.duckstation.DuckStation"
+        "net.pcsx2.PCSX2"
+	"org.ppsspp.PPSSPP"
+        "org.ryujinx.Ryujinx"
+	"info.cemu.Cemu"
+        "app.xemu.xemu"
+)
+flatpak install -y flathub ${flathub_install[*]}
+}
+flathub
