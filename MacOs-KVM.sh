@@ -1,3 +1,9 @@
+
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew analytics off
+
 defaults write com.apple.loginwindow autoLoginUser -bool true
 
 # massively increase virtualized macOS by disabling spotlight.
