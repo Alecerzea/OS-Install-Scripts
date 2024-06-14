@@ -1,7 +1,7 @@
 powercfg.exe —h off
 winget upgrade —all —include—unknown 
-DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 DISM.exe /online /cleanup-image /startcomponentcleanup
+DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 cleanmgr /sageset:l 
 cleanmgr /sagerun:l 
 cleanmgr.exe /AUTOCLEAN 
