@@ -95,13 +95,6 @@ EOF
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
-# Make the Home folder private
-# Privatizing the home folder creates problems with virt-manager
-# accessing ISOs from your home directory. Store images in /var/lib/libvirt/images
-chmod 700 /home/"$(whoami)"
-# is reset using:
-#chmod 755 /home/"$(whoami)"
-#
 # In Wine, Easy AntiCheat requires Wine to use ptrace as a standard user.
 # Kicksecure limits this to root, but the workaround in this file is not comprehensive.
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
