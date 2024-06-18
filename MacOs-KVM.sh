@@ -4,8 +4,6 @@
 
 brew analytics off
 
-defaults write com.apple.loginwindow autoLoginUser -bool true
-
 # massively increase virtualized macOS by disabling spotlight.
 sudo mdutil -i off -a
 
