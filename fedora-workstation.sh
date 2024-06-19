@@ -157,12 +157,15 @@ flathub () {
         "org.ryujinx.Ryujinx"
 	"info.cemu.Cemu"
         "app.xemu.xemu"
+	"com.valvesoftware.Steam"
+        "com.google.Chrome"
+	"com.microsoft.Edge"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo dnf install -y dnf-plugins-core steam-devices neovim sqlite3 zsh-autosuggestions zsh-syntax-highlighting setroubleshoot newsboat ffmpeg compat-ffmpeg4 akmod-v4l2loopback yt-dlp @virtualization guestfs-tools podman simple-scan gparted steam microsoft-edge-stable google-chrome-stable --best --allowerasing
+sudo dnf install -y dnf-plugins-core steam-devices neovim sqlite3 zsh-autosuggestions zsh-syntax-highlighting setroubleshoot newsboat ffmpeg compat-ffmpeg4 akmod-v4l2loopback yt-dlp @virtualization guestfs-tools podman simple-scan gparted --best --allowerasing
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
