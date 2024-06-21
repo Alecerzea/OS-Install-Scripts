@@ -30,8 +30,6 @@ debloat () {
 	"cheese"
 	"cyrus-sasl-plain"
 	"dos2unix"
-	# eog is no longer the default since Fedora 39
-	"eog"
 	"evince"
 	"evince-djvu"
 	"fedora-bookmarks"
@@ -68,9 +66,6 @@ debloat () {
 	"mozilla-filesystem"
 	"mtr"
 	"nmap-ncat"
-	"open-vm-tools"
-	"openconnect"
-	"openvpn"
 	"orca"
 	"perl*"
 	"perl-IO-Socket-SSL"
