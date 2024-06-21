@@ -90,7 +90,4 @@ EOF
 
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
-
-# In Wine, Easy AntiCheat requires Wine to use ptrace as a standard user.
-# Kicksecure limits this to root, but the workaround in this file is not comprehensive.
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
