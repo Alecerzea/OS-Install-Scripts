@@ -34,7 +34,7 @@ flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/fl
 flatpak install flathub org.duckstation.DuckStation net.pcsx2.PCSX2 org.ppsspp.PPSSPP org.ryujinx.Ryujinx info.cemu.Cemu app.xemu.xemu com.obsproject.Studio com.heroicgameslauncher.hgl com.valvesoftware.Steam com.google.Chrome com.microsoft.Edge
 
 
-sudo dnf install -y steam-devices neovim sqlite3 zsh-autosuggestions zsh-syntax-highlighting setroubleshoot newsboat ffmpeg compat-ffmpeg4 akmod-v4l2loopback yt-dlp @virtualization guestfs-tools distrobox podman distrobox hugo simple-scan plasma-nm gparted --best --allowerasing
+sudo dnf install -y steam-devices neovim sqlite3 zsh-autosuggestions zsh-syntax-highlighting setroubleshoot newsboat ffmpeg compat-ffmpeg4 akmod-v4l2loopback yt-dlp @virtualization guestfs-tools simple-scan plasma-nm gparted fastfeth --best --allowerasing
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
