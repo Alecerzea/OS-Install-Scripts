@@ -10,9 +10,6 @@ sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-non
 
 sudo dnf upgrade -y
 
-umask 077
-sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
-
 
 sudo dnf remove -y anaconda* \
 
