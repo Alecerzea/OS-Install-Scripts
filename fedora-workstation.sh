@@ -9,8 +9,6 @@ sudo dnf groupupdate core -y
 
 sudo dnf upgrade -y
 
-umask 077
-sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
 
 debloat () {
 	log "debloat"
