@@ -43,25 +43,6 @@ sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 
-sudo mkdir -p /etc/systemd/system/NetworkManager.service.d
-sudo curl https://gitlab.com/divested/brace/-/raw/master/brace/usr/lib/systemd/system/NetworkManager.service.d/99-brace.conf -o /etc/systemd/system/NetworkManager.service.d/99-brace.conf
-sudo mkdir -p /etc/systemd/system/irqbalance.service.d
-sudo curl https://gitlab.com/divested/brace/-/raw/master/brace/usr/lib/systemd/system/irqbalance.service.d/99-brace.conf -o /etc/systemd/system/irqbalance.service.d/99-brace.conf
-
-
-
-sudo mkdir -p /etc/systemd/system/sshd.service.d
-sudo curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/systemd/system/sshd.service.d/local.conf -o /etc/systemd/system/sshd.service.d/local.conf
-
-
-sudo firewall-cmd --permanent --remove-port=1025-65535/udp
-sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
-sudo firewall-cmd --permanent --remove-service=mdns
-sudo firewall-cmd --permanent --remove-service=ssh
-sudo firewall-cmd --permanent --remove-service=samba-client
-sudo firewall-cmd --reload
-
-
 sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
 [main]
 hostname-mode=none
