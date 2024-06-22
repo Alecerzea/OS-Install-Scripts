@@ -32,7 +32,6 @@ flatpak install flathub org.duckstation.DuckStation net.pcsx2.PCSX2 org.ppsspp.P
 
 
 sudo dnf install -y steam-devices neovim sqlite3 zsh-autosuggestions zsh-syntax-highlighting setroubleshoot newsboat ffmpeg compat-ffmpeg4 akmod-v4l2loopback yt-dlp @virtualization guestfs-tools simple-scan plasma-nm gparted fastfeth --best --allowerasing
-sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
@@ -40,18 +39,4 @@ sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 
-sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
-[main]
-hostname-mode=none
-
-[device]
-wifi.scan-rand-mac-address=yes
-
-[connection]
-wifi.cloned-mac-address=random
-ethernet.cloned-mac-address=random
-EOF
-
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
