@@ -8,10 +8,10 @@ sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 
-sudo dnf upgrade -y
+sudo dnf -y upgrade 
 
 
-sudo dnf remove -y anaconda* \
+sudo dnf -y remove anaconda* \
 
 	zd1211-firmware atmel-firmware libertas-usb8388-firmware abrt* bluez-cups alsa-sof-firmware boost-date-time orca fedora-bookmarks mailcap open-vm-tools samba-client libreswan unbound-libs podman yajl mediawriter nano nano-default-editor thermald sos kpartx dos2unix sssd cyrus-sasl-plain geolite2* traceroute ModemManager tcpdump mozilla-filesystem nmap-ncat spice-vdagent adcli mtr realmd teamd vpnc openconnect openvpn ppp pptp rsync xorg-x11-drv-vmware hyperv* virtualbox-guest-additions qemu-guest-agent dragon kmines kpat dnfdragora akregator kmail korganizer elisa-player kamoso kwrite konversation kolourpaint krdc kmahjongg kmouth krfb kcalc kcharselect kde-connect kgpg kamera kfind kmag media-player-info mediawriter kmouth plasma-discover
 
