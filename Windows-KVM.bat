@@ -1,3 +1,5 @@
+#before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro
+
 powercfg.exe -h off
 winget upgrade --all --include-unknown
 DISM.exe /online /cleanup-image /startcomponentcleanup
