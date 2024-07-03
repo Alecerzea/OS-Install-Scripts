@@ -1,4 +1,4 @@
-These is just a personal things that I like to do everythime I install an OS in a personall system or VM, thats all, give it a look if you want.
+These is just some personal things that I like to do everythime I install an OS in a personall system or VM, thats all, give it a look if you want.
 
 I have Windows, Fedora-Linux and MacOs systems personalized as my likeness.
 
