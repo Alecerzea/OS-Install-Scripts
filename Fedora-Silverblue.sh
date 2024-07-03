@@ -99,10 +99,6 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
-sudo fedora-third-party enable
-sudo fedora-third-party refresh
-flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
-
 flathub () {
 	log "flathub"
 	local -a flathub_install
