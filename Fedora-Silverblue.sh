@@ -135,9 +135,3 @@ sudo usermod -aG libvirt "$(whoami)"
 
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
-
-sudo rpm-ostree reset
-
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
-
-systemctl reboot
