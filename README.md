@@ -14,3 +14,5 @@ I use two projects https://github.com/Coopydood/ultimate-macOS-KVM and https://g
 To make the Mac-VMs work in Fedora I made these script to do it https://gist.github.com/Alecerzea/87a9530a9d16f9845cb071ae42458d99 (Its not needed in debian nor arch based distros)
 
 If you wanna use gpu passthrough in any vm you create (As I use both in my Mac and Windows KVMs), use the project https://github.com/HikariKnight/quickpassthrough
+
+My Linux config is only GNOME+AMD, Nvidia in Linux is a headache to me, fuck you optimus based laptops, and KDE isnt my favorite desktop environment, idc about the beef of the developers, GNOME just works (and delete all the files I want and I dont need to search for all their dependecies to delete them)
