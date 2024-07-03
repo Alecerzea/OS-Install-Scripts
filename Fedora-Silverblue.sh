@@ -1,6 +1,6 @@
 sudo rpm-ostree upgrade -y
 
-sudo dnf autoremove -y
+sudo rpm-ostree autoremove -y
 sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
