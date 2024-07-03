@@ -124,14 +124,15 @@ flathub () {
 	"org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
 	"org.mozilla.firefox"
 	"org.duckstation.DuckStation"
-        "net.pcsx2.PCSX2"
+	"net.pcsx2.PCSX2"
 	"org.ppsspp.PPSSPP"
-        "org.ryujinx.Ryujinx"
+	"org.ryujinx.Ryujinx"
 	"info.cemu.Cemu"
-        "app.xemu.xemu"
+	"app.xemu.xemu"
 	"com.valvesoftware.Steam"
-        "com.google.Chrome"
+	"com.google.Chrome"
 	"com.microsoft.Edge"
+	"net.davidotek.pupgui2"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }
