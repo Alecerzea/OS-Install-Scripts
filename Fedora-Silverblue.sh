@@ -125,7 +125,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo rpm-ostree install -y dnf-plugins-core steam-devices sqlite3 zsh-autosuggestions zsh-syntax-highlighting newsboatkmod-v4l2loopback yt-dlp @virtualization guestfs-tools podman simple-scan gparted grub-customizer
+sudo rpm-ostree install -y dnf-plugins-core steam-devices sqlite3 zsh-autosuggestions zsh-syntax-highlighting newsboatkmod-v4l2loopback yt-dlp virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-manager virt-viewer libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer
 
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
