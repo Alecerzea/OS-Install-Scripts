@@ -1,4 +1,5 @@
 #before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro
+#to let you know, I don't game in VMs, these is just for work and testing (My job provide us with adobe licenses)
 
 powercfg.exe -h off
 winget upgrade --all --include-unknown
