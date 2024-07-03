@@ -138,7 +138,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo dnf install -y dnf-plugins-core steam-devices sqlite3 zsh-autosuggestions zsh-syntax-highlighting newsboatkmod-v4l2loopback yt-dlp @virtualization guestfs-tools podman simple-scan gparted grub-customizer
+sudo dnf install -y dnf-plugins-core steam-devices yt-dlp @virtualization guestfs-tools gparted grub-customizer
 
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
