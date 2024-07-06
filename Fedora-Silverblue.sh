@@ -36,7 +36,12 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
+sudo setsebool -P domain_kernel_load_modules on
+cd /etc/yum.repos.d/
+sudo wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-fedora-$(rpm -E %fedora).repo
+sudo rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos
 sudo rpm-ostree install -y steam-devices yt-dlp virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-manager virt-viewer libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer
+gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf

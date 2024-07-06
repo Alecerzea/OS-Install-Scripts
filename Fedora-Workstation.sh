@@ -138,7 +138,11 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo dnf install -y dnf-plugins-core steam-devices yt-dlp @virtualization guestfs-tools gparted grub-customizer
+sudo setsebool -P domain_kernel_load_modules on
+sudo dnf -y copr enable bieszczaders/kernel-cachyos
+sudo dnf -y install kernel-cachyos-rt kernel-cachyos-rt-devel-matched
+sudo dnf -y install dnf-plugins-core steam-devices yt-dlp @virtualization guestfs-tools gparted grub-customizer
+gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
