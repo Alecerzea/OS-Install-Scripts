@@ -159,7 +159,6 @@ EOF
 
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
-chmod 700 /home/"$(whoami)"
 
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
