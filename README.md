@@ -20,4 +20,4 @@ My Linux config is only GNOME+AMD, NVIDIA in Linux is a headache to me  and I wa
 
 I also added some shit for gaming in here that I don't know if they would work with secure boot, I have faith it would work. 
 
-PS:And it didnt xd, at least the key I needed to add doesnt mess with the kernel, not like the NVIDIA one at least.
+PS:It didnt XD, at least the key I needed to add doesnt mess with the kernel.
