@@ -19,3 +19,5 @@ I don't use either for gaming, please dont try neither Valorant nor Warzone unde
 My Linux config is only GNOME+AMD, Nvidia in Linux is a headache to me  and I want Secure boot without adding a key that would mess with my kernel, and KDE i'snt my favorite desktop environment, idc about the beef of the developers, GNOME just works (and delete all the apps and dependencies I want).
 
 I also added some shit for gaming in here that I don't know if they would work with secure boot, I have faith it would work. 
+
+And it didnt xd, at least the key I needed to add doesnt mess with the kernel, not like the nvidia one at least.
