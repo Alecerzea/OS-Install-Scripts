@@ -43,7 +43,6 @@ sudo wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/re
 sudo rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos
 cd
 sudo rpm-ostree install -y steam-devices yt-dlp virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-manager virt-viewer libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer cmake libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel
-git clone https://github.com/KhronosGroup/SPIRV-Cross && cd SPIRV-Cross && mkdir build && cd build && cmake .. && cmake --build . && sudo make install
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
@@ -63,11 +62,11 @@ sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 chmod 700 /home/"$(whoami)"
 
-
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
-
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
+
+git clone https://github.com/KhronosGroup/SPIRV-Cross && cd SPIRV-Cross && mkdir build && cd build && cmake .. && cmake --build . && sudo make install

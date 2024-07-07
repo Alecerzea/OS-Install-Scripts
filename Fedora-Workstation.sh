@@ -142,7 +142,6 @@ sudo setsebool -P domain_kernel_load_modules on
 sudo dnf -y copr enable bieszczaders/kernel-cachyos
 sudo dnf -y install kernel-cachyos-rt kernel-cachyos-rt-devel-matched
 sudo dnf -y install dnf-plugins-core steam-devices yt-dlp @virtualization guestfs-tools gparted grub-customizer cmake libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel
-git clone https://github.com/KhronosGroup/SPIRV-Cross && cd SPIRV-Cross && mkdir build && cd build && cmake .. && cmake --build . && sudo make install
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
@@ -170,3 +169,5 @@ sudo usermod -aG libvirt "$(whoami)"
 
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
+
+git clone https://github.com/KhronosGroup/SPIRV-Cross && cd SPIRV-Cross && mkdir build && cd build && cmake .. && cmake --build . && sudo make install
