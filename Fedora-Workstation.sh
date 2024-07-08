@@ -4,9 +4,7 @@ countme=false
 deltarpm=true
 " | sudo tee -a /etc/dnf/dnf.conf
 
-
 sudo dnf upgrade -y
-
 
 debloat () {
 	log "debloat"

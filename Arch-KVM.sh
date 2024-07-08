@@ -5,4 +5,10 @@ sudo chmod +x strap.sh
 sudo ./strap.sh
 sudo pacman -Syyu
 sudo pacman -S flatpak
-flatpak install flathub com.brave.Browser flathub net.mullvad.MullvadBrowser
+flathub () {
+	log "flathub"
+	local -a flathub_install
+	flathub_install=(
+	"com.brave.Browser"
+	"net.mullvad.MullvadBrowser"
+)
