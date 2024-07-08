@@ -1,5 +1,3 @@
-sudo apt update -y
-
 sudo apt autoremove -y
 sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
@@ -44,7 +42,7 @@ flathub
 
 sudo add-apt-repository ppa:tomtomtom/yt-dlp
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
-sudo apt update                                 
+sudo apt update -y                                
 
 sudo apt install nala wget steam-devices yt-dlp guestfs-tools gparted grub-customizer build-essential cmake libunwind-dev libglfw3-dev libvulkan-dev vulkan-validationlayers-dev spirv-tools glslang-tools libspirv-cross-c-shared-dev virt-manager qemu-system qemu-user-static fastfetch -y
 
