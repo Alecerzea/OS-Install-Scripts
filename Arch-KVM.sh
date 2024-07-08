@@ -1,3 +1,8 @@
+printf "%s" "
+ParallelDownloads=10
+ILoveCandy
+" | sudo tee -a /etc/pacman.conf
+
 sudo pacman -Syyu
 curl -O https://blackarch.org/strap.sh
 sha1sum strap.sh # should match: d062038042c5f141755ea39dbd615e6ff9e23121
