@@ -122,7 +122,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo pacman -S qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch
+sudo pacman -S wget qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S spirv-cross
 
@@ -137,3 +137,9 @@ sudo usermod -aG libvirt "$(whoami)"
 
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
+
+wget https://mirror.cachyos.org/cachyos-repo.tar.xz
+
+tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+
+sudo ./cachyos-repo.sh
