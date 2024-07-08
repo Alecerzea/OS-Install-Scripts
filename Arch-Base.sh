@@ -95,7 +95,7 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
-sudo pacman -S flatpak
+sudo pacman -S flatpak fastfetch
 flathub () {
 	log "flathub"
 	local -a flathub_install
@@ -122,7 +122,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo pacman -S qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang
+sudo pacman -S qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S spirv-cross
 

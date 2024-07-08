@@ -130,7 +130,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo apt install sudo apt install steam-devices yt-dlp guestfs-tools gparted grub-customizer build-essential cmake libunwind-dev libglfw3-dev libvulkan-dev vulkan-validationlayers-dev spirv-tools glslang-tools libspirv-cross-c-shared-dev virt-manager qemu-system qemu-user-static -y
+sudo apt install steam-devices yt-dlp guestfs-tools gparted grub-customizer build-essential cmake libunwind-dev libglfw3-dev libvulkan-dev vulkan-validationlayers-dev spirv-tools glslang-tools libspirv-cross-c-shared-dev virt-manager qemu-system qemu-user-static fastfetch -y
 
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
