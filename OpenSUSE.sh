@@ -29,7 +29,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo zypper install qemu virt-manager fastfetch steam-devices yt-dlp guestfs-tools gparted grub-customizer
+sudo zypper install qemu virt-manager fastfetch steam-devices yt-dlp guestfs-tools gparted grub-customizer uml-utilities git wget libguestfs-tools p7zip-full make dmg2img tesseract-ocr tesseract-ocr-eng genisoimage vim net-tools screen python virsh pypresence
 
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
