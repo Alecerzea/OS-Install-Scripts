@@ -1,3 +1,8 @@
+printf "%s" "
+ParallelDownloads=10
+ILoveCandy
+" | sudo tee -a /etc/pacman.conf
+
 sudo pacman -Syyu
 debloat () {
 	log "debloat"
