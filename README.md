@@ -6,6 +6,8 @@ I tried using these debloater https://github.com/Raphire/Win11Debloat in my .bat
 
 My Fedora commands, some are from trafotin Gitlab (https://gitlab.com/trafotin/os-install-scripts) and some are personal mine, just to clarify.
 
+My Arch-KVM is only for Cyber-Security use, personally, I don't have enough confidence on myself to main Vanilla Arch or an Arch base distro, maybe I could change in the future, but's better to be careful.
+
 The script I have here for Mac is only for VM use, since I use it only in KVM in my Fedora install, please understand if you use it in bare metal you're on your own.
 
 I use two projects https://github.com/Coopydood/ultimate-macOS-KVM and https://github.com/kholia/OSX-KVM to create my Mac-KVMs in Fedora and the commands in my script are from https://github.com/sickcodes/osx-optimizer.

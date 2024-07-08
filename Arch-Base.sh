@@ -121,3 +121,19 @@ flathub () {
 flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
+
+sudo pacman -S qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+yay -S spirv-cross
+
+sudo systemctl restart NetworkManager
+sudo hostnamectl hostname "localhost"
+
+
+sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
+sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
+sudo systemctl enable libvirtd
+sudo usermod -aG libvirt "$(whoami)"
+
+
+sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
