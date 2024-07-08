@@ -43,7 +43,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo pacman -S wget qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch
+sudo pacman -S wget qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch python virsh python-pypresence uml-utilities python virsh python-pypresence uml-utilities git libguestfs-tools p7zip-full dmg2img tesseract-ocr tesseract-ocr-eng genisoimage vim net-tools screen
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S spirv-cross
 
