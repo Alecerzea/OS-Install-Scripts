@@ -55,3 +55,6 @@ sudo usermod -aG libvirt "$(whoami)"
 
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
+
+sudo apt install unattended-upgrades
+sudo dpkg-reconfigure unattended-upgrades
