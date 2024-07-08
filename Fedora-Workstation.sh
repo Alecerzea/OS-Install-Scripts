@@ -139,7 +139,7 @@ flathub
 sudo setsebool -P domain_kernel_load_modules on
 sudo dnf -y copr enable bieszczaders/kernel-cachyos
 sudo dnf -y install kernel-cachyos-rt kernel-cachyos-rt-devel-matched
-sudo dnf -y install dnf-plugins-core steam-devices yt-dlp @virtualization guestfs-tools gparted grub-customizer cmake libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel
+sudo dnf -y install wget dnf-plugins-core steam-devices yt-dlp @virtualization guestfs-tools gparted grub-customizer cmake libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
