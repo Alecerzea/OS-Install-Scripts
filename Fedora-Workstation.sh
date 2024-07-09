@@ -47,9 +47,6 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo setsebool -P domain_kernel_load_modules on
-sudo dnf -y copr enable bieszczaders/kernel-cachyos
-sudo dnf -y install kernel-cachyos-rt kernel-cachyos-rt-devel-matched
 sudo dnf -y install wget dnf-plugins-core steam-devices yt-dlp virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-manager virt-viewer libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer cmake libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel git tesseract-ocr-eng genisoimage vim net-tools screen libguestfs-tools p7zip-full make dmg2img tesseract-ocr uml-utilities
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
