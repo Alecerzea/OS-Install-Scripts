@@ -8,7 +8,8 @@ curl -O https://blackarch.org/strap.sh
 sudo chmod +x strap.sh
 sudo ./strap.sh
 sudo pacman -Syyu
-sudo pacman -S flatpak
+sudo pacman -S flatpak cockpit
+sudo systemctl enable --now cockpit.socket
 flathub () {
 	log "flathub"
 	local -a flathub_install
