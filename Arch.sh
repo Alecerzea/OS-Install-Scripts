@@ -1,7 +1,4 @@
-printf "%s" "
-ParallelDownloads=10
-ILoveCandy
-" | sudo tee -a /etc/pacman.conf
+# before messing aroung go the sudo nano /etc/pacman.conf and uncomment ParallelDownloads=10 and add ILoveCandy
 
 sudo pacman -Syyu
 
