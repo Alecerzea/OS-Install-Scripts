@@ -3,7 +3,7 @@ ParallelDownloads=10
 ILoveCandy
 " | sudo tee -a /etc/pacman.conf
 
-sudo pacman -Syyu
+sudo pacman -Syyu gnome fastfetch openssh
 curl -O https://blackarch.org/strap.sh
 sudo chmod +x strap.sh
 sudo ./strap.sh
