@@ -40,8 +40,8 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo pacman -S wget qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch git dmg2img net-tools screen
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -Syyu wget qemu steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch git dmg2img net-tools screen
+sudo pacman -Syyu --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S spirv-cross
 
 sudo systemctl restart NetworkManager
