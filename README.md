@@ -1,4 +1,4 @@
-These is just some personal things that I like to do everythime I install an OS in a personall system or VM, thats all, give it a look if you want.(and tell me if I mess up or mispronounce the name of a package XD)
+These is just some personal things that I like to do everythime I install an OS in a personall system or VM/Server/Work, thats all, give it a look if you want.(and tell me if I mess up or mispronounce the name of a package XD)
 
 I have Windows, Linux and MacOs systems personalized as my likeness.
 
