@@ -44,7 +44,7 @@ sudo add-apt-repository ppa:tomtomtom/yt-dlp
 sudo apt update -y                                
 
 sudo apt install nala -y
-sudo nala install wget steam-devices yt-dlp guestfs-tools gparted build-essential cmake libunwind-dev libglfw3-dev libvulkan-dev vulkan-validationlayers-dev spirv-tools glslang-tools libspirv-cross-c-shared-dev virt-manager qemu-system qemu-user-static fastfetch python virsh python-pypresence uml-utilities git libguestfs-tools p7zip-full dmg2img tesseract-ocr tesseract-ocr-eng genisoimage vim net-tools screen
+sudo nala install wget steam-devices yt-dlp guestfs-tools gparted build-essential cmake libunwind-dev libglfw3-dev libvulkan-dev spirv-tools glslang-tools libspirv-cross-c-shared-dev virt-manager qemu-system qemu-user-static fastfetch uml-utilities git libguestfs-tools p7zip-full dmg2img tesseract-ocr tesseract-ocr-eng genisoimage vim net-tools screen
 
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
