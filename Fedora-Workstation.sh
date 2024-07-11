@@ -17,8 +17,6 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
-sudo fedora-third-party enable
-sudo fedora-third-party refresh
 flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 
 flathub () {
@@ -47,7 +45,7 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo dnf -y install wget dnf-plugins-core steam-devices yt-dlp @virtualization libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer cmake libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel net-tools screen libguestfs-tools make dmg2img
+sudo dnf -y install wget dnf-plugins-core steam-devices yt-dlp @virtualization libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel net-tools screen libguestfs-tools make dmg2img
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
