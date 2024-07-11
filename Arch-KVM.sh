@@ -1,5 +1,5 @@
-# Before messing aroung go the sudo nano /etc/pacman.conf and uncomment ParallelDownloads=10 and add ILoveCandy
-# These is only enfocated to the cybersecurity use, nothing more 
+# Before messing aroung go the sudo nano /etc/pacman.conf and uncomment ParallelDownloads=10 and add ILoveCandy.
+# These is only enfocated to the CyberSecurity use, nothing more. 
 
 sudo pacman -Syyu gnome fastfetch openssh
 curl -O https://blackarch.org/strap.sh
