@@ -1,6 +1,6 @@
 sudo zypper update -y
 
-sudo zypper install flatpak -y
+sudo zypper install flatpak qemu virt-manager fastfetch steam-devices yt-dlp guestfs-tools gparted grub-customizer wget libguestfs-tools make dmg2img net-tools screen python -y
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flathub () {
@@ -29,7 +29,6 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
-sudo zypper install qemu virt-manager fastfetch steam-devices yt-dlp guestfs-tools gparted grub-customizer wget libguestfs-tools make dmg2img net-tools screen python
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
