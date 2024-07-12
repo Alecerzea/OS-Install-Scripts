@@ -1,4 +1,4 @@
-#These is only for Server use
+#These is only for Server use.
 
 sudo dnf -y install cockpit httpd 
 sudo systemctl start httpd.service
