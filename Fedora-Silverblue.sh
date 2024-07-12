@@ -5,7 +5,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y wget steam-devices yt-dlp libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel net-tools screen libguestfs-tools make dmg2img
+sudo rpm-ostree install -y wget steam-devices yt-dlp libguestfs-tools python3-libguestfs guestfs-tools podman simple-scan gparted grub-customizer libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel net-tools screen libguestfs-tools make dmg2img
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
