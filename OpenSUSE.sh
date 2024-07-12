@@ -29,6 +29,11 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
+sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
+sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
+sudo systemctl enable libvirtd
+sudo usermod -aG libvirt "$(whoami)"
+
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
