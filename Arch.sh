@@ -1,4 +1,4 @@
-# Before messing aroung go the sudo nano /etc/pacman.conf and uncomment ParallelDownloads=10 and add ILoveCandy
+# Before messing aroung go the sudo nano /etc/pacman.conf and uncomment ParallelDownloads=5, change it to 10 and add ILoveCandy
 
 sudo pacman -Syyu
 

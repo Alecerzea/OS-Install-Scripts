@@ -1,4 +1,4 @@
-#These is my only script that's not for Server use, It's for personal use XD
+#These is my only script that's not for Server use, It's for personal use XD.
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
