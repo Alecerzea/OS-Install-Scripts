@@ -11,7 +11,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
 sudo apt install flatpak nala gnome-software-plugin-flatpak -y
-sudo nala install wget steam-devices yt-dlp guestfs-tools gparted build-essential cmake libunwind-dev libglfw3-dev libvulkan-dev spirv-tools glslang-tools libspirv-cross-c-shared-dev virt-manager qemu-system qemu-user-static fastfetch uml-utilities libguestfs-tools p7zip-full dmg2img tesseract-ocr tesseract-ocr-eng genisoimage vim net-tools screen virt-manager
+sudo nala install wget libvirt steam-devices yt-dlp guestfs-tools gparted build-essential cmake libunwind-dev libglfw3-dev libvulkan-dev spirv-tools glslang-tools libspirv-cross-c-shared-dev virt-manager qemu-system qemu-user-static fastfetch uml-utilities libguestfs-tools p7zip-full dmg2img tesseract-ocr tesseract-ocr-eng genisoimage vim net-tools screen virt-manager
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 

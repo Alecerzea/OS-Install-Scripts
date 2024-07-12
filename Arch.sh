@@ -13,7 +13,7 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
-sudo pacman -S flatpak fastfetch steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch git dmg2img net-tools screen qemu
+sudo pacman -S flatpak fastfetch libvirt steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch git dmg2img net-tools screen qemu
 sudo pacman -Syyu --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S spirv-cross
 
