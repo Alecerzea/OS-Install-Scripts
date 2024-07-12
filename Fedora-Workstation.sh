@@ -6,6 +6,7 @@ deltarpm=true
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
+sudo dnf -y install wget dnf-plugins-core steam-devices yt-dlp @virtualization libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel net-tools screen libguestfs-tools make dmg2img
 sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
@@ -44,8 +45,6 @@ flathub () {
 flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
-
-sudo dnf -y install wget dnf-plugins-core steam-devices yt-dlp @virtualization libguestfs-tools python3-libguestfs virt-top guestfs-tools podman simple-scan gparted grub-customizer libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel net-tools screen libguestfs-tools make dmg2img
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
