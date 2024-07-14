@@ -36,6 +36,9 @@ flathub () {
 	"com.google.Chrome"
 	"com.microsoft.Edge"
 	"org.mozilla.firefox"
+	"net.davidotek.pupgui2"
+	"com.brave.Browser"
+	"net.mullvad.MullvadBrowser"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }
