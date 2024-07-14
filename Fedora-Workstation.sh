@@ -50,8 +50,6 @@ flatpak install -y flathub ${flathub_install[*]}
 flathub
 
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
-flatpak override --user --env=MANGOHUD=1 "com.heroicgameslauncher.hgl"
-flatpak override --user --env=MANGOHUD=1 "net.lutris.Lutris"
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
