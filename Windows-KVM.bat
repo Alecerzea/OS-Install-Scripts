@@ -1,5 +1,5 @@
 #before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro
-#to let you know, I don't game in my VMs, these is just for work and testing (My job provide us with adobe licenses)
+#to let you know, I don't game in my VMs, these is just for work and testing
 
 powercfg.exe -h off
 
