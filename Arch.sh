@@ -41,6 +41,7 @@ flathub () {
 	"com.brave.Browser"
 	"net.mullvad.MullvadBrowser"
 	"net.davidotek.pupgui2"
+	"net.lutris.Lutris"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }
