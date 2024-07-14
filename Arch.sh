@@ -47,6 +47,10 @@ flatpak install -y flathub ${flathub_install[*]}
 }
 flathub
 
+flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
+flatpak override --user --env=MANGOHUD=1 "com.heroicgameslauncher.hgl"
+flatpak override --user --env=MANGOHUD=1 "net.lutris.Lutris"
+
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
