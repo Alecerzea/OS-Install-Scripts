@@ -1,5 +1,3 @@
-#These is only for Server use as a TTY.
+#These is only for Server use and testing webpages
 
-sudo apt install nala cockpit apache2
-sudo nala update
-sudo nala upgrade --full
+sudo apt install cockpit apache2
