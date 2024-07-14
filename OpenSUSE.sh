@@ -34,8 +34,6 @@ flatpak install -y flathub ${flathub_install[*]}
 flathub
 
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
-flatpak override --user --env=MANGOHUD=1 "com.heroicgameslauncher.hgl"
-flatpak override --user --env=MANGOHUD=1 "net.lutris.Lutris"
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
