@@ -52,9 +52,3 @@ sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
-
-wget https://mirror.cachyos.org/cachyos-repo.tar.xz
-
-tar xvf cachyos-repo.tar.xz && cd cachyos-repo
-
-sudo ./cachyos-repo.sh
