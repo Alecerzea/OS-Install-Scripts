@@ -6,8 +6,6 @@ brew analytics off
 
 sudo mdutil -i off -a
 
-nvram boot-args
-
 sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"
 
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
@@ -18,12 +16,6 @@ defaults write com.apple.universalaccess reduceTransparency -int 1
 sudo /usr/bin/defaults write .GlobalPreferences MultipleSessionsEnabled -bool TRUE
 
 defaults write "Apple Global Domain" MultipleSessionsEnabled -bool true
-
-defaults write com.apple.universalaccessAuthWarning /System/Applications/Utilities/Terminal.app -bool true
-defaults write com.apple.universalaccessAuthWarning /usr/libexec -bool true
-defaults write com.apple.universalaccessAuthWarning /usr/libexec/sshd-keygen-wrapper -bool true
-defaults write com.apple.universalaccessAuthWarning com.apple.Messages -bool true
-defaults write com.apple.universalaccessAuthWarning com.apple.Terminal -bool true
 
 defaults write com.apple.loginwindow DisableScreenLock -bool true
 
