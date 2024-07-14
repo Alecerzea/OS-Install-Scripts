@@ -1,6 +1,6 @@
 These is just some personal things that I like to do everythime I install an OS in a personall system or VM/Server/Work, thats all, give it a look if you want.
 
-I have Windows, Linux and MacOs systems personalized as my likeness.(I{ll never add BSD nor Gentoo})
+I have Windows, Linux and MacOs systems personalized as my likeness.(I'll never add BSD nor Gentoo})
 
 I also use these debloater https://github.com/Raphire/Win11Debloat to get rid of Microsoft Telemetry.
 
@@ -8,7 +8,7 @@ My Fedora commands, some are from trafotin Gitlab (https://gitlab.com/trafotin/o
 
 My Arch-KVM is only for Cyber-Security use, personally, I don't have enough confidence on myself to main Vanilla Arch, maybe I could change in the future, but's better to be careful.
 
-Kick side note: I don't recommend base-on-something distros, for me it's better to only use vanilla one and add thhe changes someone wants, as I have cachy repos in my Arch Script.
+Kick side note: I don't recommend base-on-something distros, for me it's better to only use vanilla one and add the changes someone wants, to have a balance between stability and customization.
 
 The Script I have here for Mac is only for VM use, since I use it only in KVM in my Fedora install, please understand if you use it in bare metal you're on your own.
 
@@ -20,4 +20,4 @@ If you wanna use gpu passthrough in any vm you create (As I use both in my Mac a
 
 I don't use either for gaming, please don't try neither Valorant nor Warzone under them (I just play them in my PS5 BTW).
 
-My Linux config is only GNOME+AMD, NVIDIA in Linux is a headache to me  and I want Secure boot without adding a key that would mess with my Kernel, and KDE isn't my favorite desktop environment, idc about the beef of the developers, nor customization(The most I do is change the Wallpaper and done) GNOME just works.
+My Linux config is only GNOME+AMD/Intel GPU, NVIDIA in Linux is a headache to me  and I want Secure boot without adding a key that would mess with my Kernel, KDE isn't a desktop environment I like, idc about the beef of the developers, nor customization(The most I do is change the Wallpaper and done) GNOME just works.
