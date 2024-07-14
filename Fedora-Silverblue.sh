@@ -5,7 +5,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y wget steam-devices yt-dlp libguestfs-tools python3-libguestfs guestfs-tools podman simple-scan gparted grub-customizer libunwind-devel glfw-devel vulkan-devel vulkan-validation-layers-devel spirv-tools glslang-devel gcc-c++ gcc spirv-tools-devel xbyak-devel net-tools screen libguestfs-tools make dmg2img
+sudo rpm-ostree install -y wget steam-devices yt-dlp gparted grub-customizer
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
@@ -60,5 +60,3 @@ sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
-
-git clone https://github.com/KhronosGroup/SPIRV-Cross && cd SPIRV-Cross && mkdir build && cd build && cmake .. && cmake --build . && sudo make install

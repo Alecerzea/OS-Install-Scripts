@@ -13,7 +13,7 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
-sudo pacman -S wget flatpak fastfetch libvirt steam-devices yt-dlp guestfs-tools gparted grub-customizer virt-manager libunwind glfw-x11 vulkan-devel glslang fastfetch git dmg2img net-tools screen qemu
+sudo pacman -S wget flatpak fastfetch libvirt steam-devices yt-dlp guestfs-tools gparted grub-customizer fastfetch
 sudo pacman -Syyu --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S spirv-cross
 
@@ -48,10 +48,5 @@ flathub
 
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
-
-sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
-sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
-sudo systemctl enable libvirtd
-sudo usermod -aG libvirt "$(whoami)"
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
