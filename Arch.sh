@@ -41,6 +41,7 @@ flathub () {
 	"net.lutris.Lutris"
 	"com.protonvpn.www"
 	"me.proton.Pass"
+	"com.mattjakeman.ExtensionManager"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }

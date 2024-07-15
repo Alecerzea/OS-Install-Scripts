@@ -25,6 +25,7 @@ flathub () {
 	"com.brave.Browser"
 	"net.mullvad.MullvadBrowser"
 	"net.lutris.Lutris"
+	"com.mattjakeman.ExtensionManager"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }
