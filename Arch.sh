@@ -35,13 +35,12 @@ flathub () {
 	"info.cemu.Cemu"
 	"app.xemu.xemu"
 	"com.valvesoftware.Steam"
-	"com.google.Chrome"
-	"com.microsoft.Edge"
-	"org.mozilla.firefox"
 	"com.brave.Browser"
 	"net.mullvad.MullvadBrowser"
 	"net.davidotek.pupgui2"
 	"net.lutris.Lutris"
+	"com.protonvpn.www"
+	"me.proton.Pass"
 )
 flatpak install -y flathub ${flathub_install[*]}
 }
