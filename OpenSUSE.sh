@@ -40,5 +40,3 @@ sudo usermod -aG libvirt "$(whoami)"
 
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
-
-sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf

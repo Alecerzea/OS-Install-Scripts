@@ -52,4 +52,6 @@ flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
-sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
+curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+sudo ./cachyos-repo.sh
