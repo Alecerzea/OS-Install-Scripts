@@ -7,7 +7,6 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome
 systemctl reboot
 
 #after the reboot use these code to set-up virtualization,delete duplicates in grub and the key for secure boot
-#ujust _install-system-flatpaks
 #ujust setup-virtualization
 #ujust enroll-secure-boot-key
 #password "ublue-os"
