@@ -1,3 +1,3 @@
-#These is only for Server use and testing webpages
+#These is only for Server in a TTY.
 
-sudo apt install cockpit apache2
+sudo apt install cockpit

@@ -1,6 +1,6 @@
 sudo zypper update -y
 
-sudo zypper install flatpak libvirt qemu virt-manager fastfetch steam-devices yt-dlp guestfs-tools gparted grub-customizer wget libguestfs-tools make dmg2img net-tools screen python -y
+sudo zypper install flatpak libvirt qemu virt-manager fastfetch steam-devices yt-dlp guestfs-tools gparted grub-customizer wget make dmg2img net-tools screen python -y
 
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc

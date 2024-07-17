@@ -8,7 +8,7 @@ My Fedora commands, some are from trafotin Gitlab (https://gitlab.com/trafotin/o
 
 My Arch-KVM is only for Cyber-Security use, personally, I don't have enough confidence on myself to main Vanilla Arch, maybe I could change in the future, but's better to be careful.
 
-Kick side note: I don't recommend base-on-something distros, for me it's better to only use vanilla one and add the changes someone wants, to have a balance between stability and customization.
+Kick side note: I don't recommend base-on-something distros, for me it's better to only use vanilla one and add the changes someone wants, to have a balance between stability and customization, that's why I have the scripts to convert Silverblue to Bazzite and Arch to CachyOS.
 
 The Script I have here for Mac is only for VM use, since I use it only in KVM in my Fedora install, please understand if you use it in bare metal you're on your own.
 

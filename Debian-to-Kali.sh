@@ -8,5 +8,3 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 sudo reboot
 sudo apt autoremove --purge
-sudo apt install kali-linux-headless -y
-sudo apt clean

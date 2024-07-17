@@ -2,13 +2,13 @@ powercfg.exe h off
 
 winget upgrade --all --include-unknown
 
-#DISM.exe /online /cleanup-image /startcomponentcleanup
-#DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
+# DISM.exe /online /cleanup-image /startcomponentcleanup
+# DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
 
-#cleanmgr /sageset:l 
-#cleanmgr /sagerun:l 
+# cleanmgr /sageset:l 
+# cleanmgr /sagerun:l 
 
-#cleanmgr.exe /AUTOCLEAN
+# cleanmgr.exe /AUTOCLEAN
 
 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
@@ -17,6 +17,6 @@ winget install Proton.ProtonVPN Proton.ProtonPass Fastfetch-cli.Fastfetch Micros
 wsl --install
 wsl --set-default-version 2
 
-#ipconfig /flushdns /it deletes the incognito out of your Router, like Skipper says: you haven't seen anything 
-#chkdsk /f
-#chkdsk /r
+# ipconfig /flushdns /it deletes the incognito out of your Router, like Skipper says: you haven't seen anything 
+# chkdsk /f
+# chkdsk /r

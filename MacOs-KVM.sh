@@ -1,3 +1,6 @@
+#Remember Only VM use.
+#I'm starting to think if these is even worth it considering that Apple got rid of support for  x86, not the biggest fan of ARM btw.
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install fastfetch yt-dlp
