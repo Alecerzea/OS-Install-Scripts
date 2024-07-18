@@ -21,10 +21,10 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
 
-my_flathub () {
-	log "flathub"
-	local -a flathub_install
-	flathub_install=(
+alecerzea_flathub () {
+	log "alecerzea_flathub"
+	local -a alecerzea_flathub_install
+	alecerzea_flathub_install=(
 	"com.heroicgameslauncher.hgl"
 	"com.obsproject.Studio"
 	"com.obsproject.Studio.Plugin.OBSVkCapture"
@@ -43,10 +43,11 @@ my_flathub () {
 	"net.mullvad.MullvadBrowser"
 	"net.lutris.Lutris"
 	"com.mattjakeman.ExtensionManager"
+	"org.gnome.Extensions"
 )
-flatpak install -y flathub ${my_flathub_install[*]}
+flatpak install -y flathub ${alecerzea_flathub_install[*]}
 }
-my_flathub            
+alecerzea_flathub
 
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 

@@ -11,3 +11,4 @@ systemctl reboot
 #ujust enroll-secure-boot-key
 #password "ublue-os"
 #ujust configure-gru for duplicate grub
+#ujust update

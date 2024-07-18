@@ -18,6 +18,6 @@ To make the Mac-VMs work in Virt-Manager under Fedora I made these script to do 
 
 If you wanna use gpu passthrough in any vm you create (As I use both in my Mac and Windows KVMs), use the project https://github.com/HikariKnight/quickpassthrough .
 
-I don't use either for gaming, please don't try neither Valorant nor Warzone under them (I just play them in my PS5 BTW).
+I don't use either for gaming,don't eveb try neither Valorant nor Warzone under them XD (I just play them in my PS5 BTW).
 
 My Linux config is only GNOME+AMD/Intel GPU, NVIDIA in Linux is a headache to me  and I want Secure boot without adding a key that would mess with my Kernel, KDE isn't a desktop environment I like, idc about the beef of the developers, nor customization(The most I do is change the Wallpaper and done) GNOME just works.
