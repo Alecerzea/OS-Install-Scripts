@@ -15,7 +15,6 @@ gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
 sudo pacman -S wget flatpak fastfetch libvirt steam-devices yt-dlp guestfs-tools gparted grub-customizer fastfetch sbctl 
 sudo pacman -Syyu --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay -S spirv-cross
 sbctl create-keys
 sbctl enroll-keys -m
 sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
