@@ -4,7 +4,7 @@ I have Windows, Linux and MacOs systems personalized as my likeness.(I'll never 
 
 I also use these debloater https://github.com/Raphire/Win11Debloat to get rid of Microsoft Telemetry.
 
-My Fedora commands, some are from trafotin Gitlab (https://gitlab.com/trafotin/os-install-scripts) and some are my own.
+In regard of my Linux commands, some are from trafotin Gitlab (https://gitlab.com/trafotin/os-install-scripts) and some are my own.
 
 My Arch-KVM is only for Cyber-Security use, personally, I don't have enough confidence on myself to main Vanilla Arch, maybe I could change in the future, but's better to be careful.
 
