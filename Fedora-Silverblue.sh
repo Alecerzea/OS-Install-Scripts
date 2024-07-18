@@ -16,7 +16,7 @@ gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
 
-flathub () {
+my_flathub () {
 	log "flathub"
 	local -a flathub_install
 	flathub_install=(
@@ -26,7 +26,6 @@ flathub () {
 	"com.valvesoftware.Steam"
 	"org.freedesktop.Platform.VulkanLayer.MangoHud"
 	"org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
-	"net.davidotek.pupgui2"
 	"org.duckstation.DuckStation"
 	"net.pcsx2.PCSX2"
 	"org.ppsspp.PPSSPP"
@@ -40,9 +39,9 @@ flathub () {
 	"net.lutris.Lutris"
 	"com.mattjakeman.ExtensionManager"
 )
-flatpak install -y flathub ${flathub_install[*]}
+flatpak install -y flathub ${my_flathub_install[*]}
 }
-flathub
+my_flathub
 
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 
