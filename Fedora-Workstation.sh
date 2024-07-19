@@ -6,7 +6,7 @@ deltarpm=true
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo dnf -y install dnf-plugins-core steam-devices yt-dlp @virtualization gparted grub-customizer make dmg2img
+sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img
 sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
@@ -17,103 +17,6 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
-
-alecerzea_debloat () {
-	log "alecerzea_debloat"
-	local -a alecerzea_debloating_stuff
-	alecerzea_debloating_stuff=(
-	"ModemManager"
-	"abrt*"
-	"adcli"
-	"alsa-sof-firmware"
-	"anaconda*"
-	"anthy-unicode"
-	"atmel-firmware"
-	"avahi"
-	"baobab"
-	"bluez-cups"
-	"boost-date-time"
-	"brasero-libs"
-	"cheese"
-	"cyrus-sasl-plain"
-	"dos2unix"
-	"eog"
-	"evince"
-	"evince-djvu"
-	"fedora-bookmarks"
-	"fedora-chromium-config"
-	"geolite2*"
-	"gnome-backgrounds"
-	"gnome-boxes"
-	"gnome-calculator"
-	"gnome-calendar"
-	"gnome-characters"
-	"gnome-classic-session"
-	"gnome-clocks"
-	"gnome-color-manager"
-	"gnome-connections"
-	"gnome-contacts"
-	"gnome-font-viewer"
-	"gnome-logs"
-	"gnome-maps"
-	"gnome-remote-desktop"
-	"gnome-shell-extension*"
-	"gnome-shell-extension-background-logo"
-	"gnome-system-monitor"
-	"gnome-text-editorevince"
-	"gnome-themes-extra"
-	"gnome-tour"
-	"gnome-user-docs"
-	"gnome-weather"
-	"hyperv*"
-	"kpartx"
-	"libertas-usb8388-firmware"
-	"loupe"
-	"mailcap"
-	"mediawriter"
-	"mozilla-filesystem"
-	"mtr"
-	"nano"
-	"nano-default-editor"
-	"nmap-ncat"
-	"open-vm-tools"
-	"openconnect"
-	"openvpn"
-	"orca"
-	"perl*"
-	"perl-IO-Socket-SSL"
-	"podman"
-	"ppp"
-	"pptp"
-	"qemu-guest-agent"
-	"qgnomeplatform"
-	"realmd"
-	"rsync"
-	"samba-client"
-	"sane*"
-	"simple-scan"
-	"snapshot"
-	"sos"
-	"spice-vdagent"
-	"sssd"
-	"tcpdump"
-	"teamd"
-	"thermald"
-	"totem"
-	"traceroute"
-	"trousers"
-	"unbound-libs"
-	"virtualbox-guest-additions"
-	"vpnc"
-	"xorg-x11-drv-vmware"
-	"yajl"
-	"yelp"
-	"zd1211-firmware"
-)
-sudo dnf -y rm ${alecerzea_debloating_stuff[*]}
-}
-alecerzea_debloat
-
 
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc

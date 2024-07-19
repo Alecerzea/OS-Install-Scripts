@@ -14,7 +14,7 @@ sudo add-apt-repository ppa:tomtomtom/yt-dlp
 sudo apt update -y          
 
 sudo apt install flatpak nala gnome-software-plugin-flatpak -y
-sudo nala install wget steam-devices yt-dlp guestfs-tools gparted cmake virt-manager qemu-system qemu-user-static fastfetch dmg2img net-tools screen virt-manager
+sudo nala install wget yt-dlp guestfs-tools gparted cmake virt-manager qemu-system qemu-user-static fastfetch dmg2img net-tools screen virt-manager
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 

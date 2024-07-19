@@ -13,7 +13,7 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
-sudo pacman -S wget flatpak fastfetch libvirt steam-devices yt-dlp guestfs-tools gparted grub-customizer fastfetch sbctl 
+sudo pacman -S wget flatpak fastfetch libvirt yt-dlp guestfs-tools gparted grub-customizer fastfetch sbctl 
 sudo pacman -Syyu --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 sbctl create-keys
 sbctl enroll-keys -m
