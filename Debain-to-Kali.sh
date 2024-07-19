@@ -1,4 +1,3 @@
-#These is only for Server in a TTY.
 #Note, If you use the unstable version, you'll have broken dependencies, these is only intended for a fresh net-install.
 #Of Course, these is only for CyberSecurity Use as a TTY.
 
