@@ -6,6 +6,6 @@ sudo sh -c sed -i 'deb http://http.kali.org/kali kali-rolling main contrib non-f
 sudo apt update
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
-sudo reboot
 sudo apt autoremove --purge
 sudo apt install cockpit
+sudo reboot
