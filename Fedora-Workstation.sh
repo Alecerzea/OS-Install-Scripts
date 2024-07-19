@@ -23,7 +23,6 @@ alecerzea_debloat () {
 	local -a alecerzea_debloating_stuff
 	alecerzea_debloating_stuff=(
 	"ModemManager"
-	"NetworkManager-ssh"
 	"abrt*"
 	"adcli"
 	"alsa-sof-firmware"
@@ -60,7 +59,6 @@ alecerzea_debloat () {
 	"gnome-remote-desktop"
 	"gnome-shell-extension*"
 	"gnome-shell-extension-background-logo"
-	"gnome-software"
 	"gnome-system-monitor"
 	"gnome-text-editorevince"
 	"gnome-themes-extra"
