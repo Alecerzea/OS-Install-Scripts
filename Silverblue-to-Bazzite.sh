@@ -10,5 +10,5 @@ systemctl reboot
 #ujust setup-virtualization
 #ujust enroll-secure-boot-key
 #password "ublue-os"
-#ujust configure-gru for duplicate grub
+#ujust configure-grub for duplicate grub
 #ujust update

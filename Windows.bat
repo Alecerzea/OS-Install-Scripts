@@ -12,7 +12,7 @@ winget upgrade --all --include-unknown
 
 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
-winget install Proton.ProtonVPN Proton.ProtonPass Fastfetch-cli.Fastfetch Microsoft.Powershell Microsoft.PowerShell.Preview Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy OBSProject.OBSStudio Notepad++.Notepad++ VideoLAN.VLC Valve.Steam EpicGames.EpicGamesLauncher GOG.Galaxy Amazon.Games Ubisoft.Connect ElectronicArts.EADesktop PPSSPPTeam.PPSSPP RARLab.WinRAR Brave.Brave MullvadVPN.MullvadBrowser Microsoft.VisualStudioCode GitHub.GitHubDesktop Nvidia.GeForceNow PlayStation.PSRemotePlay PlayStation.PSPlus PlayStation.DualSenseFWUpdater yt-dlp.yt-dlp
+winget install Proton.ProtonVPN Proton.ProtonPass Fastfetch-cli.Fastfetch Microsoft.Powershell Microsoft.PowerShell.Preview Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy OBSProject.OBSStudio Notepad++.Notepad++ VideoLAN.VLC Valve.Steam EpicGames.EpicGamesLauncher GOG.Galaxy Amazon.Games Ubisoft.Connect ElectronicArts.EADesktop PPSSPPTeam.PPSSPP RARLab.WinRAR Brave.Brave MullvadVPN.MullvadBrowser Nvidia.GeForceNow PlayStation.PSRemotePlay PlayStation.PSPlus PlayStation.DualSenseFWUpdater yt-dlp.yt-dlp
 
 wsl --install
 wsl --set-default-version 2

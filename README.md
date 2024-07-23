@@ -1,14 +1,14 @@
 These is just some personal things that I like to do everythime I install an OS in a personall system or VM/Server/Work, thats all, give it a look if you want.
 
-I have Windows, Linux and MacOs systems personalized as my likeness.(I'll never add BSD nor Gentoo)
+I have Windows, Fedora-Linux and MacOs systems personalized as my likeness.
 
 I also use these debloater https://github.com/Raphire/Win11Debloat to get rid of Microsoft Telemetry.
 
 In regard of my Linux commands, some are from trafotin Gitlab (https://gitlab.com/trafotin/os-install-scripts) and some are my own.
 
-Kick side note: I don't recommend base-on-something distros, for me it's better to only use vanilla one and add the changes someone wants, having a balance between stability and customization, that's why I have the scripts to convert Silverblue to Bazzite and Arch to CachyOS.
+Kick side note: I don't recommend base-on-something distros, for me it's better to only use vanilla one and add the changes someone wants, having a balance between stability and customization, that's why I have the scripts to convert Silverblue to Bazzite.
 
-The reason why I'm saying these is because I already tried my scripts in some based-on-something-distros, like Nobara and Ubuntu, and sometimes not everyting works out of the box, so please consider these.
+The reason why I'm saying these is because I already tried my scripts in some based-on-something-distros, like Nobara, and sometimes not everyting works out of the box, so please consider these.
 
 The Script I have here for Mac is only for VM use, since I use it only in KVM in my Fedora install, please understand if you use it in bare metal you're on your own.
 

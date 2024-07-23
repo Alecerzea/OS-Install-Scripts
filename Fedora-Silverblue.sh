@@ -23,7 +23,6 @@ alecerzea_flathub () {
 	"com.heroicgameslauncher.hgl"
 	"com.obsproject.Studio"
 	"com.obsproject.Studio.Plugin.OBSVkCapture"
-	"com.valvesoftware.Steam"
 	"org.freedesktop.Platform.VulkanLayer.MangoHud"
 	"org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
 	"org.duckstation.DuckStation"
@@ -32,7 +31,6 @@ alecerzea_flathub () {
 	"org.ryujinx.Ryujinx"
 	"info.cemu.Cemu"
 	"app.xemu.xemu"
-	"com.valvesoftware.Steam"
 	"net.davidotek.pupgui2"
 	"com.brave.Browser"
 	"net.mullvad.MullvadBrowser"
@@ -91,7 +89,5 @@ sudo firewall-cmd --permanent --remove-service=mdns
 sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
-
-chmod 700 /home/"$(whoami)"
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
