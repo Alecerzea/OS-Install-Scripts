@@ -1,6 +1,6 @@
 These is just some personal things that I like to do everythime I install an OS in a personall system or VM/Server/Work, thats all, give it a look if you want.
 
-I have Windows, Fedora-Linux and MacOs systems personalized as my likeness.
+I have Windows, Linux and MacOs systems personalized as my likeness.
 
 I also use these debloater https://github.com/Raphire/Win11Debloat to get rid of Microsoft Telemetry.
 

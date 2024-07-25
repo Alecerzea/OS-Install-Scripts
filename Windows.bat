@@ -3,7 +3,6 @@ powercfg.exe h off
 winget upgrade --all --include-unknown
 
 #DISM.exe /online /cleanup-image /startcomponentcleanup
-#DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
 
 #cleanmgr /sageset:l 
 #cleanmgr /sagerun:l 
