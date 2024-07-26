@@ -21,7 +21,7 @@ gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
 
-flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 
 alecerzea_flathub () {
 	log "alecerzea_flathub"
