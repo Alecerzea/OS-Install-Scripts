@@ -46,6 +46,7 @@ alecerzea_flathub () {
 	"net.lutris.Lutris"
 	"com.mattjakeman.ExtensionManager"
 	"org.gnome.Extensions"
+	"org.videolan.VLC"
 )
 flatpak install -y flathub ${alecerzea_flathub_install[*]}
 }
