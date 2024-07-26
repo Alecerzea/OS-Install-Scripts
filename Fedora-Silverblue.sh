@@ -23,6 +23,7 @@ alecerzea_flathub () {
 	"com.heroicgameslauncher.hgl"
 	"com.obsproject.Studio"
 	"com.obsproject.Studio.Plugin.OBSVkCapture"
+	"com.valvesoftware.Steam"
 	"org.freedesktop.Platform.VulkanLayer.MangoHud"
 	"org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
 	"org.duckstation.DuckStation"
