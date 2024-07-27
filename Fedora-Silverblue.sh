@@ -11,6 +11,10 @@ cd /etc/yum.repos.d/
 sudo wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-fedora-$(rpm -E %fedora).repo
 sudo rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos-rt
 sudo systemctl reboot
+sudo wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-addons-fedora-$(rpm -E %fedora).repo
+sudo rpm-ostree install libcap-ng-devel procps-ng-devel
+sudo rpm-ostree install uksmd
+sudo systemctl enable --now uksmd.service
 cd
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
