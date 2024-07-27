@@ -6,10 +6,12 @@ sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
 sudo rpm-ostree install -y yt-dlp gparted grub-customizer
+
 cd /etc/yum.repos.d/
 sudo wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-fedora-$(rpm -E %fedora).repo
 sudo rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos-rt
 sudo systemctl reboot
+cd
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
@@ -20,33 +22,33 @@ gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
 
-alecerzea_flathub () {
-	log "alecerzea_flathub"
-	local -a alecerzea_flathub_install
-	alecerzea_flathub_install=(
-	"com.heroicgameslauncher.hgl"
-	"com.obsproject.Studio"
-	"com.obsproject.Studio.Plugin.OBSVkCapture"
-	"com.valvesoftware.Steam"
-	"org.freedesktop.Platform.VulkanLayer.MangoHud"
-	"org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
-	"org.duckstation.DuckStation"
-	"net.pcsx2.PCSX2"
-	"org.ppsspp.PPSSPP"
-	"org.ryujinx.Ryujinx"
-	"info.cemu.Cemu"
-	"app.xemu.xemu"
-	"net.davidotek.pupgui2"
-	"com.brave.Browser"
-	"net.mullvad.MullvadBrowser"
-	"net.lutris.Lutris"
-	"com.mattjakeman.ExtensionManager"
-	"org.gnome.Extensions"
-	"org.videolan.VLC"
-)
-flatpak install -y flathub ${alecerzea_flathub_install[*]}
+alecerzea_flathub() {
+  log "alecerzea_flathub"
+  local -a alecerzea_flathub_install
+  alecerzea_flathub_install=(
+    "app.xemu.xemu"
+    "com.brave.Browser"
+    "com.heroicgameslauncher.hgl"
+    "com.mattjakeman.ExtensionManager"
+    "com.obsproject.Studio"
+    "com.obsproject.Studio.Plugin.OBSVkCapture"
+    "com.valvesoftware.Steam"
+    "com.visualstudio.code"
+    "info.cemu.Cemu"
+    "net.davidotek.pupgui2"
+    "net.lutris.Lutris"
+    "net.mullvad.MullvadBrowser"
+    "net.pcsx2.PCSX2"
+    "org.duckstation.DuckStation"
+    "org.freedesktop.Platform.VulkanLayer.MangoHud"
+    "org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
+    "org.gnome.Extensions"
+    "org.ppsspp.PPSSPP"
+    "org.ryujinx.Ryujinx"
+    "org.videolan.VLC"
+  )
+  flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
-alecerzea_flathub
 
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
 

@@ -1,20 +1,34 @@
-#Before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro
+# Before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro
+
+# chkdsk /f
+# chkdsk /r
+# cleanmgr /sageset:l 
+# cleanmgr /sagerun:l 
+# cleanmgr.exe /AUTOCLEAN 
 
 powercfg.exe -h off
 
-winget upgrade --all --include-unknown
-
-#DISM.exe /online /cleanup-image /startcomponentcleanup
-
-#cleanmgr /sageset:l 
-#cleanmgr /sagerun:l 
-
-#cleanmgr.exe /AUTOCLEAN 
-
 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
-winget install Brave.Brave MullvadVPN.MullvadBrowser Microsoft.VisualStudioCode Fastfetch-cli.Fastfetch Microsoft.Powershell Microsoft.PowerShell.Preview Adobe.Acrobat.Reader.64-bit GitHub.GitHubDesktop Easeware.DriverEasy Notepad++.Notepad++ VideoLAN.VLC Git.Git RARLab.WinRAR yt-dlp.yt-dlp Microsoft.SQLServer.2022.Developer Microsoft.SQLServerManagementStudio
+# DISM.exe /online /cleanup-image /startcomponentcleanup
 
-#ipconfig /flushdns #it deletes the incognito out of your Router, like Skipper says: you haven't seen anything 
-#chkdsk /f
-#chkdsk /r
+# ipconfig /flushdns 
+
+winget install Adobe.Acrobat.Reader.64-bit 
+winget install Brave.Brave 
+winget install Easeware.DriverEasy 
+winget install Fastfetch-cli.Fastfetch 
+winget install Git.Git 
+winget install GitHub.GitHubDesktop 
+winget install Microsoft.PowerShell 
+winget install Microsoft.PowerShell.Preview 
+winget install Microsoft.SQLServer.2022.Developer 
+winget install Microsoft.SQLServerManagementStudio 
+winget install Microsoft.VisualStudioCode 
+winget install MullvadVPN.MullvadBrowser 
+winget install Notepad++.Notepad++ 
+winget install RARLab.WinRAR 
+winget install VideoLAN.VLC 
+winget install yt-dlp.yt-dlp
+
+winget upgrade --all --include-unknown
