@@ -14,8 +14,26 @@ DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
 # ipconfig /flushdns 
 
+wsl --install
+wsl --set-default-version 2
+
+winget upgrade --all --include-unknown
+
 winget install Adobe.Acrobat.Reader.64-bit 
+winget install Amazon.Games
+winget install ElectronicArts.EADesktop
+winget install EpicGames.EpicGamesLauncher
+winget install Notepad++.Notepad++
+winget install Nvidia.GeForceNow
+winget install OBSProject.OBSStudio
+winget install PlayStation.DualSenseFWUpdater
+winget install PlayStation.PSPlus
+winget install PlayStation.PSRemotePlay
+winget install PPSSPPTeam.PPSSPP
 winget install Brave.Brave 
+winget install GOG.Galaxy
+winget install Ubisoft.Connect
+winget install Valve.Steam
 winget install Easeware.DriverEasy 
 winget install Fastfetch-cli.Fastfetch 
 winget install Git.Git 
@@ -30,5 +48,3 @@ winget install Notepad++.Notepad++
 winget install RARLab.WinRAR 
 winget install VideoLAN.VLC 
 winget install yt-dlp.yt-dlp
-
-winget upgrade --all --include-unknown

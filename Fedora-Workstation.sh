@@ -8,14 +8,6 @@ sudo dnf upgrade -y
 sudo dnf autoremove -y
 sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img
 
-sudo dnf -y copr enable bieszczaders/kernel-cachyos
-sudo dnf -y install kernel-cachyos-rt kernel-cachyos-rt-devel-matched
-
-sudo dnf -y copr enable bieszczaders/kernel-cachyos-addons
-sudo dnf -y install libcap-ng libcap-ng-devel procps-ng procps-ng-devel
-sudo dnf -y install uksmd
-sudo systemctl enable --now uksmd.service
-
 sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
