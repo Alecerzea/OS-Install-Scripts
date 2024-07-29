@@ -19,32 +19,4 @@ wsl --set-default-version 2
 
 winget upgrade --all --include-unknown
 
-winget install Adobe.Acrobat.Reader.64-bit 
-winget install Amazon.Games
-winget install ElectronicArts.EADesktop
-winget install EpicGames.EpicGamesLauncher
-winget install Notepad++.Notepad++
-winget install Nvidia.GeForceNow
-winget install OBSProject.OBSStudio
-winget install PlayStation.DualSenseFWUpdater
-winget install PlayStation.PSPlus
-winget install PlayStation.PSRemotePlay
-winget install PPSSPPTeam.PPSSPP
-winget install Brave.Brave 
-winget install GOG.Galaxy
-winget install Ubisoft.Connect
-winget install Valve.Steam
-winget install Easeware.DriverEasy 
-winget install Fastfetch-cli.Fastfetch 
-winget install Git.Git 
-winget install GitHub.GitHubDesktop 
-winget install Microsoft.PowerShell 
-winget install Microsoft.PowerShell.Preview 
-winget install Microsoft.SQLServer.2022.Developer 
-winget install Microsoft.SQLServerManagementStudio 
-winget install Microsoft.VisualStudioCode 
-winget install MullvadVPN.MullvadBrowser 
-winget install Notepad++.Notepad++ 
-winget install RARLab.WinRAR 
-winget install VideoLAN.VLC 
-winget install yt-dlp.yt-dlp
+winget install Adobe.Acrobat.Reader.64-bit Amazon.Games ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.DualSenseFWUpdater PlayStation.PSPlus PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Brave.Brave GOG.Galaxy Ubisoft.Connect Valve.Steam Easeware.DriverEasy Fastfetch-cli.Fastfetch Git.Git GitHub.GitHubDesktop Microsoft.PowerShell Microsoft.PowerShell.Preview Microsoft.SQLServer.2022.Developer Microsoft.SQLServerManagementStudio Microsoft.VisualStudioCode MullvadVPN.MullvadBrowser RARLab.WinRAR VideoLAN.VLC yt-dlp.yt-dlp
