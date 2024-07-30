@@ -1,4 +1,4 @@
-# Before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro
+# Before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro or a@a.com or no@thankyou.com
 
 # chkdsk /f
 # chkdsk /r
