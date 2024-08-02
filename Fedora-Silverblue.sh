@@ -91,3 +91,7 @@ sudo firewall-cmd --permanent --remove-service=mdns
 sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
+
+sudo systemctl mask swap.target
+sudo systemctl stop swap.target
+sudo swapon -s
