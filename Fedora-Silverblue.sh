@@ -5,7 +5,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y yt-dlp gparted grub-customizer
+sudo rpm-ostree install -y yt-dlp gparted grub-customizer steam-devices
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
