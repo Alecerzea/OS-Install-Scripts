@@ -108,3 +108,5 @@ sudo firewall-cmd --reload
 sudo systemctl mask swap.target
 sudo systemctl stop swap.target
 sudo swapon -s
+
+echo 3 | sudo tee /proc/sys/vm/drop_caches
