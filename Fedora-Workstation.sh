@@ -35,7 +35,6 @@ alecerzea_flathub() {
     "com.obsproject.Studio"
     "com.obsproject.Studio.Plugin.OBSVkCapture"
     "com.valvesoftware.Steam"
-    "com.visualstudio.code"
     "info.cemu.Cemu"
     "net.davidotek.pupgui2"
     "net.lutris.Lutris"
@@ -52,7 +51,7 @@ alecerzea_flathub() {
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
 
-flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
+flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam app.xemu.xemu info.cemu.Cemu net.lutris.Lutris net.pcsx2.PCSX2 org.duckstation.DuckStation org.ppsspp.PPSSPP org.ryujinx.Ryujinx
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
