@@ -9,11 +9,9 @@ sudo dnf autoremove -y
 sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img steam-devices
 
 alecerzea_debloat () {
-	log "trafotin_debloat"
-	local -a trafotin_debloating_stuff
-	trafotin_debloating_stuff=(
-	"ModemManager"
-	"NetworkManager-ssh"
+	log "alecerzea_debloat"
+	local -a alecerzea_debloating_stuff
+	alecerzea_debloating_stuff=(
 	"abrt*"
 	"adcli"
 	"alsa-sof-firmware"
@@ -50,7 +48,6 @@ alecerzea_debloat () {
 	"gnome-remote-desktop"
 	"gnome-shell-extension*"
 	"gnome-shell-extension-background-logo"
-	"gnome-software"
 	"gnome-system-monitor"
 	"gnome-text-editorevince"
 	"gnome-themes-extra"
@@ -65,12 +62,9 @@ alecerzea_debloat () {
 	"mediawriter"
 	"mozilla-filesystem"
 	"mtr"
-	"nano"
-	"nano-default-editor"
 	"nmap-ncat"
 	"open-vm-tools"
 	"openconnect"
-	"openvpn"
 	"orca"
 	"perl*"
 	"perl-IO-Socket-SSL"
@@ -102,7 +96,7 @@ alecerzea_debloat () {
 	"yelp"
 	"zd1211-firmware"
 )
-sudo dnf -y rm ${trafotin_debloating_stuff[*]}
+sudo dnf -y rm ${alecerzea_debloating_stuff[*]}
 }
 alecerzea_debloat
 

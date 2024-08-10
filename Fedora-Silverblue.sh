@@ -7,12 +7,10 @@ sudo fwupdmgr update -y
 
 sudo rpm-ostree install -y yt-dlp gparted grub-customizer steam-devices
 
-trafotin_debloat() {
-  log "trafotin_debloat"
-  local -a trafotin_debloating_stuff
-  trafotin_debloating_stuff=(
-    "ModemManager"
-    "NetworkManager-ssh"
+alecerzea_debloat() {
+  log "alecerzea_debloat"
+  local -a alecerzea_debloating_stuff
+  alecerzea_debloating_stuff=(
     "abrt*"
     "adcli"
     "alsa-sof-firmware"
@@ -49,7 +47,6 @@ trafotin_debloat() {
     "gnome-remote-desktop"
     "gnome-shell-extension*"
     "gnome-shell-extension-background-logo"
-    "gnome-software"
     "gnome-system-monitor"
     "gnome-text-editorevince"
     "gnome-themes-extra"
@@ -64,8 +61,6 @@ trafotin_debloat() {
     "mediawriter"
     "mozilla-filesystem"
     "mtr"
-    "nano"
-    "nano-default-editor"
     "nmap-ncat"
     "open-vm-tools"
     "openconnect"
@@ -101,10 +96,10 @@ trafotin_debloat() {
     "yelp"
     "zd1211-firmware"
   )
-  sudo rpm-ostree uninstall ${trafotin_debloating_stuff[*]}
+  sudo rpm-ostree uninstall ${alecerzea_debloating_stuff[*]}
 }
 
-trafotin_debloat
+alecerzea_debloat
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
