@@ -1,3 +1,5 @@
+#I already tried it in Debian and no luck, sad
+
 wget https://go.dev/dl/go1.22.6.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.22.6.linux-amd64.tar.gz
 export PATH=$PATH:/usr/go/local/bin
