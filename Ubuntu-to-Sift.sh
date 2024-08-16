@@ -1,4 +1,4 @@
-#I already tried it in Debian and no luck, sad
+#I already tried it in Debian and recent Ubuntu with no luck, you need to use Ubuntu 22.04, nothing upper would work
 
 wget https://go.dev/dl/go1.22.6.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.22.6.linux-amd64.tar.gz
