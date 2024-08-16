@@ -44,6 +44,7 @@ alecerzea_flathub() {
     "org.mozilla.firefox"
     "com.google.Chrome"
     "org.torproject.torbrowser-launcher"
+    "org.signal.Signal"
   )
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
