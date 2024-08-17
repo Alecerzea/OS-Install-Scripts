@@ -1,3 +1,5 @@
+# DNF Configuration and Upgrade
+
 printf "%s" "
 max_parallel_downloads=10
 countme=false
@@ -8,102 +10,108 @@ sudo dnf upgrade -y
 sudo dnf autoremove -y
 sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img steam-devices
 
+# Debloating
+
 alecerzea_debloat () {
-	log "alecerzea_debloat"
-	local -a alecerzea_debloating_stuff
-	alecerzea_debloating_stuff=(
-	"abrt*"
-	"adcli"
-	"alsa-sof-firmware"
-	"anaconda*"
-	"anthy-unicode"
-	"atmel-firmware"
-	"avahi"
-	"baobab"
-	"bluez-cups"
-	"boost-date-time"
-	"brasero-libs"
-	"cheese"
-	"cyrus-sasl-plain"
-	"dos2unix"
-	"eog"
-	"evince"
-	"evince-djvu"
-	"fedora-bookmarks"
-	"fedora-chromium-config"
-	"geolite2*"
-	"gnome-backgrounds"
-	"gnome-boxes"
-	"gnome-calculator"
-	"gnome-calendar"
-	"gnome-characters"
-	"gnome-classic-session"
-	"gnome-clocks"
-	"gnome-color-manager"
-	"gnome-connections"
-	"gnome-contacts"
-	"gnome-font-viewer"
-	"gnome-logs"
-	"gnome-maps"
-	"gnome-remote-desktop"
-	"gnome-shell-extension*"
-	"gnome-shell-extension-background-logo"
-	"gnome-system-monitor"
-	"gnome-text-editorevince"
-	"gnome-themes-extra"
-	"gnome-tour"
-	"gnome-user-docs"
-	"gnome-weather"
-	"hyperv*"
-	"kpartx"
-	"libertas-usb8388-firmware"
-	"loupe"
-	"mailcap"
-	"mediawriter"
-	"mozilla-filesystem"
-	"mtr"
-	"nmap-ncat"
-	"open-vm-tools"
-	"openconnect"
-	"orca"
-	"perl*"
-	"perl-IO-Socket-SSL"
-	"podman"
-	"ppp"
-	"pptp"
-	"qemu-guest-agent"
-	"qgnomeplatform"
-	"realmd"
-	"rsync"
-	"samba-client"
-	"sane*"
-	"simple-scan"
-	"snapshot"
-	"sos"
-	"spice-vdagent"
-	"sssd"
-	"tcpdump"
-	"teamd"
-	"thermald"
-	"totem"
-	"traceroute"
-	"trousers"
-	"unbound-libs"
-	"virtualbox-guest-additions"
-	"vpnc"
-	"xorg-x11-drv-vmware"
-	"yajl"
-	"yelp"
-	"zd1211-firmware"
-)
-sudo dnf -y rm ${alecerzea_debloating_stuff[*]}
+    log "alecerzea_debloat"
+    local -a alecerzea_debloating_stuff
+    alecerzea_debloating_stuff=(
+        "abrt*"
+        "adcli"
+        "alsa-sof-firmware"
+        "anaconda*"
+        "anthy-unicode"
+        "atmel-firmware"
+        "avahi"
+        "baobab"
+        "bluez-cups"
+        "boost-date-time"
+        "brasero-libs"
+        "cheese"
+        "cyrus-sasl-plain"
+        "dos2unix"
+        "eog"
+        "evince"
+        "evince-djvu"
+        "fedora-bookmarks"
+        "fedora-chromium-config"
+        "geolite2*"
+        "gnome-backgrounds"
+        "gnome-boxes"
+        "gnome-calculator"
+        "gnome-calendar"
+        "gnome-characters"
+        "gnome-classic-session"
+        "gnome-clocks"
+        "gnome-color-manager"
+        "gnome-connections"
+        "gnome-contacts"
+        "gnome-font-viewer"
+        "gnome-logs"
+        "gnome-maps"
+        "gnome-remote-desktop"
+        "gnome-shell-extension*"
+        "gnome-shell-extension-background-logo"
+        "gnome-system-monitor"
+        "gnome-text-editorevince"
+        "gnome-themes-extra"
+        "gnome-tour"
+        "gnome-user-docs"
+        "gnome-weather"
+        "hyperv*"
+        "kpartx"
+        "libertas-usb8388-firmware"
+        "loupe"
+        "mailcap"
+        "mediawriter"
+        "mozilla-filesystem"
+        "mtr"
+        "nmap-ncat"
+        "open-vm-tools"
+        "openconnect"
+        "orca"
+        "perl*"
+        "perl-IO-Socket-SSL"
+        "podman"
+        "ppp"
+        "pptp"
+        "qemu-guest-agent"
+        "qgnomeplatform"
+        "realmd"
+        "rsync"
+        "samba-client"
+        "sane*"
+        "simple-scan"
+        "snapshot"
+        "sos"
+        "spice-vdagent"
+        "sssd"
+        "tcpdump"
+        "teamd"
+        "thermald"
+        "totem"
+        "traceroute"
+        "trousers"
+        "unbound-libs"
+        "virtualbox-guest-additions"
+        "vpnc"
+        "xorg-x11-drv-vmware"
+        "yajl"
+        "yelp"
+        "zd1211-firmware"
+    )
+    sudo dnf -y rm ${alecerzea_debloating_stuff[*]}
 }
 alecerzea_debloat
+
+# Firmware Updates
 
 sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
+
+# GNOME Settings
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
@@ -111,8 +119,7 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
-umask 077
-sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
+# Flatpak
 
 flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 
@@ -151,6 +158,11 @@ alecerzea_flathub() {
 
 flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam app.xemu.xemu info.cemu.Cemu net.lutris.Lutris net.pcsx2.PCSX2 org.duckstation.DuckStation org.ppsspp.PPSSPP org.ryujinx.Ryujinx
 
+# Security and System Configuration
+
+umask 077
+sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
+
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
 sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
@@ -178,9 +190,7 @@ sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/a9886a3119f9b662b15fc26d28a7fedf316b72c4/usr/lib/sysctl.d/30_silent-kernel-printk.conf -o /etc/sysctl.d/30_silent-kernel-printk.conf
 
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_cpu_mitigations.cfg -o /etc/grub.d/40_cpu_mitigations.cfg
-
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_distrust_cpu.cfg -o /etc/grub.d/40_distrust_cpu.cfg
-
 sudo curl https://github.com/Kicksecure/security-misc/raw/a9886a3119f9b662b15fc26d28a7fedf316b72c4/etc/default/grub.d/40_enable_iommu.cfg -o /etc/grub.d/40_enable_iommu.cfg
 
 sudo mkdir -p /etc/systemd/system/NetworkManager.service.d
@@ -196,11 +206,9 @@ sudo curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/chron
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
-sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
-sudo firewall-cmd --permanent --remove-service=mdns
-sudo firewall-cmd --permanent --remove-service=ssh
-sudo firewall-cmd --permanent --remove-service=samba-client
-sudo firewall-cmd --reload
+sudo firewall-cmd
+
+# Disabling Swap
 
 sudo systemctl mask swap.target
 sudo systemctl stop swap.target

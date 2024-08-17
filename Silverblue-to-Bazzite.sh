@@ -1,9 +1,10 @@
 sudo rpm-ostree reset
 
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
 
-systemctl reboot
+sudo systemctl reboot
 
-# ujust setup-virtualization
-# ujust configure-grub
-# ujust update
+# Post-reboot setup
+sudo ujust setup-virtualization
+sudo ujust configure-grub
+sudo ujust update
