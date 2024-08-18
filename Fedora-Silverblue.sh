@@ -72,7 +72,7 @@ alecerzea_flathub() {
     "com.valvesoftware.Steam"
     "info.cemu.Cemu"
     "net.davidotek.pupgui2"
-        "net.lutris.Lutris"
+    "net.lutris.Lutris"
     "net.mullvad.MullvadBrowser"
     "net.pcsx2.PCSX2"
     "org.duckstation.DuckStation"

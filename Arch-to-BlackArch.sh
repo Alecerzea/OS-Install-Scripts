@@ -7,6 +7,6 @@ sudo chmod +x strap.sh
 # Run the script
 sudo ./strap.sh
 
-# Update the package list and install required tools
+# Update the package list and install neccesary tools
 sudo pacman -Syyu
 sudo pacman -S metasploit nmap wireshark netcat

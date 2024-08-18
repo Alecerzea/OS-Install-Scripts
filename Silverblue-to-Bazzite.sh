@@ -1,6 +1,6 @@
-sudo rpm-ostree reset
+rpm-ostree reset
 
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
 
 sudo systemctl reboot
 
@@ -8,3 +8,4 @@ sudo systemctl reboot
 sudo ujust setup-virtualization
 sudo ujust configure-grub
 sudo ujust update
+ujust _install-system-flatpaks

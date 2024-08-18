@@ -36,5 +36,5 @@ wsl --set-default-version 2
 # Upgrade all installed packages to the latest version
 winget upgrade --all --include-unknown
 
-# Install various packages
+# Installing my packages
 winget install Adobe.Acrobat.Reader.64-bit Amazon.Games ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.DualSenseFWUpdater PlayStation.PSPlus PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP GOG.Galaxy Ubisoft.Connect Valve.Steam Easeware.DriverEasy Fastfetch-cli.Fastfetch Microsoft.PowerShell Microsoft.PowerShell.Preview RARLab.WinRAR VideoLAN.VLC Google.Chrome Brave.Brave Mozilla.Firefox MullvadVPN.MullvadBrowser TorProject.TorBrowser yt-dlp.yt-dlp.nightly Proton.ProtonVPN Proton.ProtonPass Microsoft.VisualStudioCode GitHub.GitHubDesktop HeroicGamesLauncher.HeroicGamesLauncher

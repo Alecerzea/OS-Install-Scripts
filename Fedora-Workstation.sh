@@ -146,12 +146,12 @@ alecerzea_flathub() {
     "org.ppsspp.PPSSPP"
     "org.ryujinx.Ryujinx"
     "org.videolan.VLC"
-	"com.visualstudio.code"
-	"com.microsoft.Edge"
-	"org.mozilla.firefox"
-	"com.google.Chrome"
-	"org.torproject.torbrowser-launcher"
-	"org.signal.Signal"
+	  "com.visualstudio.code"
+	  "com.microsoft.Edge"
+	  "org.mozilla.firefox"
+	  "com.google.Chrome"
+	  "org.torproject.torbrowser-launcher"
+	  "org.signal.Signal"
   )
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
