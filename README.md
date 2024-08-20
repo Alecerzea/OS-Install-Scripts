@@ -22,6 +22,6 @@ Although I have some gaming stores install on my KVMs, I don't use them for gami
 
 # Linux Config
 
-My Linux setup is simple: GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to configure, at least for me XD. I also prefer to use Secure Boot without adding a custom key that I need to re-add everytime I update my kernel. I'm not a fan of KDE, and I don't customize my desktop environment much beyond changing the wallpaper.
+My Linux setup is simple: GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to configure, at least for me XD. I also prefer to use Secure Boot without adding a custom key that I need to re-add everytime I update my kernel. I'm not a fan of KDE,it always broke in my install XD, the most customization I do is changing the wallpaper.
 
 # GNOME JUST WORKS

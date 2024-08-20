@@ -31,39 +31,40 @@ ipconfig /flushdns
 wsl --install
 wsl --set-default-version 2
 
-# Upgrade all my apps
-winget upgrade --all --include-unknown
-
 # Installing my shit
-winget install Adobe.Acrobat.Reader.64-bit
-winget install Amazon.Games
-winget install Brave.Brave
-winget install Easeware.DriverEasy
-winget install ElectronicArts.EADesktop
-winget install EpicGames.EpicGamesLauncher
-winget install Fastfetch-cli.Fastfetch
-winget install GitHub.GitHubDesktop
-winget install Google.Chrome
-winget install GOG.Galaxy
-winget install HeroicGamesLauncher.HeroicGamesLauncher
-winget install Microsoft.PowerShell
-winget install Microsoft.PowerShell.Preview
-winget install Microsoft.VisualStudioCode
-winget install Mozilla.Firefox
-winget install MullvadVPN.MullvadBrowser
-winget install Nvidia.GeForceNow
-winget install Notepad++.Notepad++
-winget install OBSProject.OBSStudio
-winget install PlayStation.DualSenseFWUpdater
-winget install PlayStation.PSPlus
-winget install PlayStation.PSRemotePlay
-winget install PPSSPPTeam.PPSSPP
-winget install Proton.ProtonPass
-winget install Proton.ProtonVPN
-winget install RARLab.WinRAR
-winget install TorProject.TorBrowser
-winget install Ubisoft.Connect
-winget install Valve.Steam
-winget install VideoLAN.VLC
-winget install yt-dlp.yt-dlp.nightly
+$packages = @(
+    "Adobe.Acrobat.Reader.64-bit"
+    "Brave.Brave"
+    "Easeware.DriverEasy"
+    "ElectronicArts.EADesktop"
+    "Fastfetch-cli.Fastfetch"
+    "GitHub.GitHubDesktop"
+    "HeroicGamesLauncher.HeroicGamesLauncher"
+    "Microsoft.PowerShell"
+    "Microsoft.PowerShell.Preview"
+    "Microsoft.VisualStudioCode"
+    "MullvadVPN.MullvadBrowser"
+    "Nvidia.GeForceNow"
+    "Notepad++.Notepad++"
+    "OBSProject.OBSStudio"
+    "PlayStation.DualSenseFWUpdater"
+    "PlayStation.PSPlus"
+    "PlayStation.PSRemotePlay"
+    "PPSSPPTeam.PPSSPP"
+    "Proton.ProtonPass"
+    "Proton.ProtonVPN"
+    "RARLab.WinRAR"
+    "TorProject.TorBrowser"
+    "Ubisoft.Connect"
+    "Valve.Steam"
+    "VideoLAN.VLC"
+    "yt-dlp.yt-dlp.nightly"
+)
+
+# Install the packages
+foreach ($package in $packages) {
+    winget install $package
+}
+
+# Upgrade all packages
 winget upgrade --all --include-unknown

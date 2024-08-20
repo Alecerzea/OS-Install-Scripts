@@ -1,4 +1,4 @@
-# DNF Configuration and Upgrade
+# DNF Configuration and Upgrading the
 
 printf "%s" "
 max_parallel_downloads=10
@@ -134,6 +134,7 @@ alecerzea_flathub() {
     "com.obsproject.Studio"
     "com.obsproject.Studio.Plugin.OBSVkCapture"
     "com.valvesoftware.Steam"
+    "com.visualstudio.code"
     "info.cemu.Cemu"
     "net.davidotek.pupgui2"
     "net.lutris.Lutris"
@@ -146,12 +147,7 @@ alecerzea_flathub() {
     "org.ppsspp.PPSSPP"
     "org.ryujinx.Ryujinx"
     "org.videolan.VLC"
-	  "com.visualstudio.code"
-	  "com.microsoft.Edge"
-	  "org.mozilla.firefox"
-	  "com.google.Chrome"
 	  "org.torproject.torbrowser-launcher"
-	  "org.signal.Signal"
   )
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
