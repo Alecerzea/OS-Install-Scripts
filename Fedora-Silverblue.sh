@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # System Updates and Cleanup
 sudo rpm-ostree upgrade -y
 sudo rpm-ostree autoremove -y
