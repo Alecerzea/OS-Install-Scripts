@@ -1,12 +1,8 @@
-# Download the strap.sh script from BlackArch
+# Setting up Blackarch
 curl -O https://blackarch.org/strap.sh
-
-# Make the script executable
 sudo chmod +x strap.sh
-
-# Run the script
 sudo ./strap.sh
 
-# Update the package list and install neccesary tools
+# Update the package list and install tools I use regularly
 sudo pacman -Syyu
 sudo pacman -S metasploit nmap wireshark netcat

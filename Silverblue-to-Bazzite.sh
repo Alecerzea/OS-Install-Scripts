@@ -8,4 +8,4 @@ sudo systemctl reboot
 sudo ujust setup-virtualization
 sudo ujust configure-grub
 sudo ujust update
-ujust _install-system-flatpaks
+ujust_install-system-flatpaks

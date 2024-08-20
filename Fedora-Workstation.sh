@@ -206,7 +206,11 @@ sudo curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/chron
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
-sudo firewall-cmd
+sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
+sudo firewall-cmd --permanent --remove-service=mdns
+sudo firewall-cmd --permanent --remove-service=ssh
+sudo firewall-cmd --permanent --remove-service=samba-client
+sudo firewall-cmd --reload
 
 # Disabling Swap
 
