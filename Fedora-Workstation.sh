@@ -1,4 +1,4 @@
-# DNF Configuration and Upgrading the
+# DNF Configuration, Upgrading and Installing new packages
 
 printf "%s" "
 max_parallel_downloads=10
@@ -10,7 +10,7 @@ sudo dnf upgrade -y
 sudo dnf autoremove -y
 sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img steam-devices
 
-# Debloating
+# Debloating Fedora
 
 alecerzea_debloat () {
     log "alecerzea_debloat"

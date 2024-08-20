@@ -8,9 +8,9 @@ I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all 
 
 # Linux Customization
 
-My Linux setup is based on vanilla distributions, which I customize to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts. I prefer this approach because it allows me to strike a balance between stability and perfomance.
+My Linux setup is based on vanilla distributions, which I modify to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts.
 
-# Note on Base on:
+# Note on Distros that base on another (Like Ubuntu/Manjaro/Nobara):
 
 I recommend using vanilla distributions(Arch, Debian, Fedora, SUSE) instead of "based-on-something" distros. I say these cause I've already tried using my scripts on distros like Nobara, but not everything worked out of the box.
 

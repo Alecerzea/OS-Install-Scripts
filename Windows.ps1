@@ -1,24 +1,25 @@
-# Before, in the instalation press Shift+FN+F10 then use the command oobe\bypassnro or a@a.com or no@thankyou.com
+# During the instalation press Shift+FN+F10 then use the command oobe\bypassnro 
+# Or when the system ask you to log in, use a@a.com or no@thankyou.com to bypass the account adding to windows
 
-# Fix errors on the disk
+# Fixing errors on the disk
 chkdsk /f
 
-# Locate bad sectors and recover readable information
+# Locating bad sectors and recovering readable information
 chkdsk /r
 
-# Configure Disk Cleanup tool to remove unnecessary files
+# Configure=ing Disk Cleanup tool to remove unnecessary files
 cleanmgr /sageset:l
 
-# Run Disk Cleanup tool to remove unnecessary files
+# Running Disk Cleanup tool to remove unnecessary files
 cleanmgr /sagerun:l
 
-# Run Disk Cleanup tool in automatic mode
+# Running Disk Cleanup tool in automatic mode
 cleanmgr.exe /AUTOCLEAN
 
-# Disable hibernation to free up disk space
+# Disabling hibernation
 powercfg.exe -h off
 
-# Disable reserved storage
+# Disabling reserved storage
 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
 # Remove unnecessary components and files from the Windows image
@@ -27,7 +28,7 @@ DISM.exe /online /cleanup-image /startcomponentcleanup
 # Flush DNS resolver cache
 ipconfig /flushdns
 
-# Install WSL and set default to version 2
+# Installing WSL and set default to version 2
 wsl --install
 wsl --set-default-version 2
 
@@ -61,10 +62,9 @@ $packages = @(
     "yt-dlp.yt-dlp.nightly"
 )
 
-# Install the packages
 foreach ($package in $packages) {
-    winget install $package
+    winget install $packages
 }
 
-# Upgrade all packages
+# Upgrading all packages
 winget upgrade --all --include-unknown
