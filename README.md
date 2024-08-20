@@ -18,8 +18,8 @@ I recommend using vanilla distributions(Arch, Debian, Fedora, SUSE) instead of "
 
 I used commands from [OSX-Optimizer](https://github.com/sickcodes/osx-optimizer) and also installed [Homebrew](https://brew.sh/) with the addition of [Lulu](https://github.com/objective-see/LuLu) with some custom rules to get rid of Apple Telemetry.
 
-I also have the plan of re-making some OSX-VMs, just for testing, I personally recommend using [OSX-KVM](https://github.com/kholia/OSX-KVM) and (ultimate-macOS-KVM
-)[https://github.com/Coopydood/ultimate-macOS-KVM]
+I also have the plan of re-making some OSX-VMs, just for testing, I personally recommend using [OSX-KVM](https://github.com/kholia/OSX-KVM) and [ultimate-macOS-KVM
+](https://github.com/Coopydood/ultimate-macOS-KVM)
 
 # GPU Passthrough
 
