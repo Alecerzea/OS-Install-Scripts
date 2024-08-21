@@ -1,6 +1,6 @@
 # Personalized Systems
 
-I have personalized Linux and Windows systems with the configuration I want.
+I have personalized Linux, Windows and MacOs systems with the configuration I want.
 
 # Windows Configuration
 
@@ -23,9 +23,9 @@ I also have the plan of re-making some OSX-VMs, just for testing, I personally r
 
 # GPU Passthrough
 
-If you want to use GPU passthrough in a VM, I recommend using [quickpassthrough](https://github.com/HikariKnight/quickpassthrough). I use it in my Windows KVMs and has been a pretty neat experience.
+If you want to use GPU passthrough in a VM, I recommend using [quickpassthrough](https://github.com/HikariKnight/quickpassthrough). I use it in my Windows and MacOs KVMs and has been a pretty neat experience, take note only AMD GPUs works with latest MacOs, Nvidia only till Catalina.
 
-Although I have some gaming stores install on my KVMs, I don't use them for gaming (Thanks stupid kernel-level AntiCheat), mostly work with Davinci Resolve and Affinity. I prefer playing games that use it like valorant or warzone on my PS5.
+Although I have some gaming stores install on my KVMs, I don't use them for gaming (and wouldn't have a reason to use them as proton exist and has been a pretty neat experience with the need of a VM), mostly to work with Davinci Resolve and Affinity. I prefer playing games that use kernel-level anticheat like valorant or warzone on my PS5.
 
 # Linux Config
 
