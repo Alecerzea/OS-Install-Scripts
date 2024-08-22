@@ -147,7 +147,6 @@ alecerzea_flathub() {
     "org.ppsspp.PPSSPP"
     "org.ryujinx.Ryujinx"
     "org.videolan.VLC"
-	  "org.torproject.torbrowser-launcher"
   )
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }

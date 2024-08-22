@@ -55,7 +55,6 @@ $packages = @(
     "Proton.ProtonPass"
     "Proton.ProtonVPN"
     "RARLab.WinRAR"
-    "TorProject.TorBrowser"
     "Ubisoft.Connect"
     "Valve.Steam"
     "VideoLAN.VLC"
