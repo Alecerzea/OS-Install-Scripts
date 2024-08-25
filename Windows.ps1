@@ -59,6 +59,7 @@ $packages = @(
     "Valve.Steam"
     "VideoLAN.VLC"
     "yt-dlp.yt-dlp"
+    "GianlucaPernigotto.Videomass"
 )
 
 foreach ($package in $packages) {
