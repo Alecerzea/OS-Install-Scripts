@@ -47,3 +47,7 @@ lulu --add-rule --process any --remote-endpoint "icloud.com" --action block --na
 tell application "System Events"
     set the idle time to 0
 end tell
+
+# Disabling swap
+
+sysctl -w vm.compressor_mode=2
