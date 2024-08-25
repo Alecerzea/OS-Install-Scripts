@@ -60,6 +60,7 @@ $packages = @(
     "VideoLAN.VLC"
     "yt-dlp.yt-dlp"
     "GianlucaPernigotto.Videomass"
+    "GuinpinSoft.MakeMKV"
 )
 
 foreach ($package in $packages) {
