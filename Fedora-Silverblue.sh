@@ -17,6 +17,11 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"
 
+# Set the display to never turn off
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+
 # Flatpaks I use the most
 
 alecerzea_flathub() {

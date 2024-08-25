@@ -67,3 +67,7 @@ foreach ($package in $packages) {
 
 # Upgrading all packages
 winget upgrade --all --include-unknown
+
+# Keeping the screen on 
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.Application]::SetThreadState([System.Windows.Forms.ApplicationThreadState]::AlwaysOnTop)

@@ -41,3 +41,9 @@ lulu --add-rule --process any --remote-endpoint "diagnostics.apple.com" --action
 
 # Blocking Apple iCloud
 lulu --add-rule --process any --remote-endpoint "icloud.com" --action block --name "Block Apple iCloud"
+
+# Stop the screen to turn off
+
+tell application "System Events"
+    set the idle time to 0
+end tell
