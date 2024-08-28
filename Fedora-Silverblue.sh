@@ -53,7 +53,7 @@ alecerzea_flathub() {
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
 
-flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam app.xemu.xemu info.cemu.Cemu net.lutris.Lutris net.pcsx2.PCSX2 org.duckstation.DuckStation org.ppsspp.PPSSPP org.ryujinx.Ryujinx
+flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam app.xemu.xemu info.cemu.Cemu net.lutris.Lutris net.pcsx2.PCSX2 org.duckstation.DuckStation org.ppsspp.PPSSPP org.ryujinx.Ryujinx org.DolphinEmu.dolphin-emu
 
 # Security and System Configuration
 
