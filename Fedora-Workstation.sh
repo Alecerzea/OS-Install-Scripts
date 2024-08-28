@@ -152,6 +152,7 @@ alecerzea_flathub() {
     "org.ppsspp.PPSSPP"
     "org.ryujinx.Ryujinx"
     "org.videolan.VLC"
+    "org.DolphinEmu.dolphin-emu"
   )
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
