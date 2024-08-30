@@ -1,6 +1,12 @@
 # During the instalation press Shift+FN+F10 then use the command oobe\bypassnro 
 # Or when the system ask you to log in, use a@a.com or no@thankyou.com to bypass the account adding to windows
 
+# Check if the script is running as an administrator
+if (-not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "Please run this script as an administrator."
+    exit
+}
+
 # Fixing errors on the disk
 chkdsk /f
 
@@ -76,3 +82,6 @@ Add-Type -AssemblyName System.Windows.Forms
 
 #Deleting system restore points
 vssadmin Delete Shadows /All
+
+# Disabling swap
+Get-PageFile | Remove-PageFile
