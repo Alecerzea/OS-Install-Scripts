@@ -27,7 +27,7 @@ If you want to use GPU passthrough in a VM, I recommend using [quickpassthrough]
 
 Note that's not needed in Bazzite or any Ublue project, I only rebase my system to it and the use the command "ujust setup-virtualization" and select to use the IOMMU drivers.
 
-Although I have some gaming stores install on my KVMs, I don't use them for gaming (and wouldn't have a reason to use them as proton exist and has been a pretty neat experience with the need of a VM), mostly to work with Davinci Resolve and Affinity. I undertand people would like to play games like Valorant or Warzone, but since they have kernel-level anticheat, it's kinda impossible to run them on linux or in a Windows-KVM without getting Banned xd, I personally like to play them on my PS5.
+Although I have some gaming stores install on my KVMs, I don't use them for gaming (and wouldn't have a reason to use them as proton exist and has been a pretty neat experience without the need of a VM), mostly to work with Davinci Resolve and Affinity. I undertand people would like to play games like Valorant or Warzone, but since they have kernel-level anticheat, it's kinda impossible to run them on linux or in a Windows-KVM without getting Banned xd, I personally like to play them on my PS5.
 
 # Linux Config
 
