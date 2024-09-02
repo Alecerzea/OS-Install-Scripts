@@ -31,6 +31,25 @@ tell application "System Events"
     set the idle time to 0
 end tell
 
-# Disabling swap
+# Disabling Swap
 
 sysctl -w vm.compressor_mode=2
+
+# Changing Hostname
+
+sudo scutil --set ComputerName MacBook
+sudo scutil --set LocalHostName MacBook
+
+# Hardening the Firewall
+
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
+
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
+
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
+
+sudo pkill -HUP socketfilterfw
