@@ -25,23 +25,6 @@ sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Res
 
 sudo mdutil -i off -a
 
-# Custom Lulu tools that get rid of apple telemtry
-
-# Blocking Apple Telemetry Domains
-lulu --add-rule --process any --remote-endpoint "*.apple.com" --action block --name "Block Apple Telemetry"
-
-# Blocking Apple Analytics
-lulu --add-rule --process any --remote-endpoint "analytics.apple.com" --action block --name "Block Apple Analytics"
-
-# Blocking Apple Crash Reporter
-lulu --add-rule --process CrashReporter --remote-endpoint "crashreport.apple.com" --action block --name "Block Apple Crash Reporter"
-
-# Blocking Apple Diagnostics
-lulu --add-rule --process any --remote-endpoint "diagnostics.apple.com" --action block --name "Block Apple Diagnostics"
-
-# Blocking Apple iCloud
-lulu --add-rule --process any --remote-endpoint "icloud.com" --action block --name "Block Apple iCloud"
-
 # Stop the screen to turn off
 
 tell application "System Events"
