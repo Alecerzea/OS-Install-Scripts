@@ -126,7 +126,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 # Flatpak
 
-flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 alecerzea_flathub() {
   log "alecerzea_flathub"
