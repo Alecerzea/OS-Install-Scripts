@@ -6,7 +6,7 @@ sudo tar -C /usr/local -xzf go1.23.0.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
 # Installing Cast
-wget https://github.com/ekristen/cast/releases/download/v0.14.45/cast-v0.14.45-linux-amd64.deb
+wget https://github.com/ekristen/cast/releases/download/v0.14.46/cast-v0.14.46-linux-amd64.deb
 sudo dpkg -i cast-v0.14.44-linux-amd64.deb
 
 # Installing Sift under Ubuntu
