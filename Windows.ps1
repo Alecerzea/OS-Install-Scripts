@@ -30,6 +30,7 @@ DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
 # Remove unnecessary components and files from the Windows image
 DISM.exe /online /cleanup-image /startcomponentcleanup
+DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
 
 # Flush DNS resolver cache
 ipconfig /flushdns
