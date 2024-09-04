@@ -134,8 +134,10 @@ alecerzea_flathub() {
   alecerzea_flathub_install=(
     "app.xemu.xemu"
     "com.brave.Browser"
+    "com.google.Chrome"
     "com.heroicgameslauncher.hgl"
     "com.mattjakeman.ExtensionManager"
+    "com.microsoft.Edge"
     "com.obsproject.Studio"
     "com.obsproject.Studio.Plugin.OBSVkCapture"
     "com.valvesoftware.Steam"
@@ -145,14 +147,15 @@ alecerzea_flathub() {
     "net.lutris.Lutris"
     "net.mullvad.MullvadBrowser"
     "net.pcsx2.PCSX2"
+    "org.DolphinEmu.dolphin-emu"
     "org.duckstation.DuckStation"
     "org.freedesktop.Platform.VulkanLayer.MangoHud"
     "org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
+    "org.mozilla.firefox"
     "org.gnome.Extensions"
     "org.ppsspp.PPSSPP"
     "org.ryujinx.Ryujinx"
     "org.videolan.VLC"
-    "org.DolphinEmu.dolphin-emu"
   )
   flatpak install -y flathub "${alecerzea_flathub_install[@]}"
 }
