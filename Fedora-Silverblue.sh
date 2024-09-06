@@ -41,7 +41,6 @@ alecerzea_flathub() {
     "info.cemu.Cemu"
     "net.davidotek.pupgui2"
     "net.lutris.Lutris"
-    "net.mullvad.MullvadBrowser"
     "net.pcsx2.PCSX2"
     "org.DolphinEmu.dolphin-emu"
     "org.duckstation.DuckStation"

@@ -53,7 +53,7 @@ $packages = @(
     "Microsoft.PowerShell"
     "Microsoft.PowerShell.Preview"
     "Microsoft.VisualStudioCode"
-    "MullvadVPN.MullvadBrowser"
+    "MullvadVPN.MullvadVPN"
     "Nvidia.GeForceNow"
     "Notepad++.Notepad++"
     "OBSProject.OBSStudio"
@@ -68,7 +68,6 @@ $packages = @(
     "Valve.Steam"
     "VideoLAN.VLC"
     "yt-dlp.yt-dlp"
-    "GianlucaPernigotto.Videomass"
     "GuinpinSoft.MakeMKV"
 )
 
