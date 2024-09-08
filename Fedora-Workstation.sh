@@ -133,7 +133,6 @@ alecerzea_flathub() {
   local -a alecerzea_flathub_install
   alecerzea_flathub_install=(
     "app.xemu.xemu"
-    "com.brave.Browser"
     "com.google.Chrome"
     "com.heroicgameslauncher.hgl"
     "com.mattjakeman.ExtensionManager"

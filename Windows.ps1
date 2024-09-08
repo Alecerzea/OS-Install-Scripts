@@ -42,7 +42,6 @@ wsl --set-default-version 2
 # Installing my shit
 $packages = @(
     "Adobe.Acrobat.Reader.64-bit"
-    "Brave.Brave"
     "Easeware.DriverEasy"
     "ElectronicArts.EADesktop"
     "Fastfetch-cli.Fastfetch"
