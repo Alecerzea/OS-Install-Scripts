@@ -143,7 +143,6 @@ alecerzea_flathub() {
     "com.visualstudio.code"
     "info.cemu.Cemu"
     "net.davidotek.pupgui2"
-    "net.lutris.Lutris"
     "net.pcsx2.PCSX2"
     "org.DolphinEmu.dolphin-emu"
     "org.duckstation.DuckStation"
