@@ -1,11 +1,20 @@
-rpm-ostree reset
+echo "Have you already rebased your System? [Y/N]"
+read -r R
 
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
+case "R" in
+  n|N)
+    # Rebasing the system to Bazzite
+    rpm-ostree reset
 
-sudo systemctl reboot
+    rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
 
-# Post-reboot setup
-ujust _install-system-flatpaks
-ujust setup-virtualization
-ujust configure-grub
-ujust update
+    sudo systemctl reboot
+    ;;
+  y|Y)
+    # Installing system packages for me
+    ujust _install-system-flatpaks
+    ujust setup-virtualization
+    ujust configure-grub
+    ujust update
+    ;;
+esac

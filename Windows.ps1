@@ -67,7 +67,6 @@ $packages = @(
     "Valve.Steam"
     "VideoLAN.VLC"
     "yt-dlp.yt-dlp"
-    "GuinpinSoft.MakeMKV"
 )
 
 foreach ($package in $packages) {
