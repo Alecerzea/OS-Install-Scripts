@@ -1,7 +1,7 @@
 # Homebrew and Packages
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install fastfetch yt-dlp
+brew install fastfetch yt-dlp wget
 brew analytics off
 
 # Accessibility and Performance

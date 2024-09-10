@@ -1,4 +1,4 @@
-echo "Have you already rebased your System? [Y/N]"
+echo "Have you already rebased your System ? [Y/N]"
 read -r R
 
 case "R" in

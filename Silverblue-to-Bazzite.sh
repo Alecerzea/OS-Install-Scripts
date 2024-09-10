@@ -11,7 +11,7 @@ case "R" in
     sudo systemctl reboot
     ;;
   y|Y)
-    # Installing system packages for me
+    # Installing system packages and setting up virtualization
     ujust _install-system-flatpaks
     ujust setup-virtualization
     ujust configure-grub
