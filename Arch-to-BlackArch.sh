@@ -5,4 +5,4 @@ sudo ./strap.sh
 
 # Updating the package list and install tools I use regularly
 sudo pacman -Syyu
-sudo pacman -S metasploit nmap wireshark netcat
+sudo pacman -S metasploit nmap wireshark-cli netcat
