@@ -1,5 +1,4 @@
 # Adding Kali archive key
-sudo curl https://archive.kali.org/archive-key.asc -o /etc/apt/trusted.gpg.d/kali-archive-key.asc
 curl -fsSL https://archive.kali.org/archive-key.asc | sudo tee /etc/apt/trusted.gpg.d/kali-archive-key.asc
 
 # Updating sources list
