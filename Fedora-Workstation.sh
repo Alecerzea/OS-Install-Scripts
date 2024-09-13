@@ -8,7 +8,7 @@ deltarpm=true
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img steam-devices
+sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img steam-devices chromium
 
 # Debloating Fedora
 

@@ -7,7 +7,7 @@ sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
 # Installing packages I use the most
-sudo rpm-ostree install -y yt-dlp gparted grub-customizer steam-devices
+sudo rpm-ostree install -y yt-dlp gparted grub-customizer steam-devices chromium
 
 # Changing GNOME Settings
 
