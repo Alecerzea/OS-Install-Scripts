@@ -4,7 +4,7 @@ I have personalized Linux, Windows and MacOs systems with the configuration I wa
 
 # Windows Configuration
 
-I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all Microsoft Telemetry from my Windows/KVM systems.
+I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all Microsoft Telemetry from my Windows/KVM systems before running my .ps1 script, which Disable Swap, stop the screen to trun off, disable Hibernation, etc.
 
 # Linux Configuration
 
@@ -13,6 +13,8 @@ My Linux setup is based on vanilla distributions, which I modify to my liking. I
 # Note on Distros that base on another (Like Ubuntu/Manjaro/Nobara):
 
 I recommend using vanilla distributions(Arch, Debian, Fedora, SUSE) instead of "based-on-something" distros. I say these cause I've already tried using my scripts on distros like Nobara, but not everything worked out of the box.
+
+Nothing but love for GE and all his work for Linux Gaming, but man, you could have just set up your dad in normal Fedora with your drivers app XD.
 
 # MacOS Configuration
 
