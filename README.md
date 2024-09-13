@@ -4,7 +4,7 @@ I have personalized Linux, Windows and MacOs systems with the configuration I wa
 
 # Windows Configuration
 
-I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all Microsoft Telemetry from my Windows/KVM systems before running my .ps1 script, which Disable Swap, stop the screen to trun off, disable Hibernation, etc.
+I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all Microsoft Telemetry from my Windows/KVM systems before running my .ps1 script, which Disable Swap, stop the screen to turn off, disable Hibernation, etc.
 
 # Linux Configuration
 
