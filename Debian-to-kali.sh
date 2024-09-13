@@ -13,4 +13,4 @@ sudo apt full-upgrade -y
 sudo apt autoremove --purge
 
 # Reboot needed 
-sudo reboot
+sudo reboot now
