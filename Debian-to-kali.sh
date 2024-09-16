@@ -13,3 +13,5 @@ sudo apt autoremove --purge
 
 # Reboot needed 
 sudo reboot now
+
+sudo apt install nmap wireshark -y
