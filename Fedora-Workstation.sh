@@ -128,36 +128,9 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-alecerzea_flathub() {
-  log "alecerzea_flathub"
-  local -a alecerzea_flathub_install
-  alecerzea_flathub_install=(
-    "app.xemu.xemu"
-    "com.google.Chrome"
-    "com.heroicgameslauncher.hgl"
-    "com.mattjakeman.ExtensionManager"
-    "com.microsoft.Edge"
-    "com.obsproject.Studio"
-    "com.obsproject.Studio.Plugin.OBSVkCapture"
-    "com.valvesoftware.Steam"
-    "com.visualstudio.code"
-    "info.cemu.Cemu"
-    "net.davidotek.pupgui2"
-    "net.pcsx2.PCSX2"
-    "org.DolphinEmu.dolphin-emu"
-    "org.duckstation.DuckStation"
-    "org.freedesktop.Platform.VulkanLayer.MangoHud"
-    "org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
-    "org.mozilla.firefox"
-    "org.gnome.Extensions"
-    "org.ppsspp.PPSSPP"
-    "org.ryujinx.Ryujinx"
-    "org.videolan.VLC"
-  )
-  flatpak install -y flathub "${alecerzea_flathub_install[@]}"
-}
+# Some flatpaks I use most of the time
 
-flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam app.xemu.xemu info.cemu.Cemu net.lutris.Lutris net.pcsx2.PCSX2 org.duckstation.DuckStation org.ppsspp.PPSSPP org.ryujinx.Ryujinx org.DolphinEmu.dolphin-emu
+flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.mattjakeman.ExtensionManager com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.MangoHud org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.gnome.Extensions org.ppsspp.PPSSPP org.ryujinx.Ryujinx org.videolan.VLC
 
 # Security and System Configuration
 

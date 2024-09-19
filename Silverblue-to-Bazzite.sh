@@ -12,9 +12,9 @@ case "R" in
     ;;
   y|Y)
     # Installing system packages and setting up virtualization
-    ujust _install-system-flatpaks
     ujust setup-virtualization
     ujust configure-grub
+    ujust setup-resolve
     ujust update
     ;;
 esac
