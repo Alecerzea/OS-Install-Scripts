@@ -35,6 +35,10 @@ Although I have some gaming stores install on my KVMs, I don't use them for gami
 
 My Linux setup is simple: GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to configure, at least for me XD. I also prefer to use Secure Boot without adding a custom key that I need to re-add everytime I update my kernel. I'm not a fan of KDE,it always broke in my install XD, the most customization I do is changing the wallpaper.
 
+# DaVinci Resolve in Linux
+
+I recommend you to use [davincibox](https://github.com/zelikos/davincibox) if you wanna setup DaVinci Resolve in Linux, I personally don't like to do it locally, I prefer it in a container or in a VM with GPU Passthrough 
+
 # GNOME JUST WORKS
 
 Side Note: I recommend using [Mullvad DNS over HTTPS and TLS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls) for more privacy and security in the internet, I use it in my PCs as well as in my phone and has been a pretty neat experience, even though the adblocker didn't worked at all. 
