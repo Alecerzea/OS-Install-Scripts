@@ -10,4 +10,4 @@ sudo mv libgmodule* disabled-libraries
 # Export desktop launcher to host OS (LAUNCH IT OUT OF THE CONTAINER)"
 distrobox-export -a "DaVinci Resolve" 
 
-# Side note, these is only intended for Silverblue not rebased and normal fedora, if you are in any Ublue proyect, just launch ujust-resolve man, don't complicate your life
+# Side note, these is only intended for Silverblue not rebased and normal fedora, if you are in any Ublue proyect, just launch "ujust-setup-resolve" in the console, don't complicate your life buddy.
