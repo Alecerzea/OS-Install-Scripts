@@ -6,6 +6,7 @@ sudo mkdir disabled-libraries
 sudo mv libglib* disabled-libraries
 sudo mv libgio* disabled-libraries
 sudo mv libgmodule* disabled-libraries
+usermod -aG render $(whoami)
 
 # Export desktop launcher to host OS (LAUNCH IT OUT OF THE CONTAINER)"
 distrobox-export -a "DaVinci Resolve" 
