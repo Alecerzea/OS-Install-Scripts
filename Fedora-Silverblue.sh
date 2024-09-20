@@ -6,7 +6,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y yt-dlp
+sudo rpm-ostree install -y yt-dlp gparted grub-customizer make dmg2img
 
 # Changing GNOME Settings
 
