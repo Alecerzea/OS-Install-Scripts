@@ -65,8 +65,6 @@ sudo curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/syste
 
 sudo curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/chrony.conf -o /etc/chrony.conf
 
-echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
-
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
 sudo firewall-cmd --permanent --remove-service=mdns
