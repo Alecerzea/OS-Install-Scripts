@@ -63,4 +63,4 @@ sudo swapon -s
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-echo Why I don't set-up the AUR, ease, I HATE THE AUR, I only use davinci box instead of the package it comes in the AUR cause I prefer the official file instead of a repackage from an internet random
+echo "Why I don't set-up the AUR, ease, I HATE THE AUR, I only use davinci box instead of the package it comes in the AUR cause I prefer the official file instead of a repackage from a random in the internet I can't complain if I have issues with"
