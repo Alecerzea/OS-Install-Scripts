@@ -34,7 +34,7 @@ wsl --install
 wsl --set-default-version 2
 
 # Installing my shit
-winget install Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EADesktop Fastfetch-cli.Fastfetch GitHub.GitHubDesktop HeroicGamesLauncher.HeroicGamesLauncher Mozilla.Firefox Microsoft.PowerShell Microsoft.PowerShell.Preview MullvadVPN.MullvadVPN Nvidia.GeForceNow Notepad++.Notepad++ OBSProject.OBSStudio PlayStation.DualSenseFWUpdater PlayStation.PSPlus PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonPass Proton.ProtonVPN Ubisoft.Connect Valve.Steam VideoLAN.VLC yt-dlp.yt-dlp
+winget install Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EADesktop Fastfetch-cli.Fastfetch GitHub.GitHubDesktop HeroicGamesLauncher.HeroicGamesLauncher Mozilla.Firefox Microsoft.PowerShell Microsoft.PowerShell.Preview MullvadVPN.MullvadVPN Nvidia.GeForceNow Notepad++.Notepad++ OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonPass Proton.ProtonVPN Ubisoft.Connect Valve.Steam VideoLAN.VLC yt-dlp.yt-dlp
 
 # Upgrading all packages
 winget upgrade --all --include-unknown
