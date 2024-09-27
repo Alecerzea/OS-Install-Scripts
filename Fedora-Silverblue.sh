@@ -6,10 +6,9 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y yt-dlp gparted grub-customizer make dmg2img
+sudo rpm-ostree install -y yt-dlp gparted grub-customizer
 
 # Changing GNOME Settings
-
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
@@ -22,11 +21,9 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'no
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
 # Some flatpaks I use most of the time
-
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.mattjakeman.ExtensionManager com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.gnome.Extensions org.ppsspp.PPSSPP org.ryujinx.Ryujinx org.videolan.VLC fr.handbrake.ghb
 
 # Security and System Configuration
-
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
 
@@ -73,7 +70,6 @@ sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
 
 # Disabling Swap
-
 sudo systemctl mask swap.target
 sudo systemctl stop swap.target
 sudo swapon -s

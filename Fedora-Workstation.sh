@@ -1,5 +1,4 @@
 # DNF Configuration, Upgrading and Installing new packages
-
 printf "%s" "
 max_parallel_downloads=10
 countme=false
@@ -8,10 +7,9 @@ deltarpm=true
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer make dmg2img steam-devices
+sudo dnf -y install dnf-plugins-core yt-dlp @virtualization gparted grub-customizer steam-devices
 
 # Debloating Fedora
-
 alecerzea_debloat () {
     log "alecerzea_debloat"
     local -a alecerzea_debloating_stuff
@@ -105,14 +103,12 @@ alecerzea_debloat () {
 alecerzea_debloat
 
 # Firmware Updates
-
 sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
 # GNOME Settings
-
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
@@ -125,15 +121,12 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'no
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
 # Flatpak
-
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Some flatpaks I use most of the time
-
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.mattjakeman.ExtensionManager com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.gnome.Extensions org.ppsspp.PPSSPP org.ryujinx.Ryujinx org.videolan.VLC net.lutris.Lutris app.devsuite.Ptyxis fr.handbrake.ghb
 
 # Security and System Configuration
-
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
 
@@ -185,7 +178,6 @@ sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
 
 # Disabling Swap
-
 sudo systemctl mask swap.target
 sudo systemctl stop swap.target
 sudo swapon -s
