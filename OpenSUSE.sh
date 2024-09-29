@@ -42,7 +42,17 @@ EOF
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
+# Virtualization config
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
+
+# Disabling Swap
+sudo systemctl mask swap.target
+sudo systemctl stop swap.target
+sudo swapon -s
+
+echo 3 | sudo tee /proc/sys/vm/drop_caches
