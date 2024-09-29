@@ -8,7 +8,7 @@ I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all 
 My Linux setup is based on vanilla distributions, which I modify to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts.
 
 # Note on Distros that base on another (Like Ubuntu/Manjaro/Nobara):
-I recommend using vanilla distributions(Arch, Debian, Fedora, SUSE) instead of "based-on-something" distros. I say these cause I've already tried using my scripts on distros like Nobara, but not everything worked out of the box.
+I recommend using vanilla bleeding edge-distributions(Arch, Fedora, SUSE) instead of "based-on-something" distros. I say these cause I've already tried using my scripts on distros like Nobara, but not everything worked out of the box.
 
 Nothing but love for GE and all his work for Linux Gaming, but man, you could have just set up your dad in normal Fedora with your drivers app XD.
 
