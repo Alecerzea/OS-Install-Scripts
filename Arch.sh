@@ -1,5 +1,8 @@
 # Before anything, I don't main arch and just want to do these cause I want to xd
 
+# Using reflector to get the best downloads speed
+sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
 # Adding cachyos repos
 sudo curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
 tar xvf cachyos-repo.tar.xz && cd cachyos-repo
@@ -7,7 +10,8 @@ sudo ./cachyos-repo.sh
 cd
 
 # Adding programs I tend to use the most
-sudo pacman -Syyu fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak cachyos-kernel-manager linux-cachyos-headers sbctl
+sudo pacman -Syyu fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak cachyos-kernel-manager linux-cachyos-headers sbctl intel-ucode ufw
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Setting up secure-boot compatibility
 sudo sbctl status
@@ -61,6 +65,11 @@ sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
+
+# Setting up the firewall
+sudo systemctl start ufw
+sudo systemctl enable ufw
+sudo ufw deny 22/tcp
 
 # Disabling Swap
 sudo systemctl mask swap.target
