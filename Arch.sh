@@ -37,27 +37,6 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 # Some flatpaks I use most of the time
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.mattjakeman.ExtensionManager com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.gnome.Extensions org.ppsspp.PPSSPP org.ryujinx.Ryujinx org.videolan.VLC fr.handbrake.ghb
 
-# Security and System Configuration
-umask 077
-sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
-
-echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
-
-sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
-[main]
-hostname-mode=none
-
-[device]
-wifi.scan-rand-mac-address=yes
-
-[connection]
-wifi.cloned-mac-address=random
-ethernet.cloned-mac-address=random
-EOF
-
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
-
 # Virtualization config
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
@@ -78,4 +57,5 @@ sudo swapon -s
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-echo "Why I don't set-up the AUR?, ease, I HATE THE AUR, I only use davinci box instead of the package it comes in the AUR cause I prefer the official file instead of a repackage from a random in the internet I can't complain if I have issues with"
+sudo systemctl restart NetworkManager
+sudo hostnamectl hostname "localhost"
