@@ -1,4 +1,4 @@
-# Before anything, I don't main arch and just want to do these cause I want to xd
+# Before anything, use "sudo nano /etc/pacman.conf" and un# the Parallel downloads line and add ILoveCandy
 
 # Using reflector to get the best downloads speed
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist

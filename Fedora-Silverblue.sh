@@ -29,6 +29,21 @@ flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.mattjakeman.Ext
 # Security and System Configuration
 umask 077
 sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
+
+echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
+
+sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
+[main]
+hostname-mode=none
+
+[device]
+wifi.scan-rand-mac-address=yes
+
+[connection]
+wifi.cloned-mac-address=random
+ethernet.cloned-mac-address=random
+EOF
+
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 

@@ -1,9 +1,13 @@
-# Installing the packages I use the most 
+#Making zypper faster
+printf "%s" "
+download.max_concurrent_connections=10
+download.min.download_speed = 20000
+" | sudo tee -a /etc/zypp/zypp.conf
 
-sudo zypper install flatpak yt-dlp fastfetch qemu virt-manager gparted grub-customizer python
+# Installing the packages I use the most 
+sudo zypper install flatpak yt-dlp fastfetch qemu virt-manager gparted python
 
 # GNOME Settings
-
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
