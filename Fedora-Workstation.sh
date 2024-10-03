@@ -150,17 +150,18 @@ EOF
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
-sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
-sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
-sudo systemctl enable libvirtd
-sudo usermod -aG libvirt "$(whoami)"
-
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
 sudo firewall-cmd --permanent --remove-service=mdns
 sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
+
+# Virtualization set-up
+sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
+sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
+sudo systemctl enable libvirtd
+sudo usermod -aG libvirt "$(whoami)"
 
 # Disabling Swap
 sudo systemctl mask swap.target
