@@ -1,23 +1,29 @@
 # Before anything, use "sudo nano /etc/pacman.conf" and un# the Parallel downloads line and add ILoveCandy
 
 # Using reflector to get the best downloads speed
+sudo pacman -S reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-# Adding cachyos repos
+# Adding programs I tend to use the most
+sudo pacman -Syyu fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak 
+
+# Setting up CachyOs stuff
 sudo curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
 tar xvf cachyos-repo.tar.xz && cd cachyos-repo
 sudo ./cachyos-repo.sh
 cd
-
-# Adding programs I tend to use the most
-sudo pacman -Syyu fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak cachyos-kernel-manager linux-cachyos-headers sbctl intel-ucode ufw
+sudo pacman -S cachyos-kernel-manager linux-cachyos-headers
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Setting up secure-boot compatibility
+sudo pacman -S sbctl
 sudo sbctl status
 sudo sbctl create-keys 
 sudo sbctl enroll-keys
 sudo sbctl status
+
+# Setting up my CPU ucode
+sudo pacman -S intel-ucode
 
 # Changing GNOME Settings
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
@@ -46,6 +52,7 @@ sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 # Setting up the firewall
+sudo pacman -S ufw
 sudo systemctl start ufw
 sudo systemctl enable ufw
 sudo ufw deny 22/tcp
