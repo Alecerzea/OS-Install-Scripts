@@ -67,4 +67,4 @@ sudo grep "swap" /etc/fstab
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-echo "Now use "sudo nano /etc/fstab" and # all these lines "/swapfile" "/swapfile_extend_1GB" "/dev/sdb" after that, use "sudo update-grub" and sudo update-initramfs -u"
+echo "Now use "sudo nano /etc/fstab" and # all these lines "/swapfile" "/swapfile_extend_1GB" "/dev/sdb" after that, use "sudo update-grub" and sudo update-initramfs -u" and reboot the system"

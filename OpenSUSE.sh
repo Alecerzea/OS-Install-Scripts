@@ -1,8 +1,11 @@
-#Making zypper faster
+# Making zypper faster
 printf "%s" "
 download.max_concurrent_connections=10
 download.min.download_speed = 20000
 " | sudo tee -a /etc/zypp/zypp.conf
+
+# Debloating GNOME
+sudo zypper remove yast2* vim* ruby* libreoffice* gnome-console gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-terminal gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts 
 
 # Installing the packages I use the most 
 sudo zypper install flatpak yt-dlp fastfetch qemu virt-manager gparted python
@@ -45,4 +48,4 @@ sudo grep "swap" /etc/fstab
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-echo "Now use "sudo nano /etc/fstab" and # all these lines "/swapfile" "/swapfile_extend_1GB" "/dev/sdb" after that, use "sudo update-grub" and sudo update-initramfs -u"
+echo "Now use "sudo nano /etc/fstab" and # all these lines "/swapfile" "/swapfile_extend_1GB" "/dev/sdb" after that, use "sudo update-grub" and sudo update-initramfs -u" and reboot the system"
