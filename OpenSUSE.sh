@@ -5,7 +5,7 @@ download.min.download_speed = 20000
 " | sudo tee -a /etc/zypp/zypp.conf
 
 # Debloating GNOME
-sudo zypper remove yast2* vim* ruby* libreoffice* gnome-console gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-terminal gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts 
+sudo zypper remove firefox yast2* vim* ruby* libreoffice* gnome-console gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-terminal gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts 
 
 # Installing the packages I use the most 
 sudo zypper install flatpak yt-dlp fastfetch qemu virt-manager gparted python
