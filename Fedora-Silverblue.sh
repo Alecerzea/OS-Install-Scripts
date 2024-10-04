@@ -54,12 +54,17 @@ sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
 
+# Changing the hostname
+sudo systemctl restart NetworkManager
+sudo hostnamectl hostname "localhost"
+
 # Disabling Swap
 sudo systemctl mask swap.target
 sudo systemctl stop swap.target
 sudo swapon -s
+sudo swapoff --all
+sudo grep "swap" /etc/fstab
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+echo "Now use "sudo nano /etc/fstab" and # all these lines "/swapfile" "/swapfile_extend_1GB" "/dev/sdb" after that, use "sudo update-grub" and sudo update-initramfs -u"

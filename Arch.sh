@@ -4,6 +4,9 @@
 sudo pacman -S reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
+# Debloating GNOME
+sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-connections gnome-console gnome-contacts gnome-control-center gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-text-editor gnome-weather
+
 # Adding programs I tend to use the most
 sudo pacman -Syyu fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak 
 
@@ -57,12 +60,17 @@ sudo systemctl start ufw
 sudo systemctl enable ufw
 sudo ufw deny 22/tcp
 
+# Changing the hostname
+sudo systemctl restart NetworkManager
+sudo hostnamectl hostname "localhost"
+
 # Disabling Swap
 sudo systemctl mask swap.target
 sudo systemctl stop swap.target
 sudo swapon -s
+sudo swapoff --all
+sudo grep "swap" /etc/fstab
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+echo "Now use "sudo nano /etc/fstab" and # all these lines "/swapfile" "/swapfile_extend_1GB" "/dev/sdb" after that, use "sudo update-grub" and sudo update-initramfs -u"

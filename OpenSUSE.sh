@@ -32,12 +32,17 @@ sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
+# Changing the hostname
+sudo systemctl restart NetworkManager
+sudo hostnamectl hostname "localhost"
+
 # Disabling Swap
 sudo systemctl mask swap.target
 sudo systemctl stop swap.target
 sudo swapon -s
+sudo swapoff --all
+sudo grep "swap" /etc/fstab
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+echo "Now use "sudo nano /etc/fstab" and # all these lines "/swapfile" "/swapfile_extend_1GB" "/dev/sdb" after that, use "sudo update-grub" and sudo update-initramfs -u"
