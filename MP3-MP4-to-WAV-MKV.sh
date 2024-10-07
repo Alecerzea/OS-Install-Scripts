@@ -1,12 +1,5 @@
-echo "Do you wanna convert you file to mov or wav? [m/w]"
-read -r MW
+# For Videos
+ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 -acodec pcm_s16le output.mov
 
-case "$MW" in
-  m|M)
-    ffmpeg -i "incompatible.mp4" -vcodec libaom-av1 -acodec pcm_s16le "compatible.mkv"
-
-    ;;
-  w|W)
-    ffmpeg -i INPUT.mp4 -c:a pcm_s16le OUTPUT.wav
-    ;;
-esac
+# For Audios
+ffmpeg -i input.mp3 -c:a pcm_s16le output.wav
