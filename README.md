@@ -31,7 +31,7 @@ My Linux setup is simple: GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a h
 ## GNOME JUST WORKS
 
 # DaVinci Resolve in Linux
-I recommend you to use [davincibox](https://github.com/zelikos/davincibox) if you wanna setup DaVinci Resolve in Linux, I personally don't like to do it locally, I prefer it in a container or in a VM with GPU Passthrough 
+I recommend you to use [davincibox](https://github.com/zelikos/davincibox) if you wanna setup DaVinci Resolve in Linux, I personally don't like to do it locally, I prefer it in a container or in a VM with GPU Passthrough, also I recommend to use handbrake to convert mp4 to mkv AV1 files, mp3 to wav on terminal is more comfortable to me
 
 
 Side Note: I recommend using [Mullvad DNS over HTTPS and TLS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls) for more privacy and security in the internet, I use it in my PCs as well as in my phone and has been a pretty neat experience, even though the adblocker didn't worked at all. 
