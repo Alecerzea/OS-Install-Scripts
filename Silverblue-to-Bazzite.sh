@@ -14,7 +14,7 @@ case "R" in
     # Installing system packages and setting up virtualization
     ujust setup-virtualization
     ujust configure-grub
-    ujust setup-resolve
+    ujust install-resolve
     ujust update
     ;;
 esac
