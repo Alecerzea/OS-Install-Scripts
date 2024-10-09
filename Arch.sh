@@ -18,7 +18,7 @@ cd
 sudo pacman -S yay
 yay -S pacman reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -S cachyos-kernel-manager linux-cachyos-headers
+sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Setting up secure-boot compatibility
