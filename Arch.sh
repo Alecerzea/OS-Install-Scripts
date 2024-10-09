@@ -5,7 +5,7 @@ sudo pacman -S reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # Debloating GNOME
-sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-connections gnome-console gnome-contacts gnome-control-center gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-text-editor gnome-weather vim htop
+sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-connections gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-text-editor gnome-weather vim htop
 
 # Adding programs I tend to use the most
 sudo pacman -Syyu fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak 
