@@ -1,16 +1,7 @@
-# Before anything, use "sudo nano /etc/pacman.conf" and un# the Parallel downloads line and add ILoveCandy
-
-# Using reflector to get the best downloads speed
-sudo pacman -S reflector
-sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-
 # Debloating GNOME
 sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-connections gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-text-editor gnome-weather vim htop
 
-# Adding programs I tend to use the most
-sudo pacman -Syyu fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak 
-
-# Setting up CachyOs stuff
+# Setting up CachyOs stuff and installing personal things I like to use in 
 sudo curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
 tar xvf cachyos-repo.tar.xz && cd cachyos-repo
 sudo ./cachyos-repo.sh
@@ -18,7 +9,7 @@ cd
 sudo pacman -S yay
 yay -S pacman reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal
+sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Setting up secure-boot compatibility
@@ -47,7 +38,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 # Some flatpaks I use most of the time
-flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC fr.handbrake.ghb com.vscodium.codium com.usebottles.bottles fr.handbrake.ghb app.devsuite.Ptyxis
+flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC com.usebottles.bottles fr.handbrake.ghb app.devsuite.Ptyxis
 
 # Virtualization config
 sudo systemctl start libvirtd
@@ -66,3 +57,5 @@ sudo ufw deny 22/tcp
 # Changing the hostname
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
+
+# After everything, use "sudo nano /etc/pacman.conf" and un# the Parallel downloads line and add ILoveCandy
