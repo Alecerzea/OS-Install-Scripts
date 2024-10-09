@@ -7,7 +7,7 @@ deltarpm=true
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo dnf -y install dnf-plugins-core yt-dlp @virtualization steam-devices
+sudo dnf -y install dnf-plugins-core yt-dlp @virtualization steam-devicesgparted grub-customizer fastfetch
 
 # Debloating GNOME
 alecerzea_debloat () {
