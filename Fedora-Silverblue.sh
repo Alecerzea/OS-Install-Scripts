@@ -6,7 +6,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y yt-dlp
+sudo rpm-ostree install -y yt-dlp gparted grub-customizer
 
 # Changing GNOME Settings
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
