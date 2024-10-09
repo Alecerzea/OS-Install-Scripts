@@ -15,6 +15,9 @@ sudo curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
 tar xvf cachyos-repo.tar.xz && cd cachyos-repo
 sudo ./cachyos-repo.sh
 cd
+sudo pacman -S yay
+yay -S pacman reflector
+sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -S cachyos-kernel-manager linux-cachyos-headers
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
