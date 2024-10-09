@@ -6,7 +6,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y yt-dlp gparted grub-customizer
+sudo rpm-ostree install -y yt-dlp gparted grub-customizer fastfetch
 
 # Changing GNOME Settings
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
@@ -24,7 +24,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 # Some flatpaks I use most of the time
-flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC fr.handbrake.ghb com.usebottles.bottles fr.handbrake.ghb
+flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.valvesoftware.Steam com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC fr.handbrake.ghb com.usebottles.bottles fr.handbrake.ghb
 
 # Security and System Configuration
 umask 077
