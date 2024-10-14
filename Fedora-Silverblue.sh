@@ -6,7 +6,10 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
+# Swapping mesa with mesa-freeworld
 sudo rpm-ostree install -y yt-dlp gparted grub-customizer fastfetch
+sudo rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld
+sudo rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
 
 # Changing GNOME Settings
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
@@ -57,3 +60,6 @@ sudo firewall-cmd --reload
 # Changing the hostname
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost
+
+# Reboot the system
+systemctl reboot now
