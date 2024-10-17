@@ -1,5 +1,5 @@
 # Debloating GNOME
-sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-terminal gnome-connections gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-text-editor gnome-weather vim htop
+sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-terminal gnome-connections gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-weather vim htop
 
 # Setting up CachyOs stuff and installing personal things I like to use in 
 sudo curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
