@@ -1,7 +1,9 @@
 # Homebrew and Packages
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install fastfetch yt-dlp wget
+brew install fastfetch wget
 brew analytics off
+
+python3 -m pip install -U "yt-dlp[default]"
 
 # Accessibility and Performance
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
