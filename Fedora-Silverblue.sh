@@ -7,7 +7,8 @@ sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
 # Swapping mesa with mesa-freeworld
-sudo rpm-ostree install -y yt-dlp gparted grub-customizer fastfetch
+sudo rpm-ostree install -y gparted grub-customizer fastfetch
+python3 -m pip install -U "yt-dlp[default]"
 sudo rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld
 sudo rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
 
