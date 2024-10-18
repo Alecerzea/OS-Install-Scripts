@@ -34,6 +34,7 @@ flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Stud
 # Virtualization set-up
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
+sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
