@@ -9,8 +9,11 @@ cd
 sudo pacman -S yay
 yay -S pacman reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch yt-dlp git wget qemu-full libvirt virt-manager python flatpak gparted grub-customizer
+sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch git wget qemu-full libvirt virt-manager python flatpak gparted grub-customizer
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+# Set-up ytdlp
+python3 -m pip install -U "yt-dlp[default]"
 
 # Setting up secure-boot compatibility
 sudo pacman -S sbctl
