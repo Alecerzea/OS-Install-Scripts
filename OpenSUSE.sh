@@ -8,7 +8,9 @@ download.min.download_speed = 20000
 sudo zypper remove mozilla* yast2* vim* ruby* libreoffice* gnome-calculator gnome-chess gnome-sudoku gnome-weather gnome-music gnome-mines gnome-maps gnome-mahjong transmission* swell-foop quadrapassel gimp opensuse-welcome samba*
 
 # Installing the packages I use the most 
-sudo zypper install flatpak yt-dlp fastfetch qemu virt-manager python gparted grub-customizer
+sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
+
+python3 -m pip install -U "yt-dlp[default]"
 
 # GNOME Settings
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
