@@ -5,7 +5,7 @@ download.min.download_speed = 20000
 " | sudo tee -a /etc/zypp/zypp.conf
 
 # Debloating GNOME
-sudo zypper remove mozilla* vim* libreoffice* gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts gnome-mahjong gnome-text-editor gnome-clocks gnome-photos transmission* swell-foop quadrapassel gimp opensuse-welcome samba*
+sudo zypper remove mozilla* vim* libreoffice* gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts gnome-mahjong gnome-text-editor gnome-clocks gnome-photos transmission* swell-foop quadrapassel gimp opensuse-welcome 
 
 # Installing the packages I use the most 
 sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
@@ -29,7 +29,7 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 
 # Flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC app.devsuite.Ptyxis
+flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC app.devsuite.Ptyxis io.github.lime3ds.Lime3DS
 
 # Virtualization set-up
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
