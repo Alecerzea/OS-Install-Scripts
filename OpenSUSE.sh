@@ -41,3 +41,5 @@ sudo usermod -aG libvirt "$(whoami)"
 # Changing the hostname
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
+
+sudo cpupower frequency-set -g perfomance
