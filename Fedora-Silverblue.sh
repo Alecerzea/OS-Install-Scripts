@@ -60,7 +60,9 @@ sudo firewall-cmd --reload
 
 # Changing the hostname
 sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost
+sudo hostnamectl hostname "localhost"
+
+sudo cpupower frequency-set -g perfomance
 
 # Reboot the system
 systemctl reboot now
