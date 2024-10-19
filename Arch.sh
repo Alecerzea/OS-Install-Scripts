@@ -61,4 +61,6 @@ sudo ufw deny 22/tcp
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
+sudo cpupower frequency-set -g perfomance
+
 # After everything, use "sudo nano /etc/pacman.conf" and un# the Parallel downloads line and add ILoveCandy
