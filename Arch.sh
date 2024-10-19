@@ -41,7 +41,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 # Some flatpaks I use most of the time
-flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC app.devsuite.Ptyxis io.github.lime3ds.Lime3DS
+flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC app.devsuite.Ptyxis io.github.lime3ds.Lime3DS org.ryujinx.Ryujinx
 
 # Virtualization config
 sudo systemctl start libvirtd
