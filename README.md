@@ -23,9 +23,9 @@ I also have the plan of re-making some OSX-VMs, just for testing, I personally r
 # GPU Passthrough
 If you want to use GPU passthrough in a VM, I recommend using [quickpassthrough](https://github.com/HikariKnight/quickpassthrough). I use it in my Windows and MacOs KVMs and has been a pretty neat experience, take note only AMD GPUs works with latest MacOs, Nvidia only till Catalina.
 
-Note that's not needed in Bazzite or any Ublue project, I only rebase my system to it and the use the command "ujust setup-virtualization" and select to use the IOMMU drivers.
+THankfully that's not needed in Bazzite or any Ublue project, I only rebase my system to it and the use the command "ujust setup-virtualization" and select to use the IOMMU drivers.
 
-Although I have some gaming stores install on my KVMs, I don't use them for gaming (and wouldn't have a reason to use them as proton exist and has been a pretty neat experience without the need of a VM), mostly to work with Davinci Resolve and Affinity. I undertand people would like to play games like Valorant or Warzone, but since they have kernel-level anticheat, it's kinda impossible to run them on linux or in a Windows-KVM without getting Banned xd, I personally like to play them on my PS5.
+Although I have some gaming stores install on my KVMs, I don't use them for gaming (and wouldn't have a reason to use them as proton exist and has been a pretty neat experience without the need of a VM), mostly to work with [Davinci Resolve]{https://www.blackmagicdesign.com/products/davinciresolve} and [Affinity]{https://affinity.serif.com/en-us/}. I undertand people would like to play games like Valorant or Warzone, but since they have kernel-level anticheat, it's kinda impossible to run them on linux or in a Windows-KVM without getting Banned xd, I personally like to play them on my PS5.
 
 # Linux Config
 My Linux setup is simple: GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to configure, at least for me XD. I also prefer to use Secure Boot without adding a custom key that I need to re-add everytime I update my kernel. I'm not a fan of KDE,it always broke in my install XD, the most customization I do is changing the wallpaper.
@@ -33,7 +33,7 @@ My Linux setup is simple: GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a h
 ## GNOME JUST WORKS
 
 # DaVinci Resolve in Linux
-I recommend you to use [davincibox](https://github.com/zelikos/davincibox) if you wanna setup DaVinci Resolve in Linux, I personally don't like to do it locally, I prefer it in a container or in a VM with GPU Passthrough, also I recommend to use handbrake to convert mp4 to mkv AV1 files, mp3 to wav on terminal is more comfortable to me
+I recommend you to use [davincibox](https://github.com/zelikos/davincibox) if you wanna setup DaVinci Resolve in Linux, I personally don't like to do it locally, I prefer it in a container or in a VM with GPU Passthrough, also I recommend to use handbrake to convert mp4 to mkv AV1 files, mp3 to wav on terminal is more comfortable to me.
 
 
-Side Note: I recommend using [Mullvad DNS over HTTPS and TLS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls) for more privacy and security in the internet, I use it in my PCs as well as in my phone and has been a pretty neat experience, even though the adblocker didn't worked at all. 
+Side Note: I recommend using [Mullvad DNS over HTTPS and TLS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls) for more privacy and security in the internet, I use it in my PCs as well as in my phone and has been a pretty neat experience, even though the adblocker doesn't work at all, for that I'll recommend you to set-up [Aguard]{https://adguard.com/en/welcome.html} inside [pfSense]{https://www.pfsense.org/}. 
