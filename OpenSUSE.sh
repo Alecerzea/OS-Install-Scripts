@@ -4,9 +4,6 @@ download.max_concurrent_connections=10
 download.min.download_speed = 20000
 " | sudo tee -a /etc/zypp/zypp.conf
 
-# Debloating GNOME
-sudo zypper remove mozilla* vim* libreoffice* gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts gnome-mahjong gnome-text-editor gnome-clocks gnome-photos transmission* swell-foop quadrapassel gimp opensuse-welcome 
-
 # Installing the packages I use the most 
 sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
 
