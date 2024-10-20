@@ -62,6 +62,8 @@ sudo firewall-cmd --reload
 sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
+udo modprobe cpufreq_performance
 sudo cpupower frequency-set -g perfomance
 
 # Reboot the system
