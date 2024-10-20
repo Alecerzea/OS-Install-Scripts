@@ -67,4 +67,4 @@ udo modprobe cpufreq_performance
 sudo cpupower frequency-set -g perfomance
 
 # Reboot the system
-systemctl reboot now
+systemctl reboot
