@@ -44,6 +44,3 @@ Add-Type -AssemblyName System.Windows.Forms
 
 #Deleting system restore points
 vssadmin Delete Shadows /All
-
-# Disabling swap
-Get-PageFile | Remove-PageFile
