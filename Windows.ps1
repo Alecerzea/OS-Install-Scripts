@@ -38,9 +38,5 @@ winget install Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EA
 # Upgrading all packages
 winget upgrade --all --include-unknown
 
-# Set the display to never turn off
-Add-Type -AssemblyName System.Windows.Forms
-[System.Windows.Forms.Application]::SetThreadState([System.Windows.Forms.ApplicationThreadState]::AlwaysOnTop)
-
 #Deleting system restore points
 vssadmin Delete Shadows /All
