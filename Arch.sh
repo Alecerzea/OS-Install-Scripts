@@ -65,6 +65,5 @@ sudo hostnamectl hostname "localhost"
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g perfomance
-sudo cpupower frequency-set -g perfomance
 
 # After everything, use "sudo nano /etc/pacman.conf" and un# the Parallel downloads line and add ILoveCandy
