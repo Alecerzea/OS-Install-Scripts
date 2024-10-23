@@ -3,8 +3,6 @@ sudo dnf -y install alsa-plugins-pulseaudio libxcrypt-compat xcb-util-renderutil
 
 # Now launch the .run of Davinci Resolve to install it, use these command before the command to launch it "SKIP_PACKAGE_CHECK=1"
 usermod -aG render $(whoami)
-
-# Export desktop launcher to host OS (LAUNCH IT OUT OF THE CONTAINER)"
 distrobox-export -a "DaVinci Resolve" 
 
 # Side note, if you are in any Ublue proyect, just launch "ujust setup-resolve" in the console, don't complicate your life buddy.
