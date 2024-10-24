@@ -12,8 +12,6 @@ sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-
 defaults write "Apple Global Domain" MultipleSessionsEnabled -bool true
 sudo /usr/bin/defaults write .GlobalPreferences MultipleSessionsEnabled -bool TRUE
 
-sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport prefs JoinMode=Strongest
-
 sudo mdutil -i off -a
 
 tell application "System Events"
