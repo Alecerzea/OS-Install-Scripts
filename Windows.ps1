@@ -1,6 +1,4 @@
-# During the instalation press Shift+FN+F10 then use the command oobe\bypassnro 
-# Or when the system ask you to log in, use a@a.com or no@thankyou.com to bypass the account adding to windows
-
+# Before running these, use the command "Set-ExecutionPolicy Unrestricted -Scope Process" in Powershell
 # Fixing errors on the disk
 chkdsk /f
 
