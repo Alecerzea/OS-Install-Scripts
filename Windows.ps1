@@ -1,40 +1,25 @@
 # Before running these, use the command "Set-ExecutionPolicy Unrestricted -Scope Process" in Powershell
-# Fixing errors on the disk
-chkdsk /f
 
-# Locating bad sectors and recovering readable information
+chkdsk /f
 chkdsk /r
 
-# Configure=ing Disk Cleanup tool to remove unnecessary files
 cleanmgr /sageset:l
-
-# Running Disk Cleanup tool to remove unnecessary files
 cleanmgr /sagerun:l
-
-# Running Disk Cleanup tool in automatic mode
 cleanmgr.exe /AUTOCLEAN
 
-# Disabling hibernation
 powercfg.exe -h off
 
-# Disabling reserved storage
 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
-# Remove unnecessary components and files from the Windows image
 DISM.exe /online /cleanup-image /startcomponentcleanup
 DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
 
-# Flush DNS resolver cache
 ipconfig /flushdns
 
-# Installing WSL and set default to version 2
 wsl --install
 wsl --set-default-version 2
 
-# Installing my shit
 winget install Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EADesktop Fastfetch-cli.Fastfetch GitHub.GitHubDesktop HeroicGamesLauncher.HeroicGamesLauncher Mozilla.Firefox Microsoft.PowerShell Microsoft.PowerShell.Preview MullvadVPN.MullvadVPN Nvidia.GeForceNow Notepad++.Notepad++ OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonPass Proton.ProtonVPN Ubisoft.Connect Valve.Steam VideoLAN.VLC Telegram.TelegramDesktop Discord.Discord
-# Upgrading all packages
 winget upgrade --all --include-unknown
 
-#Deleting system restore points
 vssadmin Delete Shadows /All
