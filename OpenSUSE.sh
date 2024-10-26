@@ -1,8 +1,3 @@
-printf "%s" "
-download.max_concurrent_connections=10
-download.min.download_speed = 20000
-" | sudo tee -a /etc/zypp/zypp.conf
-
 sudo zypper remove mozilla-firefox vim gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts gnome-mahjong gnome-text-editor gnome-clocks gnome-photos transmission* gimp opensuse-welcome 
 
 sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
