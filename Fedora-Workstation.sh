@@ -6,7 +6,7 @@ deltarpm=true
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo dnf -y install dnf-plugins-core @virtualization steam-devicesgparted grub-customizer fastfetch
+sudo dnf -y install dnf-plugins-core @virtualization steam-devices gparted grub-customizer fastfetch
 python3 -m pip install -U "yt-dlp[default]"
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
 
