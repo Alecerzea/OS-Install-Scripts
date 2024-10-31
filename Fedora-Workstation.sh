@@ -9,8 +9,14 @@ sudo dnf -y install dnf-plugins-core @virtualization steam-devices gparted grub-
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 python3 -m pip install -U "yt-dlp[default]"
-sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
-sudo dnf -y upgrade --refresh
+sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing 
+sudo dnf group install Multimedia
+sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin 
+sudo dnf update @sound-and-video 
+sudo dnf install ffmpeg ffmpeg-libs libva libva-utils -y
+sudo dnf swap libva-intel-media-driver intel-media-driver --allowerasing
+sudo systemctl disable NetworkManager-wait-online.service
+sudo rm /etc/xdg/autostart/org.gnome.Software.desktop
 
 alecerzea_debloat () {
     log "alecerzea_debloat"
@@ -104,9 +110,9 @@ alecerzea_debloat () {
 }
 alecerzea_debloat
 
-sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
-sudo fwupdmgr get-updates -y
+sudo fwupdmgr get-devices 
+sudo fwupdmgr get-updates 
 sudo fwupdmgr update -y
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true

@@ -1,13 +1,12 @@
 sudo rpm-ostree upgrade -y
 sudo rpm-ostree autoremove -y
-sudo fwupdmgr get-devices
 sudo fwupdmgr refresh --force
-sudo fwupdmgr get-updates -y
+sudo fwupdmgr get-devices 
+sudo fwupdmgr get-updates 
 sudo fwupdmgr update -y
 
 sudo rpm-ostree install -y gparted grub-customizer fastfetch
 python3 -m pip install -U "yt-dlp[default]"
-sudo rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld
 sudo rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
