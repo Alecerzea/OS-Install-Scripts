@@ -2,6 +2,8 @@ sudo zypper remove mozilla-firefox vim gnome-calculator gnome-chess gnome-contac
 
 sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
 
+sudo zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/ packman
+
 python3 -m pip install -U "yt-dlp[default]"
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
