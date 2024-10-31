@@ -9,12 +9,24 @@ sudo dnf -y install dnf-plugins-core @virtualization steam-devices gparted grub-
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 python3 -m pip install -U "yt-dlp[default]"
-sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing 
-sudo dnf group install Multimedia
-sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin 
-sudo dnf update @sound-and-video 
+sudo dnf -y swap 'ffmpeg-free' 'ffmpeg' --allowerasing 
+sudo dnf -y group install Multimedia
+sudo dnf -y update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin 
+sudo dnf update @sound-and-video -y 
 sudo dnf install ffmpeg ffmpeg-libs libva libva-utils -y
-sudo dnf swap libva-intel-media-driver intel-media-driver --allowerasing
+
+echo "Do you use AMD or Intel CPU? [A/I]"
+read -r CPU
+case "$CPU" in
+  i|I)
+sudo dnf -y swap libva-intel-media-driver intel-media-driver --allowerasing
+;;
+  a|A)
+sudo dnf -y swap mesa-va-drivers mesa-va-drivers-freeworld
+sudo dnf -y swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+;;
+esac
+
 sudo systemctl disable NetworkManager-wait-online.service
 sudo rm /etc/xdg/autostart/org.gnome.Software.desktop
 

@@ -21,7 +21,7 @@ sudo sbctl status
 echo "Do you use AMD or Intel CPU? [A/I]"
 read -r CPU
 case "$CPU" in
-  o|I)
+  i|I)
 sudo pacman -S intel-ucode
 ;;
   a|A)
