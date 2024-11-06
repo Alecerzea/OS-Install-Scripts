@@ -199,4 +199,4 @@ sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sy
 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance
-sudo cpupower frequency-set -g perfomance
+sudo cpupower frequency-set -g performance
