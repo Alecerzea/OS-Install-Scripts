@@ -7,22 +7,22 @@ sudo fwupdmgr update -y
 
 sudo rpm-ostree install -y gparted grub-customizer fastfetch
 python3 -m pip install -U "yt-dlp[default]"
-sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo rpm-ostree install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 echo "Do you use AMD or Intel CPU? [A/I]"
 read -r CPU
 case "$CPU" in
   i|I)
-sudo rpm-ostree install intel-media-driver
+sudo rpm-ostree install intel-media-driver -y
 ;;
   a|A)
-sudo rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld
-sudo rpm-ostree override remove mesa-vdpau-drivers --install mesa-vdpau-drivers-freeworld
+sudo rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld -y
+sudo rpm-ostree override remove mesa-vdpau-drivers --install mesa-vdpau-drivers-freeworld -y
 ;;
 esac
 
-sudo rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly gstreamer1-vaapi
-sudo rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
+sudo rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly gstreamer1-vaapi -y
+sudo rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpegb-y
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
