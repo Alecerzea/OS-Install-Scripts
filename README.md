@@ -14,7 +14,9 @@ I only use GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to conf
 # MacOS Configuration
 I used commands from [OSX-Optimizer](https://github.com/sickcodes/osx-optimizer) and also installed [Homebrew](https://brew.sh/) with the addition of [Lulu](https://github.com/objective-see/LuLu).
 
-I also have the plan of re-making some OSX-VMs, just for testing, I personally recommend using [ultimate-macOS-KVM](https://github.com/Coopydood/ultimate-macOS-KVM)
+I also have the plan of re-making some OSX-VMs, just for testing, I personally recommend using [ultimate-macOS-KVM](https://github.com/Coopydood/ultimate-macOS-KVM).
+
+Note too the future: use the id of your disk in case you have multiple disks in your system, I have more than 3 so I need it, using these command in the terminal "ls /dev/disk-by-id" then using "/dev/disk/by-id/HARDDRIVESERIAL" inside Virt Manager to passthrough that drive to the VM.
 
 # GPU Passthrough
 If you want to use GPU passthrough in a VM, I recommend using [quickpassthrough](https://github.com/HikariKnight/quickpassthrough). I use it in my Windows and MacOs KVMs and has been a pretty neat experience, take note only AMD GPUs works with latest MacOs, Nvidia only till Catalina.
