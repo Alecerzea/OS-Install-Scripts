@@ -5,7 +5,7 @@ countme=false
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-sudo dnf -y install dnf-plugins-core @virtualization steam-devices gparted grub-customizer fastfetch
+sudo dnf -y install dnf-plugins-core @virtualization steam-devices fastfetch
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 python3 -m pip install -U "yt-dlp[default]"
