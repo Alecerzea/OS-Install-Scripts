@@ -82,6 +82,10 @@ sudo firewall-cmd --reload
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
 
+sudo systemctl stop swap-create@zram0
+sudo touch /etc/systemd/zram-generator.conf
+sudo dnf -y remove zram-generator-defaults
+
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
