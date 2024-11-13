@@ -23,12 +23,22 @@ flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.valvesoftware.S
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
-sudo systemctl start libvirtd
-sudo systemctl enable libvirtd
+sudo sysctl start libvirtd
+sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+sudo sysctl restart NetworkManager
+sudo hostctl hostname "localhost"
+
+sudo sysctl -w net.ipv4.conf.all.send_redirects=0
+sudo sysctl -w net.ipv4.conf.default.send_redirects=0
+sudo sysctl -w net.ipv4.ip_forward=0
+sudo sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1
+sudo sysctl -w net.ipv4.icmp_echo_ignore_bogus_error_reponses=1
+sudo sysctl -w net.ipv4.conf.all.rp_filter=1
+sudo sysctl -w net.ipv4.conf.default.rp_filter=1
+sudo sysctl -w net.ipv4.tcp_syncookies=1
+sudo sysctl -w net.ipv4.route.flush=1
 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance

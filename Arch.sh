@@ -43,20 +43,30 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.valvesoftware.Steam com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC io.github.lime3ds.Lime3DS org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
-sudo systemctl start libvirtd
-sudo systemctl enable libvirtd
+sudo sysctl start libvirtd
+sudo sysctl enable libvirtd
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
-sudo systemctl enable libvirtd
+sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 sudo pacman -S ufw
-sudo systemctl start ufw
-sudo systemctl enable ufw
+sudo sysctl start ufw
+sudo sysctl enable ufw
 sudo ufw deny 22/tcp
 
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+sudo sysctl restart NetworkManager
+sudo hostctl hostname "localhost"
+
+sudo sysctl -w net.ipv4.conf.all.send_redirects=0
+sudo sysctl -w net.ipv4.conf.default.send_redirects=0
+sudo sysctl -w net.ipv4.ip_forward=0
+sudo sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1
+sudo sysctl -w net.ipv4.icmp_echo_ignore_bogus_error_reponses=1
+sudo sysctl -w net.ipv4.conf.all.rp_filter=1
+sudo sysctl -w net.ipv4.conf.default.rp_filter=1
+sudo sysctl -w net.ipv4.tcp_syncookies=1
+sudo sysctl -w net.ipv4.route.flush=1
 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance

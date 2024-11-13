@@ -27,7 +27,7 @@ sudo dnf -y swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 ;;
 esac
 
-sudo systemctl disable NetworkManager-wait-online.service
+sudo sysctl disable NetworkManager-wait-online.service
 sudo rm /etc/xdg/autostart/org.gnome.Software.desktop
 
 alecerzea_debloat () {
@@ -159,16 +159,16 @@ wifi.cloned-mac-address=random
 ethernet.cloned-mac-address=random
 EOF
 
-sudo systemctl restart NetworkManager
+sudo sysctl restart NetworkManager
 sudo hostnamectl hostname "localhost"
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
-sudo systemctl enable libvirtd
+sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+sudo sysctl restart NetworkManager
+sudo hostctl hostname "localhost"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
@@ -179,9 +179,19 @@ sudo firewall-cmd --reload
 
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
 
-sudo systemctl stop swap-create@zram0
+sudo sysctl stop swap-create@zram0
 sudo touch /etc/systemd/zram-generator.conf
 sudo dnf -y remove zram-generator-defaults
+
+sudo sysctl -w net.ipv4.conf.all.send_redirects=0
+sudo sysctl -w net.ipv4.conf.default.send_redirects=0
+sudo sysctl -w net.ipv4.ip_forward=0
+sudo sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1
+sudo sysctl -w net.ipv4.icmp_echo_ignore_bogus_error_reponses=1
+sudo sysctl -w net.ipv4.conf.all.rp_filter=1
+sudo sysctl -w net.ipv4.conf.default.rp_filter=1
+sudo sysctl -w net.ipv4.tcp_syncookies=1
+sudo sysctl -w net.ipv4.route.flush=1
 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance

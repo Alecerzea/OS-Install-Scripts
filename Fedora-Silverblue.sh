@@ -52,8 +52,8 @@ wifi.cloned-mac-address=random
 ethernet.cloned-mac-address=random
 EOF
 
-sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+sudo sysctl restart NetworkManager
+sudo hostctl hostname "localhost"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
@@ -62,9 +62,19 @@ sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
 
-sudo systemctl stop swap-create@zram0
+sudo sysctl stop swap-create@zram0
 sudo touch /etc/systemd/zram-generator.conf
 sudo rpm-ostree remove remove zram-generator-defaults
+
+sudo sysctl -w net.ipv4.conf.all.send_redirects=0
+sudo sysctl -w net.ipv4.conf.default.send_redirects=0
+sudo sysctl -w net.ipv4.ip_forward=0
+sudo sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1
+sudo sysctl -w net.ipv4.icmp_echo_ignore_bogus_error_reponses=1
+sudo sysctl -w net.ipv4.conf.all.rp_filter=1
+sudo sysctl -w net.ipv4.conf.default.rp_filter=1
+sudo sysctl -w net.ipv4.tcp_syncookies=1
+sudo sysctl -w net.ipv4.route.flush=1
 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance
