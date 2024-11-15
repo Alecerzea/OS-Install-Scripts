@@ -7,7 +7,7 @@ cd
 sudo pacman -S yay
 yay -S pacman reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch git wget qemu-full libvirt virt-manager python flatpak
+sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch git wget qemu-full libvirt virt-manager python flatpak gparted grub-customizer
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 
@@ -47,7 +47,6 @@ sudo sysctl start libvirtd
 sudo sysctl enable libvirtd
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
-sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 sudo pacman -S ufw

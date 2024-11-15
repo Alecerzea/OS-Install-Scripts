@@ -5,7 +5,7 @@ sudo fwupdmgr get-devices
 sudo fwupdmgr get-updates 
 sudo fwupdmgr update -y
 
-sudo rpm-ostree install -y fastfetch
+sudo rpm-ostree install -y fastfetch gparted grub-customizer
 python3 -m pip install -U "yt-dlp[default]"
 sudo rpm-ostree install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 

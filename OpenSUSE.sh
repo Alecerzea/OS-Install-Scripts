@@ -1,5 +1,5 @@
 sudo zypper remove mozilla-firefox vim gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts gnome-mahjong gnome-text-editor gnome-clocks gnome-photos transmission* gimp opensuse-welcome 
-sudo zypper install flatpak fastfetch qemu virt-manager python
+sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
 
 sudo zypper refresh
@@ -21,10 +21,10 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.valvesoftware.Steam com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC io.github.lime3ds.Lime3DS org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
-sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
-sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo sysctl start libvirtd
 sudo sysctl enable libvirtd
+sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
+sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt "$(whoami)"
 
 sudo sysctl restart NetworkManager
