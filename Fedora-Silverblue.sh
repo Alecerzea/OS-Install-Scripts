@@ -37,21 +37,6 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.valvesoftware.Steam com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.ppsspp.PPSSPP org.mozilla.firefox org.videolan.VLC io.github.lime3ds.Lime3DS org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
-umask 077
-sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
-
-sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
-[main]
-hostname-mode=none
-
-[device]
-wifi.scan-rand-mac-address=yes
-
-[connection]
-wifi.cloned-mac-address=random
-ethernet.cloned-mac-address=random
-EOF
-
 sudo sysctl restart NetworkManager
 sudo hostctl hostname "localhost"
 
@@ -61,10 +46,6 @@ sudo firewall-cmd --permanent --remove-service=mdns
 sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
-
-sudo sysctl stop swap-create@zram0
-sudo touch /etc/systemd/zram-generator.conf
-sudo rpm-ostree remove remove zram-generator-defaults
 
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 sudo sysctl -w net.ipv4.conf.default.send_redirects=0

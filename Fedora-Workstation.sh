@@ -142,26 +142,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.valvesoftware.Steam com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.ppsspp.PPSSPP org.mozilla.firefox org.videolan.VLC io.github.lime3ds.Lime3DS org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
-umask 077
-sudo sed -i 's/umask 022/umask 077/g' /etc/bashrc
-
-echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
-
-sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
-[main]
-hostname-mode=none
-
-[device]
-wifi.scan-rand-mac-address=yes
-
-[connection]
-wifi.cloned-mac-address=random
-ethernet.cloned-mac-address=random
-EOF
-
-sudo sysctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
-
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo sysctl enable libvirtd
