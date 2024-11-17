@@ -9,7 +9,7 @@ Additionally, I employ [Chris Titus Tech Wintool](https://github.com/ChrisTitusT
 # Linux Configuration
 My Linux setup is based on vanilla distributions, which I modify to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts.
 
-I only use GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to configure, at least for me XD. I also prefer to use Secure Boot without adding a custom key that I need to re-add everytime I update my kernel. I'm not a fan of KDE,it always broke in my install XD, the most customization I do is changing the wallpaper.
+I only use GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to configure, at least for me XD. I also prefer to use Secure Boot without adding a custom key that I need to re-add everytime I update my kernel. I'm not a fan of KDE and the most customization I do is changing the wallpaper.
 
 # MacOS Configuration
 I used commands from [OSX-Optimizer](https://github.com/sickcodes/osx-optimizer) and also installed [Homebrew](https://brew.sh/) with the addition of [Lulu](https://github.com/objective-see/LuLu).
@@ -22,7 +22,7 @@ Note too the future: use the id of your disk in case you have multiple disks in 
 # GPU Passthrough
 If you want to use GPU passthrough in a VM, I recommend using [quickpassthrough](https://github.com/HikariKnight/quickpassthrough). I use it in my Windows and MacOs KVMs and has been a pretty neat experience, take note only AMD GPUs works with latest MacOs, Nvidia only till Catalina.
 
-THankfully that's not needed in Bazzite or any Ublue project, I only rebase my system to it and the use the command "ujust setup-virtualization" and select to use the IOMMU drivers.
+Thankfully that's not needed in Bazzite or any Ublue project, I only rebase my system to it and the use the command "ujust setup-virtualization" and select to use the IOMMU drivers.
 
 ## GNOME JUST WORKS
 
