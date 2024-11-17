@@ -1,9 +1,5 @@
 sudo rpm-ostree upgrade 
 sudo rpm-ostree autoremove 
-sudo fwupdmgr refresh --force
-sudo fwupdmgr get-devices 
-sudo fwupdmgr get-updates 
-sudo fwupdmgr update -y
 
 sudo rpm-ostree install -y fastfetch gparted grub-customizer
 python3 -m pip install -U "yt-dlp[default]"
