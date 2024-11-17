@@ -1,5 +1,5 @@
 sudo zypper remove mozilla-firefox vim gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts gnome-mahjong gnome-text-editor gnome-clocks gnome-photos transmission* gimp opensuse-welcome 
-sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
+sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer docker docker-compose docker-compose-switch
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
 
 sudo zypper refresh
@@ -26,6 +26,9 @@ sudo sysctl enable libvirtd
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt "$(whoami)"
+sudo systemctl enable docker
+sudo usermod -G docker -a $USER
+sudo systemctl restart docker
 
 sudo sysctl restart NetworkManager
 sudo hostctl hostname "localhost"

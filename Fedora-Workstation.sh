@@ -14,6 +14,8 @@ sudo dnf -y group install Multimedia
 sudo dnf -y update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin 
 sudo dnf update @sound-and-video -y 
 sudo dnf install ffmpeg ffmpeg-libs libva libva-utils -y
+sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 echo "Do you use AMD or Intel CPU? [A/I]"
 read -r CPU
