@@ -34,9 +34,6 @@ sudo sysctl enable libvirtd
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt "$(whoami)"
-sudo systemctl enable docker
-sudo usermod -G docker -a $USER
-sudo systemctl restart docker
 
 sudo sysctl restart NetworkManager
 sudo hostctl hostname "localhost"
