@@ -34,8 +34,8 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.ppsspp.PPSSPP org.mozilla.firefox org.videolan.VLC io.github.lime3ds.Lime3DS org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
-sudo sysctl restart NetworkManager
-sudo hostctl hostname "localhost"
+sudo systemctl restart NetworkManager
+sudo hostnamectl hostname "localhost"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
