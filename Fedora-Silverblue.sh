@@ -31,7 +31,8 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
-flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.ppsspp.PPSSPP org.mozilla.firefox org.videolan.VLC io.github.lime3ds.Lime3DS org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
+flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
+flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.ppsspp.PPSSPP org.mozilla.firefox org.videolan.VLC io.github.lime3ds.Lime3DS org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
 sudo sysctl restart NetworkManager
 sudo hostctl hostname "localhost"
