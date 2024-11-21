@@ -1,5 +1,5 @@
 sudo zypper remove mozilla-firefox vim gnome-calculator gnome-chess gnome-contacts gnome-sudoku gnome-system-monitor gnome-weather gnome-remote-desktop gnome-music gnome-mines gnome-maps gnome-logs gnome-contacts gnome-mahjong gnome-text-editor gnome-clocks gnome-photos transmission* gimp opensuse-welcome 
-sudo zypper install flatpak fastfetch qemu virt-manager python gparted grub-customizer
+sudo zypper install flatpak fastfetch qemu virt-manager python gparted
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
 
 sudo zypper refresh
