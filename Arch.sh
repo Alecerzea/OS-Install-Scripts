@@ -59,8 +59,8 @@ sudo sysctl start ufw
 sudo sysctl enable ufw
 sudo ufw deny 22/tcp
 
-sudo sysctl restart NetworkManager
-sudo hostctl hostname "localhost"
+sudo systemctl restart NetworkManager
+sudo hostnasmectl hostname "localhost"
 
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 sudo sysctl -w net.ipv4.conf.default.send_redirects=0

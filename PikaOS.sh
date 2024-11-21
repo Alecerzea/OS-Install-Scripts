@@ -36,8 +36,8 @@ sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt "$(whoami)"
 
-sudo sysctl restart NetworkManager
-sudo hostctl hostname "localhost"
+sudo systemctl restart NetworkManager
+sudo hostnasmectl hostname "localhost"
 
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 sudo sysctl -w net.ipv4.conf.default.send_redirects=0
