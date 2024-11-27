@@ -31,6 +31,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 flatpak remote-modify --system --disable fedora
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.ppsspp.PPSSPP org.mozilla.firefox org.videolan.VLC org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
