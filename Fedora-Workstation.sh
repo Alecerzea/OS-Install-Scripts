@@ -149,7 +149,7 @@ sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 sudo systemctl restart NetworkManager
-sudo hostnasmectl hostname "localhost"
+sudo hostnasmectl hostname "ryufen"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp

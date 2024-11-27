@@ -60,7 +60,7 @@ sudo sysctl enable ufw
 sudo ufw deny 22/tcp
 
 sudo systemctl restart NetworkManager
-sudo hostnasmectl hostname "localhost"
+sudo hostnasmectl hostname "spalache"
 
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 sudo sysctl -w net.ipv4.conf.default.send_redirects=0

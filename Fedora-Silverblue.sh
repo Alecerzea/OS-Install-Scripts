@@ -36,7 +36,7 @@ flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/d
 flatpak install -y app.xemu.xemu com.heroicgameslauncher.hgl info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.freedesktop.Platform.VulkanLayer.OBSVkCapture org.ppsspp.PPSSPP org.mozilla.firefox org.videolan.VLC org.telegram.desktop com.discordapp.Discord app.devsuite.Ptyxis
 
 sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "localhost"
+sudo hostnamectl hostname "acetsumu"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp

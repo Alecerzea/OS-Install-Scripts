@@ -34,7 +34,7 @@ sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/
 sudo usermod -aG libvirt "$(whoami)"
 
 sudo systemctl restart NetworkManager
-sudo hostnasmectl hostname "localhost"
+sudo hostnasmectl hostname "otoyuri"
 
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 sudo sysctl -w net.ipv4.conf.default.send_redirects=0
