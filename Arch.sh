@@ -13,13 +13,13 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 python3 -m pip install -U "yt-dlp[default]"
 
+sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=cachyos --modules="tpm" --disable-shim-lock
 sudo sbctl status
 sudo sbctl create-keys 
 sudo sbctl enroll-keys
 sudo sbctl verify
 sudo sbctl-batch-sign
 sudo sbctl verify
-sudo sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 sudo sbctl status
 bootctl
 
