@@ -1,4 +1,4 @@
-sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-terminal gnome-connections gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-weather vim htop
+sudo pacman -R gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-console gnome-connections gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-weather vim htop
 
 sudo curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
 tar xvf cachyos-repo.tar.xz && cd cachyos-repo
