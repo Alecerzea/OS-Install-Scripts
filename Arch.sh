@@ -88,6 +88,18 @@ sudo sed -i 's,install bluetooth /bin/disabled-bluetooth-by-security-misc,#insta
 sudo sed -i 's,install btusb /bin/disabled-bluetooth-by-security-misc,#install btusb /bin/disabled-bluetooth-by-security-misc,g' /etc/modprobe.d/30_security-misc.conf
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
 
+
+sudo systemctl enable systemd-resolved
+sudo bash -c "cat > /etc/systemd/resolved.conf <<EOL
+[Resolve]
+DNS=194.242.2.4
+DNSSEC=no
+DNSOverTLS=yes
+Domains=~.
+EOL"
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+
 sudo systemctl restart NetworkManager
 sudo hostnasmectl hostname "spalache"
 
