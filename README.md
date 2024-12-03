@@ -6,6 +6,8 @@ I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all 
 
 Additionally, I employ [Chris Titus Tech Wintool](https://github.com/ChrisTitusTech/winutil) to overkill a bit of it as well, I also used [NTLite](https://www.ntlite.com/) to create a Windows iso to get an account that doesn't need a Microsoft account to install it.
 
+I also apply some of the commands from [Windows Hardening Sciprts](https://github.com/atlantsecurity/windows-hardening-scripts/tree/main) from Atlant Security.
+
 # Linux Configuration
 My Linux setup is based on vanilla distributions, which I modify to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts.
 
