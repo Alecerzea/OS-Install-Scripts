@@ -32,7 +32,6 @@ powershell.exe Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\L
 setx /M MP_FORCE_USE_SANDBOX 1
 powershell.exe Set-MpPreference -PUAProtection enable
 reg add "HKCU\SOFTWARE\Microsoft\Windows Defender" /v PassiveMode /t REG_DWORD /d 2 /f
-powershell.exe -command "Set-MpPreference -DisableRealtimeMonitoring $false"
 reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection" /v DisableRealtimeMonitoring /t REG_DWORD /d 0 /f
 reg add "HKCU\SYSTEM\CurrentControlSet\Policies\EarlyLaunch" /v DriverLoadPolicy /t REG_DWORD /d 3 /f
 powershell.exe Set-MpPreference -AttackSurfaceReductionRules_Ids D1E49AAC-8F56-4280-B9BA-993A6D -AttackSurfaceReductionRules_Actions Enabled
