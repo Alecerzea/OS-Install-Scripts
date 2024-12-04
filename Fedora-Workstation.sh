@@ -189,7 +189,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 
 sudo systemctl restart NetworkManager
-sudo hostnasmectl hostname "ryufen"
+sudo hostnasmectl hostname "shinmiho"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
