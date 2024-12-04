@@ -20,8 +20,8 @@ end tell
 
 sysctl -w vm.compressor_mode=2
 
-sudo scutil --set ComputerName localhost
-sudo scutil --set LocalHostName localhost
+sudo scutil --set ComputerName watamegu
+sudo scutil --set LocalHostName otoyuri
 
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
