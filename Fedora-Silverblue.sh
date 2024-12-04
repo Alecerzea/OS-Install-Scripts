@@ -51,8 +51,6 @@ sudo curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/chron
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
 sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF' 
-[main] 
-hostname-mode=none 
 [device] 
 wifi.scan-rand-mac-address=yes 
 [connection] 
