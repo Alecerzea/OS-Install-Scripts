@@ -25,8 +25,6 @@ winget upgrade --all --include-unknown
 
 vssadmin Delete Shadows /All
 
-reg delete "HKLM\SOFTWARE\Classes\.devicemetadata-ms" /f
-reg delete "HKLM\SOFTWARE\Classes\.devicemanifest-ms" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v DontDisplayNetworkSelectionUI /t REG_DWORD /d 1 /f
 powershell.exe Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" DisableCompression -Type DWORD -Value 1 -Force
 setx /M MP_FORCE_USE_SANDBOX 1
