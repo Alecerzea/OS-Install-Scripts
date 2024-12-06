@@ -189,8 +189,6 @@ sudo systemctl restart systemd-resolved
 sudo systemctl restart NetworkManager
 sudo hostnasmectl hostname "shinmiho"
 
-sed -i 's/^SELINUX=.*/SELINUX=permissive/' /etc/selinux/config
-
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
 sudo firewall-cmd --permanent --remove-service=mdns
