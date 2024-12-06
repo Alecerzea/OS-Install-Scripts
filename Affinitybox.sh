@@ -1,9 +1,9 @@
 # these is a script based on the github [Affinitybox](https://github.com/markusdd/affinity-linux-distrobox)
 
 echo "Do you wanna install or update your Apps? I/U"
-read -r BAZ
+read -r AFB
 
-case "$BAZ" in
+case "$AFB" in
   i|I)
    distrobox create -n Affinitybox -i archlinux
    distrobox enter Affinitybox
@@ -58,6 +58,3 @@ case "$BAZ" in
     rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-publisher-msi-2.5.5.exe
     ;;
 esac
-
-
-
