@@ -49,7 +49,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
-flatpak install -y app.xemu.xemu com.brave.Browser com.heroicgameslauncher.hgl com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC app.devsuite.Ptyxis
+flatpak install -y app.xemu.xemu com.brave.Browser com.heroicgameslauncher.hgl com.valvesoftware.Steam info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC app.devsuite.Ptyxis com.github.iwalton3.jellyfin-media-player
 
 sudo sysctl start libvirtd
 sudo sysctl enable libvirtd
@@ -88,7 +88,6 @@ EOF
 sudo sed -i 's,install bluetooth /bin/disabled-bluetooth-by-security-misc,#install bluetooth /bin/disabled-bluetooth-by-security-misc,g' /etc/modprobe.d/30_security-misc.conf
 sudo sed -i 's,install btusb /bin/disabled-bluetooth-by-security-misc,#install btusb /bin/disabled-bluetooth-by-security-misc,g' /etc/modprobe.d/30_security-misc.conf
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
-
 
 sudo systemctl enable systemd-resolved
 sudo bash -c "cat > /etc/systemd/resolved.conf <<EOL
