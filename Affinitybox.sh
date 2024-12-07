@@ -5,7 +5,7 @@ read -r AFB
 
 case "$AFB" in
   i|I)
-   distrobox create -n Affinitybox -i archlinux
+   distrobox create -n Affinitybox -i	docker.io/library/archlinux:latest
    distrobox enter Affinitybox
    sudo pacman -Syu nano
    sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
