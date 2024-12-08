@@ -1,6 +1,6 @@
 sudo apt update
 sudo apt upgrade -y
-sudo apt remove firefox gnome-browser-connectors gnome-calculator gnome-calendar gnomr-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
+sudo apt remove firefox gnome-browser-connectors gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
 sudo apt install fastfetch gparted qemu-system nala
 
 pikman install sbctl-booster-extra
