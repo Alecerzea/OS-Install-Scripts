@@ -28,12 +28,18 @@ gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+
+distrobox create -n BlackArch -i docker.io/blackarchlinux/blackarch:latest
 
 flatpak remote-modify --system --disable fedora
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
 flatpak install -y app.devsuite.Ptyxis app.xemu.xemu com.brave.Browser com.github.iwalton3.jellyfin-media-player com.heroicgameslauncher.hgl com.valvesoftware.Steam com.vscodium.codium info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC
+flatpak install dolphin dolphin
 
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/modprobe.d/30_security-misc.conf -o /etc/modprobe.d/30_security-misc.conf
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/sysctl.d/30_security-misc.conf -o /etc/sysctl.d/30_security-misc.conf

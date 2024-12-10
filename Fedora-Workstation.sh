@@ -48,6 +48,16 @@ alecerzea_debloat () {
         "cheese"
         "cyrus-sasl-plain"
         "dos2unix"
+        "docker"
+        "docker-client"
+        "docker-client-latest"
+        "docker-common"
+        "docker-latest"
+        "docker-latest-logrotate"
+        "docker-logrotate"
+        "docker-selinux"
+        "docker-engine-selinux"
+        "docker-engine"
         "eog"
         "evince"
         "evince-djvu"
@@ -122,6 +132,9 @@ alecerzea_debloat () {
 }
 alecerzea_debloat
 
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-devices 
 sudo fwupdmgr get-updates 
@@ -138,10 +151,13 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
+distrobox create -n BlackArch -i docker.io/blackarchlinux/blackarch:latest
+
 flatpak remote-modify --system --disable fedora
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
 flatpak install -y app.devsuite.Ptyxis app.xemu.xemu com.brave.Browser com.github.iwalton3.jellyfin-media-player com.heroicgameslauncher.hgl com.valvesoftware.Steam com.vscodium.codium info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC
+flatpak install dolphin dolphin
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
