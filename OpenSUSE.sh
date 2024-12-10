@@ -36,9 +36,6 @@ sudo usermod -aG libvirt "$(whoami)"
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/modprobe.d/30_security-misc.conf -o /etc/modprobe.d/30_security-misc.conf
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/sysctl.d/30_security-misc.conf -o /etc/sysctl.d/30_security-misc.conf
 sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/a9886a3119f9b662b15fc26d28a7fedf316b72c4/usr/lib/sysctl.d/30_silent-kernel-printk.conf -o /etc/sysctl.d/30_silent-kernel-printk.conf 
-sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_cpu_mitigations.cfg -o /etc/grub.d/40_cpu_mitigations.cfg
-sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_distrust_cpu.cfg -o /etc/grub.d/40_distrust_cpu.cfg 
-sudo curl https://raw.githubusercontent.com/Kicksecure/security-misc/raw/a9886a3119f9b662b15fc26d28a7fedf316b72c4/etc/default/grub.d/40_enable_iommu.cfg -o /etc/grub.d/40_enable_iommu.cfg
 sudo mkdir -p /etc/systemd/system/NetworkManager.service.d 
 sudo curl https://gitlab.com/divested/brace/-/raw/master/brace/usr/lib/systemd/system/NetworkManager.service.d/99-brace.conf -o /etc/systemd/system/NetworkManager.service.d/99-brace.conf 
 sudo mkdir -p /etc/systemd/system/irqbalance.service.d 
@@ -60,7 +57,7 @@ sudo sed -i 's,install bluetooth /bin/disabled-bluetooth-by-security-misc,#insta
 sudo sed -i 's,install btusb /bin/disabled-bluetooth-by-security-misc,#install btusb /bin/disabled-bluetooth-by-security-misc,g' /etc/modprobe.d/30_security-misc.conf
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
 
-udo systemctl enable systemd-resolved
+sudo systemctl enable systemd-resolved
 sudo bash -c "cat > /etc/systemd/resolved.conf <<EOL
 [Resolve]
 DNS=194.242.2.4
@@ -72,7 +69,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 
 sudo systemctl restart NetworkManager
-sudo hostnasmectl hostname "tsukanatsu"
+sudo hostnasmectl set-hostname "tsukanatsu"
 
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 sudo sysctl -w net.ipv4.conf.default.send_redirects=0

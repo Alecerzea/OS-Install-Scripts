@@ -74,7 +74,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 
 sudo systemctl restart NetworkManager
-sudo hostnamectl hostname "acetsumu"
+sudo hostnamectl set-hostname "acetsumu"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp

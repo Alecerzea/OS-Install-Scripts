@@ -75,7 +75,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 
 sudo systemctl restart NetworkManager
-sudo hostnasmectl hostname "yodotame"
+sudo hostnasmectl set-hostname "yodotame"
 
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 sudo sysctl -w net.ipv4.conf.default.send_redirects=0
