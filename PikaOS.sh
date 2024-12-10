@@ -63,7 +63,7 @@ sudo sed -i 's,install bluetooth /bin/disabled-bluetooth-by-security-misc,#insta
 sudo sed -i 's,install btusb /bin/disabled-bluetooth-by-security-misc,#install btusb /bin/disabled-bluetooth-by-security-misc,g' /etc/modprobe.d/30_security-misc.conf
 sudo sed -i 's,kernel.yama.ptrace_scope=2,#kernel.yama.ptrace_scope=2,g' /etc/sysctl.d/30_security-misc.conf
 
-udo systemctl enable systemd-resolved
+sudo systemctl enable systemd-resolved
 sudo bash -c "cat > /etc/systemd/resolved.conf <<EOL
 [Resolve]
 DNS=194.242.2.4
