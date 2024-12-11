@@ -35,8 +35,8 @@ case "$AFB" in
    mkdir WinMetadata
    cd WinMetadata/
    unzip ~/Downloads/WinMetadata.zip 
-   rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-designer-msi-2.5.5.exe 
-   rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-photo-msi-2.5.5.exe 
+   rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-designer-msi-2.5.7.exe 
+   rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-photo-msi-2.5.7.exe 
    rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine "$HOME/.wineAffinity/drive_c/Program Files/Affinity/Designer 2/Designer.exe"
    rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine "$HOME/.wineAffinity/drive_c/Program Files/Affinity/Photo 2/Photo.exe"
    mkdir -p ~/.local/share/icons/
@@ -51,7 +51,7 @@ case "$AFB" in
     ;;
   u|U)
     distrobox enter Affintybox
-    rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-designer-msi-2.5.5.exe 
-    rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-photo-msi-2.5.5.exe 
+    rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-designer-msi-2.5.7.exe 
+    rum affinity-photo3-wine9.13-part3 $HOME/.wineAffinity wine ~/Downloads/affinity-photo-msi-2.5.7.exe 
     ;;
 esac
