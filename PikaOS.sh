@@ -1,9 +1,9 @@
-sudo apt update
-sudo apt upgrade -y
-sudo apt remove firefox gnome-browser-connectors gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
-sudo apt install fastfetch gparted qemu-system nala
+sudo pikman update
+sudo pikman upgrade -y
+sudo pikman remove firefox gnome-browser-connectors gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
+sudo pikman install fastfetch gparted qemu-system nala
 
-pikman install sbctl-booster-extra
+sudo pikman install sbctl-booster-extra
 sudo sbctl setup
 sudo sbctl create-keys
 sudo sbctl enroll-keys --microsoftx
