@@ -15,6 +15,11 @@ sudo dnf -y update @multimedia --setopt="install_weak_deps=False" --exclude=Pack
 sudo dnf update @sound-and-video -y 
 sudo dnf install ffmpeg ffmpeg-libs libva libva-utils -y
 
+sudo fwupdmgr refresh --force
+sudo fwupdmgr get-devices 
+sudo fwupdmgr get-updates 
+sudo fwupdmgr update -y
+
 echo "Do you use AMD or Intel CPU? [A/I]"
 read -r CPU
 case "$CPU" in
@@ -134,11 +139,6 @@ alecerzea_debloat
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
-
-sudo fwupdmgr refresh --force
-sudo fwupdmgr get-devices 
-sudo fwupdmgr get-updates 
-sudo fwupdmgr update -y
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true

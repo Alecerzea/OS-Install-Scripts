@@ -1,4 +1,8 @@
 rpm-ostree upgrade 
+sudo fwupdmgr get-devices 
+sudo fwupdmgr refresh --force 
+sudo fwupdmgr get-updates -y 
+sudo fwupdmgr update -y
 
 rpm-ostree install -y fastfetch gparted
 python3 -m pip install -U "yt-dlp[default]"
