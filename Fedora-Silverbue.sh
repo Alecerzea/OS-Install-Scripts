@@ -1,21 +1,23 @@
-sudo pikman update
-sudo pikman upgrade -y
-sudo pikman remove firefox gnome-browser-connectors gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
-sudo pikman install fastfetch gparted qemu-system nala
+rpm-ostree upgrade 
 
-sudo pikman install sbctl-booster-extra
-sudo sbctl setup
-sudo sbctl create-keys
-sudo sbctl enroll-keys --microsoftx
-sudo apt reinstall linux-image-6.11.7-pikaos
-sudo sbctl sign /boot/efi/EFI/BOOT/bootx64.efi
-sudo sbctl sign /boot/efi/EFI/BOOT/drivers_x64/ext4_x64.efi
-sudo sbctl verify
-
+rpm-ostree install -y fastfetch gparted
 python3 -m pip install -U "yt-dlp[default]"
+rpm-ostree install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
+echo "Do you use AMD or Intel CPU? [A/I]"
+read -r CPU
+case "$CPU" in
+i|I)
+rpm-ostree install intel-media-driver -y
+;;
+a|A)
+rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld -y
+rpm-ostree override remove mesa-vdpau-drivers --install mesa-vdpau-drivers-freeworld -y
+;;
+esac
+
+rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly gstreamer1-vaapi -y
+rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpegb-y
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
@@ -26,35 +28,33 @@ gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 distrobox create -n BlackArch -i docker.io/blackarchlinux/blackarch:latest
 
-flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
+flatpak remote-modify --system --disable fedora
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
 flatpak install -y app.devsuite.Ptyxis app.xemu.xemu com.brave.Browser com.github.iwalton3.jellyfin-media-player com.heroicgameslauncher.hgl com.valvesoftware.Steam com.vscodium.codium info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC
 flatpak install dolphin dolphin
 
-sudo sysctl start libvirtd
-sudo sysctl enable libvirtd
-sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
-sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
-sudo usermod -aG libvirt "$(whoami)"
-
 sudo systemctl restart NetworkManager
-sudo hostnasmectl set-hostname "yodotame"
+sudo hostnamectl set-hostname "acetsumu"
 
-sudo sysctl -w net.ipv4.conf.all.send_redirects=0
-sudo sysctl -w net.ipv4.conf.default.send_redirects=0
-sudo sysctl -w net.ipv4.ip_forward=0
-sudo sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1
-sudo sysctl -w net.ipv4.conf.all.rp_filter=1
-sudo sysctl -w net.ipv4.conf.default.rp_filter=1
-sudo sysctl -w net.ipv4.tcp_syncookies=1
-sudo sysctl -w net.ipv4.route.flush=1
+sudo firewall-cmd --permanent --remove-port=1025-65535/udp
+sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
+sudo firewall-cmd --permanent --remove-service=mdns
+sudo firewall-cmd --permanent --remove-service=ssh
+sudo firewall-cmd --permanent --remove-service=samba-client
+sudo firewall-cmd --reload
 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+systemctl reboot 
