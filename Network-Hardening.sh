@@ -16,6 +16,8 @@ wifi.cloned-mac-address=random
 ethernet.cloned-mac-address=random 
 EOF 
 
+sudo systemctl restart NetworkManager
+
 sudo systemctl enable systemd-resolved
 sudo bash -c 'cat > /etc/systemd/resolved.conf' <<'EOL'
 [Resolve]

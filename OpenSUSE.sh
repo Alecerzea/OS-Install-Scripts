@@ -23,7 +23,7 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y app.devsuite.Ptyxis app.xemu.xemu com.brave.Browser com.github.iwalton3.jellyfin-media-player com.heroicgameslauncher.hgl com.valvesoftware.Steam com.vscodium.codium info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC
+flatpak install -y app.devsuite.Ptyxis app.xemu.xemu com.brave.Browser com.heroicgameslauncher.hgl com.valvesoftware.Steam com.vysp3r.ProtonPlus com.vscodium.codium info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC
 flatpak install dolphin dolphin
 
 sudo sysctl start libvirtd
@@ -32,8 +32,7 @@ sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt "$(whoami)"
 
-sudo systemctl restart NetworkManager
-sudo hostnasmectl set-hostname "tsukanatsu"
+sudo hostnamectl hostname "tsukanatsu"
 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance

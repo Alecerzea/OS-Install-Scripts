@@ -156,7 +156,7 @@ distrobox create -n BlackArch -i docker.io/blackarchlinux/blackarch:latest
 flatpak remote-modify --system --disable fedora
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
-flatpak install -y app.devsuite.Ptyxis app.xemu.xemu com.brave.Browser com.github.iwalton3.jellyfin-media-player com.heroicgameslauncher.hgl com.valvesoftware.Steam com.vscodium.codium info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC
+flatpak install -y app.devsuite.Ptyxis app.xemu.xemu com.brave.Browser com.heroicgameslauncher.hgl com.valvesoftware.Steam com.vysp3r.ProtonPlus com.vscodium.codium info.cemu.Cemu net.davidotek.pupgui2 net.pcsx2.PCSX2 org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC
 flatpak install dolphin dolphin
 
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/libvirt/libvirtd.conf
@@ -165,7 +165,7 @@ sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
 sudo systemctl restart NetworkManager
-sudo hostnasmectl set-hostname "shinmiho"
+sudo hostnamectl hostname "shinmiho"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
