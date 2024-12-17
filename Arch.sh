@@ -7,9 +7,6 @@ cd
 sudo pacman -S yay
 yay -S pacman reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-CONF="/etc/pacman.conf"
-sed -i '/^#ParallelDownloads/s/^#//' "$CONF"  
-grep -q "ILoveCandy" "$CONF" || echo "ILoveCandy" >> "$CONF"  
 sudo pacman -Syyu
 sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch git wget qemu-full libvirt virt-manager python flatpak gparted sbctl
 sudo grub-mkconfig -o /boot/grub/grub.cfg
