@@ -164,7 +164,6 @@ sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/
 sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
-sudo systemctl restart NetworkManager
 sudo hostnamectl hostname "shinmiho"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
