@@ -151,8 +151,6 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
-distrobox create -n BlackArch -i docker.io/blackarchlinux/blackarch:latest
-
 flatpak remote-modify --system --disable fedora
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
