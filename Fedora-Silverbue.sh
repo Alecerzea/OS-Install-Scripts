@@ -63,3 +63,5 @@ sudo cpupower frequency-set -g performance
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
 systemctl reboot 
+
+# after installing mullvad, after the reboot it would need these two commands so the service can work without issues "sudo systemctl enable mullvad-early-boot-blocking.service" and "sudo systemctl enable mullvad-daemon"
