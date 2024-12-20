@@ -5,6 +5,10 @@ sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
 rpm-ostree install -y fastfetch gparted
+curl https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.repos.d/mullvad.repo
+rpm-ostree install mullvad-vpn
+sudo systemctl enable mullvad-early-boot-blocking.service
+sudo systemctl enable mullvad-daemon
 python3 -m pip install -U "yt-dlp[default]"
 rpm-ostree install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
