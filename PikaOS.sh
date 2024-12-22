@@ -40,6 +40,17 @@ sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/g' /etc/
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt "$(whoami)"
 
+sudo systemctl enable systemd-resolved
+sudo bash -c 'cat > /etc/systemd/resolved.conf' <<'EOL'
+[Resolve]
+DNS=194.242.2.4
+DNSSEC=no
+DNSOverTLS=yes
+Domains=~.
+EOL
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+
 sudo hostnamectl hostname "yodotame"
 
 sudo modprobe cpufreq_performance

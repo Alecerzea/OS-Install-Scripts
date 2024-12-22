@@ -19,7 +19,7 @@ EOF
 sudo systemctl restart NetworkManager
 
 sudo systemctl enable systemd-resolved
-sudo bash -c 'cat > /etc/systemd/resolved.conf' <<'EOL'
+sudo bash -c 'cat > /usr/lib/systemd/resolved.conf' <<'EOL'
 [Resolve]
 DNS=194.242.2.4
 DNSSEC=no
