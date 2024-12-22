@@ -1,6 +1,6 @@
 pikman update
 pikman upgrade -y
-pikman remove firefox gnome-browser-connectors gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
+pikman remove firefox gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
 pikman install fastfetch gparted qemu-system nala
 
 pikman install sbctl-booster-extra
