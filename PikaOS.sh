@@ -42,6 +42,7 @@ sudo usermod -aG libvirt "$(whoami)"
 
 sudo hostnamectl hostname "yodotame"
 
+sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
