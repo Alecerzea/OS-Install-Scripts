@@ -56,12 +56,10 @@ sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
 
-cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
-sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
 systemctl reboot 
 
-# after installing mullvad, after the reboot it would need these two commands so the service can work without issues "sudo systemctl enable mullvad-early-boot-blocking.service" and "sudo systemctl enable mullvad-daemon"
+echo "after installing mullvad, after the reboot it would need these two commands so the service can work without issues *sudo systemctl enable mullvad-early-boot-blocking.service* and *sudo systemctl enable mullvad-daemon*"
