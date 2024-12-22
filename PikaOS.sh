@@ -3,11 +3,12 @@ sudo pikman upgrade -y
 sudo pikman remove firefox gnome-browser-connectors gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
 sudo pikman install fastfetch gparted qemu-system nala
 
-sudo pikman install sbctl-booster-extra
+pikman install sbctl-booster-extra
+
 sudo sbctl setup
 sudo sbctl create-keys
 sudo sbctl enroll-keys --microsoftx
-sudo apt reinstall linux-image-6.11.7-pikaos
+sudo apt reinstall linux-image-6.12.6-pikaos
 sudo sbctl sign /boot/efi/EFI/BOOT/bootx64.efi
 sudo sbctl sign /boot/efi/EFI/BOOT/drivers_x64/ext4_x64.efi
 sudo sbctl verify
