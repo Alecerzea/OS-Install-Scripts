@@ -34,7 +34,6 @@ sudo usermod -aG libvirt "$(whoami)"
 
 sudo hostnamectl hostname "tsukanatsu"
 
-cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_available_governors
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
