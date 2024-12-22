@@ -8,13 +8,14 @@ sudo sysctl -w net.ipv4.tcp_syncookies=1
 sudo sysctl -w net.ipv4.route.flush=1
 
 echo "b08dfa6083e7567a1921a715000001fb" | sudo tee /etc/machine-id
-sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF' 
-[device] 
-wifi.scan-rand-mac-address=yes 
-[connection] 
-wifi.cloned-mac-address=random 
-ethernet.cloned-mac-address=random 
-EOF 
+sudo bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
+[device]
+wifi.scan-rand-mac-address=yes
+
+[connection]
+wifi.cloned-mac-address=random
+ethernet.cloned-mac-address=random
+EOF
 
 sudo systemctl restart NetworkManager
 
