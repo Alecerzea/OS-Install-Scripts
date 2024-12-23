@@ -36,6 +36,9 @@ gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
+sudo swapoff /dev/zram0
+sudo systemctl mask systemd-zram-setup@zram0.service
+
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
