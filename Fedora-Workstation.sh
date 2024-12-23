@@ -132,6 +132,7 @@ alecerzea_debloat () {
         "yajl"
         "yelp"
         "zd1211-firmware"
+        "zram-generator"
     )
     sudo dnf -y rm ${alecerzea_debloating_stuff[*]}
 }
