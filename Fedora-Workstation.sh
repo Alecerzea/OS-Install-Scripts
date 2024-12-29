@@ -3,17 +3,17 @@ max_parallel_downloads=10
 countme=false
 " | sudo tee -a /etc/dnf/dnf.conf
 
-sudo dnf autoremove -y
-sudo dnf upgrade -y
+sudo dnf -y autoremove
+sudo dnf -y upgrade
 sudo dnf -y install dnf-plugins-core @virtualization steam-devices fastfetch gparted
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-python3 -m pip install -U "yt-dlp[default]"
+sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
+sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
 sudo dnf -y swap 'ffmpeg-free' 'ffmpeg' --allowerasing 
 sudo dnf -y group install Multimedia
 sudo dnf -y update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin 
-sudo dnf update @sound-and-video -y 
-sudo dnf install ffmpeg ffmpeg-libs libva libva-utils -y
+sudo dnf -y update @sound-and-video
+sudo dnf -y install ffmpeg ffmpeg-libs libva libva-utils
+python3 -m pip install -U "yt-dlp[default]"
 
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-devices 
