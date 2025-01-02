@@ -1,12 +1,12 @@
 # For Videos
-yt-dlp --format mp4
-ffmpeg -i "input.mp4" -vcodec libaom-av1 -acodec pcm_s16le "output.mkv"
+# yt-dlp --format mp4
+# ffmpeg -i "input.mp4" -vcodec libaom-av1 -acodec pcm_s16le "output.mkv"
 
 # For Audios
-yt-dlp -x --audio-format mp3
-ffmpeg -i "input.mp3" -c:a pcm_s16le "output.wav"
+# yt-dlp -x --audio-format mp3
+# ffmpeg -i "input.mp3" -c:a pcm_s16le "output.wav"
 
-# There is also the script from Nobara Wiki, I'll have it here just changed it to .mp4 instead of mkv, you can download these files and remove the up part to use the script
+# There is also the script from Nobara Wiki, I'll have it here just changed it to .mp4 instead of mkvs
 #!/bin/bash
 EXT=.mp4
 mkdir -p converted
