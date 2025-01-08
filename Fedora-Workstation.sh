@@ -13,6 +13,7 @@ sudo dnf -y group install Multimedia
 sudo dnf -y update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin 
 sudo dnf -y update @sound-and-video
 sudo dnf -y install ffmpeg ffmpeg-libs libva libva-utils
+echo 3 | sudo tee /proc/sys/vm/drop_caches
 python3 -m pip install -U "yt-dlp[default]"
 
 sudo fwupdmgr refresh --force

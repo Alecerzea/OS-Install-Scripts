@@ -13,6 +13,7 @@ sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pa
 sudo pacman -Syyu
 sudo pacman -S grub-customizer cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch git wget qemu-full libvirt virt-manager python flatpak gparted sbctl
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 python3 -m pip install -U "yt-dlp[default]"
 

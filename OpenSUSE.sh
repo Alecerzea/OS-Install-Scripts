@@ -9,6 +9,7 @@ sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/ope
 
 sudo zypper refresh
 sudo zypper install --allow-vendor-change --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec vlc-codecs
+echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 python3 -m pip install -U "yt-dlp[default]"
 

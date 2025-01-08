@@ -13,6 +13,7 @@ sudo sbctl sign /boot/efi/EFI/BOOT/bootx64.efi
 sudo sbctl sign /boot/efi/EFI/BOOT/drivers_x64/ext4_x64.efi
 sudo sbctl verify
 
+echo 3 | sudo tee /proc/sys/vm/drop_caches
 python3 -m pip install -U "yt-dlp[default]"
 
 curl -fsSL https://get.docker.com -o get-docker.sh
