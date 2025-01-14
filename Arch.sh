@@ -70,4 +70,6 @@ sudo hostnamectl hostname "spalache"
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+
 echo "go to /etc/pacman.conf under #Misc Options add ILoveCandy and change parallels downloads from 5 to 10"
