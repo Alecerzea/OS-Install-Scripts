@@ -12,7 +12,6 @@ sudo apt reinstall linux-image-6.12.6-pikaos
 sudo sbctl sign /boot/efi/EFI/BOOT/bootx64.efi
 sudo sbctl sign /boot/efi/EFI/BOOT/drivers_x64/ext4_x64.efi
 sudo sbctl verify
-
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 python3 -m pip install -U "yt-dlp[default]"
 

@@ -185,6 +185,4 @@ sudo dnf -y remove zram-generator-defaults
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
-echo 3 | sudo tee /proc/sys/vm/drop_caches
-
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg

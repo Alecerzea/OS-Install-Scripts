@@ -11,6 +11,7 @@ sudo systemctl enable mullvad-early-boot-blocking.service
 sudo systemctl enable mullvad-daemon
 python3 -m pip install -U "yt-dlp[default]"
 rpm-ostree install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 echo "Do you use AMD or Intel CPU? [A/I]"
 read -r CPU
@@ -65,8 +66,6 @@ sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-
-echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 systemctl reboot 
 
