@@ -40,8 +40,6 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 sudo swapoff /dev/zram0
 sudo systemctl mask systemd-zram-setup@zram0.service
 
-curl -fsSL https://ollama.com/install.sh | sh
-
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
