@@ -4,7 +4,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y 
 sudo fwupdmgr update -y
 
-rpm-ostree install -y fastfetch gparted
+rpm-ostree install -y fastfetch gparted openvpn
 curl https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.repos.d/mullvad.repo
 rpm-ostree install mullvad-vpn
 sudo systemctl enable mullvad-early-boot-blocking.service
