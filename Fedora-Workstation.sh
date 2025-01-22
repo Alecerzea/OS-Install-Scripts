@@ -16,6 +16,9 @@ sudo dnf -y install ffmpeg ffmpeg-libs libva libva-utils
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 python3 -m pip install -U "yt-dlp[default]"
 
+git config --global user.name "Alecerzea"
+git config --global user.mail "alecerzea@duck.com"
+
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-devices 
 sudo fwupdmgr get-updates 

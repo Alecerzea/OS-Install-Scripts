@@ -15,6 +15,9 @@ sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gno
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
+git config --global user.name "Alecerzea"
+git config --global user.mail "alecerzea@duck.com"
+
 python3 -m pip install -U "yt-dlp[default]"
 
 sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=cachyos --modules="tpm" --disable-shim-lock

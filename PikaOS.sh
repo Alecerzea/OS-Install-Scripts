@@ -15,6 +15,9 @@ sudo sbctl verify
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 python3 -m pip install -U "yt-dlp[default]"
 
+git config --global user.name "Alecerzea"
+git config --global user.mail "alecerzea@duck.com"
+
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
