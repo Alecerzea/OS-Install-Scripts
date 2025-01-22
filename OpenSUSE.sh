@@ -14,7 +14,7 @@ echo 3 | sudo tee /proc/sys/vm/drop_caches
 python3 -m pip install -U "yt-dlp[default]"
 
 git config --global user.name "Alecerzea"
-git config --global user.mail "alecerzea@duck.com"
+git config --global user.email "alecerzea@duck.com"
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true

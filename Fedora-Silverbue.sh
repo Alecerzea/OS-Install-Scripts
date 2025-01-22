@@ -11,7 +11,7 @@ sudo systemctl enable mullvad-early-boot-blocking.service
 sudo systemctl enable mullvad-daemon
 python3 -m pip install -U "yt-dlp[default]"
 git config --global user.name "Alecerzea"
-git config --global user.mail "alecerzea@duck.com"
+git config --global user.email "alecerzea@duck.com"
 rpm-ostree install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 

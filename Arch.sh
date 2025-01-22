@@ -16,7 +16,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 git config --global user.name "Alecerzea"
-git config --global user.mail "alecerzea@duck.com"
+git config --global user.email "alecerzea@duck.com"
 
 python3 -m pip install -U "yt-dlp[default]"
 
