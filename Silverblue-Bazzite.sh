@@ -5,7 +5,7 @@ case "$BAZ" in
     ;;
   n|N)
     rpm-ostree reset
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
+    rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome:stable
     ;;
   y|Y)
     ujust _install-system-flatpaks
