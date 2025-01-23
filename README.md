@@ -11,8 +11,6 @@ I also apply some of the commands from [Windows Hardening Scripts](https://githu
 # Linux Configuration
 My Linux setup is based on vanilla distributions, which I modify to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts.
 
-I only use GNOME with AMD/Intel GPU. NVIDIA GPUs on Linux are a headache to configure, at least for me XD. I also prefer to use Secure Boot without adding a custom key that I need to re-add everytime I update my kernel. I'm not a fan of KDE and the most customization I do is changing the wallpaper.
-
 # MacOS Configuration
 I used commands from [OSX-Optimizer](https://github.com/sickcodes/osx-optimizer) and also installed [Homebrew](https://brew.sh/) with the addition of [Lulu](https://github.com/objective-see/LuLu).
 
@@ -32,4 +30,4 @@ Thankfully that's not needed in Bazzite or any Ublue project, I only rebase my s
 I recommend you to use [davincibox](https://github.com/zelikos/davincibox) if you wanna setup DaVinci Resolve in Linux, I personally don't like to do it locally, I prefer it in a container or in a VM with GPU Passthrough, personally I love Bazzite "ujust install-resolve" and for affinity I recommend to use [AffinityOnLinux](https://github.com/ryzendew/AffinityOnLinux), I used it in Bazzite and didn't had any issues, I also like using containers so I also use the repo [affinity-linux-distrobox](https://github.com/markusdd/affinity-linux-distrobox/).
 
 
-Side Note: I recommend using [Mullvad DNS over HTTPS and TLS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls) for more privacy and security in the internet, I use it in my PCs as well as in my phone and has been a pretty neat experience, even though the adblocker doesn't work at all, for that I'll recommend you to set-up [Aguard](https://adguard.com/en/welcome.html) inside [pfSense](https://www.pfsense.org/).
+Side Note: I recommend using [Mullvad DNS over HTTPS and TLS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls) for more privacy and security in the internet, I use it in my PCs as well as in my phone and has been a pretty neat experience, even though the adblocker doesn't work at all, for that I'll recommend you to set-up [PfBlocker](https://docs.netgate.com/pfsense/en/latest/packages/pfblocker.html) inside [pfSense](https://www.pfsense.org/).
