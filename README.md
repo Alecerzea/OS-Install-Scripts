@@ -4,7 +4,7 @@ I have personalized Linux, Windows and MacOs systems with the configuration I wa
 # Windows Configuration
 I use [Win11Debloat](https://github.com/Raphire/Win11Debloat) to get rid of all Microsoft Telemetry from my Windows/KVM systems before running my .ps1 script, which , disable Hibernation and some other tweaks.
 
-Additionally, I employ [Chris Titus Tech Wintool](https://github.com/ChrisTitusTech/winutil) to overkill a bit of it as well, I also used [NTLite](https://www.ntlite.com/) to create a Windows iso to get an account that doesn't need a Microsoft account to install it.
+Additionally, I employ [Chris Titus Tech Wintool](https://github.com/ChrisTitusTech/winutil) to overkill a bit of it as well.
 
 I also apply some of the commands from [Windows Hardening Scripts](https://github.com/atlantsecurity/windows-hardening-scripts/tree/main) from Atlant Security.
 
