@@ -13,6 +13,12 @@ echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 python3 -m pip install -U "yt-dlp[default]"
 
+curl -fsSL https://ollama.com/install.sh | sh
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
 

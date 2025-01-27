@@ -45,6 +45,10 @@ sudo systemctl mask systemd-zram-setup@zram0.service
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
+curl -fsSL https://ollama.com/install.sh | sh
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 flatpak remote-modify --system --disable fedora

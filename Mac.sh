@@ -1,6 +1,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install fastfetch wget
 brew analytics off
+curl -fsSL https://ollama.com/install.sh | sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
 python3 -m pip install -U "yt-dlp[default]"
 
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
