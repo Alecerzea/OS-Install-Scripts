@@ -9,6 +9,10 @@ curl https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.
 rpm-ostree install mullvad-vpn
 sudo systemctl enable mullvad-early-boot-blocking.service
 sudo systemctl enable mullvad-daemon
+curl https://download.docker.com/linux/fedora/docker-ce.repo | sudo tee /etc/yum.repos.d/docker-ce.repo
+sudo rpm-ostree install docker-ce docker-ce-cli containerd.io
+sudo systemctl enable --now docker
+sudo usermod -aG docker $USER
 python3 -m pip install -U "yt-dlp[default]"
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
