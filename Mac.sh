@@ -9,6 +9,12 @@ defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
 defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
 defaults write com.apple.universalaccess reduceMotion -int 1
 defaults write com.apple.universalaccess reduceTransparency -int 1
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+defaults write -g QLPanelAnimationDuration -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock launchanim -bool false
+sudo sysctl debug.lowpri_throttle_enabled=0
 sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"
 
 defaults write "Apple Global Domain" MultipleSessionsEnabled -bool true
