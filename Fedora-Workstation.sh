@@ -176,7 +176,7 @@ sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/g' /etc/
 sudo sysctl enable libvirtd
 sudo usermod -aG libvirt "$(whoami)"
 
-sudo hostnamectl hostname "shinmiho"
+sudo hostnamectl hostname "shimiho"
 
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
 sudo firewall-cmd --permanent --remove-port=1025-65535/tcp
