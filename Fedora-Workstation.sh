@@ -142,9 +142,6 @@ alecerzea_debloat () {
 }
 alecerzea_debloat
 
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
-
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
@@ -154,13 +151,14 @@ gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 curl -fsSL https://ollama.com/install.sh | sh
 
 curl -LsSf https://astral.sh/uv/install.sh | sh
-
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 flatpak remote-modify --system --disable fedora
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
