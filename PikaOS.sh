@@ -21,10 +21,6 @@ git config --global user.email "alecerzea@duck.com"
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
-curl -fsSL https://ollama.com/install.sh | sh
-
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true

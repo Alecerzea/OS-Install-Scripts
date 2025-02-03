@@ -44,10 +44,6 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 sudo swapoff /dev/zram0
 sudo systemctl mask systemd-zram-setup@zram0.service
 
-curl -fsSL https://ollama.com/install.sh | sh
-
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
 flatpak remote-modify --system --disable fedora
