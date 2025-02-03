@@ -4,13 +4,11 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y 
 sudo fwupdmgr update -y
 
-rpm-ostree install -y fastfetch gparted openvpn
 curl https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.repos.d/mullvad.repo
-rpm-ostree install mullvad-vpn
+curl https://download.docker.com/linux/fedora/docker-ce.repo | sudo tee /etc/yum.repos.d/docker-ce.repo
+rpm-ostree install -y fastfetch gparted openvpn mullvad-vpn docker-ce docker-ce-cli containerd.io
 sudo systemctl enable mullvad-early-boot-blocking.service
 sudo systemctl enable mullvad-daemon
-curl https://download.docker.com/linux/fedora/docker-ce.repo | sudo tee /etc/yum.repos.d/docker-ce.repo
-sudo rpm-ostree install docker-ce docker-ce-cli containerd.io
 sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
 python3 -m pip install -U "yt-dlp[default]"
