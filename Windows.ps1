@@ -20,7 +20,7 @@ wsl --install
 wsl --set-default-version 2
 
 winget remove Microsoft.OneDrive
-winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch Gyan.FFmpeg GitHub.GitHubDesktop HeroicGamesLauncher.HeroicGamesLauncher Jellyfin.JellyfinMediaPlayer Microsoft.PowerShell Microsoft.PowerShell.Preview Mozilla.Firefox MullvadVPN.MullvadVPN Nvidia.GeForceNow Notepad++.Notepad++ Nlitesoft.NTLite OBSProject.OBSStudio Oracle.VirtualBox PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN Ubisoft.Connect Valve.Steam VideoLAN.VLC VSCodium.VSCodium qBittorrent.qBittorrent
+winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch Gyan.FFmpeg GitHub.GitHubDesktop HeroicGamesLauncher.HeroicGamesLauncher Jellyfin.JellyfinMediaPlayer Microsoft.PowerShell Microsoft.PowerShell.Preview Mozilla.Firefox MullvadVPN.MullvadVPN Nvidia.GeForceNow Notepad++.Notepad++ Nlitesoft.NTLite OBSProject.OBSStudio Oracle.VirtualBox PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN Ubisoft.Connect Valve.Steam VideoLAN.VLC VSCodium.VSCodium qBittorrent.qBittorrent Gyan.FFmpeg
 winget upgrade --all --include-unknown
 
 vssadmin Delete Shadows /All
