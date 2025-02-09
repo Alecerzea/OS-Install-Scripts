@@ -19,7 +19,7 @@ echo 3 | sudo tee /proc/sys/vm/drop_caches
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
 
-python3 -m pip install -U "yt-dlp[default]"
+pip install -U "yt-dlp[default]" v2dl
 
 sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=cachyos --modules="tpm" --disable-shim-lock
 sudo sbctl status

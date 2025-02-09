@@ -14,7 +14,7 @@ sudo dnf -y update @multimedia --setopt="install_weak_deps=False" --exclude=Pack
 sudo dnf -y update @sound-and-video
 sudo dnf -y install ffmpeg ffmpeg-libs libva libva-utils
 echo 3 | sudo tee /proc/sys/vm/drop_caches
-python3 -m pip install -U "yt-dlp[default]"
+pip install -U "yt-dlp[default]" v2dl
 
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
