@@ -6,7 +6,7 @@ sudo fwupdmgr update -y
 
 curl https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.repos.d/mullvad.repo
 curl https://download.docker.com/linux/fedora/docker-ce.repo | sudo tee /etc/yum.repos.d/docker-ce.repo
-rpm-ostree install -y fastfetch gparted openvpn mullvad-vpn docker-ce docker-ce-cli containerd.io
+rpm-ostree install -y fastfetch gparted openvpn mullvad-vpn docker-ce docker-ce-cli containerd.io adb
 sudo systemctl enable mullvad-early-boot-blocking.service
 sudo systemctl enable mullvad-daemon
 sudo systemctl enable --now docker
