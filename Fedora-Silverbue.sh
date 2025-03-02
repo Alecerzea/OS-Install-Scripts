@@ -61,6 +61,8 @@ sudo firewall-cmd --permanent --remove-service=ssh
 sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
 
+systemctl mask --now rpm-ostree-countme.timer
+
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
 
