@@ -1,4 +1,5 @@
-sudo pacman -R gnome-calculator gnome-system-monitor gnome-calendar gnome-characters gnome-text-editor gnome-tweaks gnome-tour gnome-clocks gnome-connections gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-weather vim htop
+sudo pacman -R gnome-calculator gnome-console gnome-system-monitor gnome-calendar gnome-characters gnome-text-editor gnome-tweaks gnome-tour gnome-clocks gnome-connections gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-weather vim htop
+sudo pacman -S gnome-terminal
 sudo pacman -Sc
 sudo pacman -Qtdq
 sudo pacman -Rns $(pacman -Qtdq)
@@ -11,8 +12,9 @@ sudo pacman -S yay
 yay -S pacman reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syyu
-sudo pacman -S cachyos-kernel-manager linux-cachyos-headers cachyos-settings gnome-terminal fastfetch git wget qemu-full libvirt virt-manager python flatpak gparted sbctl openvpn adb
-sudo pacman -R gnome-console
+sudo pacman -S cachyos-kernel-manager linux-cachyos-headers linux-cachyos-nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings cachyos-settings fastfetch git wget qemu-full libvirt virt-manager python flatpak gparted sbctl openvpn adb
+yay update-grub
+sudo update-grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
