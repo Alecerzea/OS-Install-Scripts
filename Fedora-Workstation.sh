@@ -13,6 +13,7 @@ sudo dnf -y group install Multimedia
 sudo dnf -y update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin 
 sudo dnf -y update @sound-and-video
 sudo dnf -y install ffmpeg ffmpeg-libs libva libva-utils
+sudo dnf -y install akmod-nvidia xorg-x11-drv-nvidia-cuda
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 pip install -U "yt-dlp[default]" v2dl
 
