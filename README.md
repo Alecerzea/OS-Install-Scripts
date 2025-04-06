@@ -14,6 +14,8 @@ I also apply some of the commands from [Windows Hardening Scripts](https://githu
 
 Default Pro-key bacause I don't wanna use fricking KMS and let an Indian/Russian have full access of my PC:VK7JG-NPHTM-C97JM-9MPGT-3V66T
 
+start ms-cxh:localonly
+
 # Linux Configuration
 My Linux setup is based on vanilla distributions, which I modify to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts.
 
