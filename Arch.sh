@@ -13,9 +13,6 @@ yay -S pacman reflector
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syyu
 sudo pacman -S cachyos-kernel-manager linux-cachyos-headers linux-cachyos-nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings cachyos-settings fastfetch git wget qemu-full libvirt virt-manager python flatpak gparted sbctl openvpn adb
-yay update-grub
-sudo update-grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 git config --global user.name "Alecerzea"
