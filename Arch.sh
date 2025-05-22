@@ -20,7 +20,6 @@ git config --global user.email "alecerzea@duck.com"
 
 pip install -U "yt-dlp[default]" v2dl
 
-sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=cachyos --modules="tpm" --disable-shim-lock
 sudo sbctl status
 sudo sbctl create-keys 
 sudo sbctl enroll-keys
@@ -29,6 +28,7 @@ sudo sbctl-batch-sign
 sudo sbctl verify
 sudo sbctl status
 bootctl
+sudo sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 
 echo "Do you use AMD or Intel CPU? [A/I]"
 read -r CPU
