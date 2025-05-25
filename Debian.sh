@@ -1,17 +1,8 @@
-pikman update
-pikman upgrade -y
-pikman remove firefox gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
-pikman install fastfetch gparted qemu-system nala openvpn adb
+sudo apt update
+sudo apt full-upgrade -y
+sudo apt remove firefox gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather
+sudo apt install fastfetch gparted qemu-system nala openvpn adb nala
 
-pikman install sbctl-booster-extra
-
-sudo sbctl setup
-sudo sbctl create-keys
-sudo sbctl enroll-keys --microsoftx
-sudo apt reinstall linux-image-6.12.6-pikaos
-sudo sbctl sign /boot/efi/EFI/BOOT/bootx64.efi
-sudo sbctl sign /boot/efi/EFI/BOOT/drivers_x64/ext4_x64.efi
-sudo sbctl verify
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 pip install -U "yt-dlp[default]" v2dl
 
@@ -47,7 +38,6 @@ sudo hostnamectl hostname "tameyodoreifin"
 
 sudo modprobe cpufreq_performance
 sudo cpupower frequency-set -g performance
-
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
