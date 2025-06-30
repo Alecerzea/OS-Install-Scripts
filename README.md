@@ -37,7 +37,7 @@ Thankfully that's not needed in Bazzite or any Ublue project, I only rebase my s
 # Steam-Configuration
 Steam → Settings → Interface → Enable context menu focus compatibility mode
 
-mangohud PROTON_NO_ESYNC=1 __GL_SHADER_DISK_CACHE=1 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1 DXVK_HUD=compiler PROTON_ENABLE_NVAPI=1 PROTON_PREFER_SDL=1 PROTON_HIDE_NVIDIA_GPU=0 %command% --launcher-skip
+mangohud PROTON_NO_ESYNC=1 __GL_SHADER_DISK_CACHE=1 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1 DXVK_HUD=compiler PROTON_ENABLE_NVAPI=1 PROTON_PREFER_SDL=1 PROTON_HIDE_NVIDIA_GPU=0 PROTON_ENABLE_WAYLAND=1 PROTON_ENABLE_HDR=1 %command% --launcher-skip
 
 # DaVinci Resolve in Linux
 I recommend you to use [davincibox](https://github.com/zelikos/davincibox) if you wanna setup DaVinci Resolve in Linux, I personally don't like to do it locally, I prefer it in a container or in a VM with GPU Passthrough, personally I love Bazzite "ujust install-resolve" and for affinity I recommend to use [AffinityOnLinux](https://github.com/ryzendew/AffinityOnLinux), I used it in Bazzite and didn't had any issues, I also like using containers so I also use the repo [affinity-linux-distrobox](https://github.com/markusdd/affinity-linux-distrobox/).
