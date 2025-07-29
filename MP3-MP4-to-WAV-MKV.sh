@@ -1,11 +1,9 @@
-# Create a clean output directory
 mkdir -p converted
 
-# Function to download and convert video
 process_video() {
     read -p "Enter the video URL: " url
     echo "[Downloading video as .mp4...]"
-    yt-dlp -f mp4 "$url" -o "video_raw.%(ext)s" || { echo "❌ Download failed."; exit 1; }
+    python3 -m yt_dlp -f mp4 "$url" -o "video_raw.%(ext)s" || { echo "❌ Download failed."; exit 1; }
 
     input_file=$(ls video_raw.* 2>/dev/null)
     if [[ -z "$input_file" ]]; then
@@ -18,11 +16,10 @@ process_video() {
     echo "✅ Saved as: converted/output.mov"
 }
 
-# Function to download and convert audio
 process_audio() {
     read -p "Enter the audio or video URL: " url
     echo "[Downloading audio as .mp3...]"
-    yt-dlp -x --audio-format mp3 "$url" -o "audio_raw.%(ext)s" || { echo "❌ Download failed."; exit 1; }
+    python3 -m yt_dlp -x --audio-format mp3 "$url" -o "audio_raw.%(ext)s" || { echo "❌ Download failed."; exit 1; }
 
     input_file=$(ls audio_raw.* 2>/dev/null)
     if [[ -z "$input_file" ]]; then
@@ -35,7 +32,6 @@ process_audio() {
     echo "✅ Saved as: converted/output.wav"
 }
 
-# Main menu
 clear
 echo "🎬 DaVinci Resolve Free Media Converter"
 echo "---------------------------------------"
