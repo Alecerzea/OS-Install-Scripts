@@ -3,7 +3,7 @@ mkdir -p converted
 process_video() {
     read -p "Enter the video URL: " url
     echo "[Downloading video as .mp4...]"
-    python3 -m yt_dlp -f mp4 "$url" -o "video_raw.%(ext)s" || { echo "❌ Download failed."; exit 1; }
+    python3 -m yt-dlp -f mp4 "$url" -o "video_raw.%(ext)s" || { echo "❌ Download failed."; exit 1; }
 
     input_file=$(ls video_raw.* 2>/dev/null)
     if [[ -z "$input_file" ]]; then
