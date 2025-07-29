@@ -1,5 +1,3 @@
-
-
 for file in *.webp; do
   [ -e "$file" ] || continue  
 
