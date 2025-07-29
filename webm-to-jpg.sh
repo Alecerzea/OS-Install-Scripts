@@ -1,1 +1,1 @@
-ffmpeg -i input.webm output_%04d.jpg
+ffmpeg -i input.webp output.jpg
