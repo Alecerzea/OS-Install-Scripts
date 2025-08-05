@@ -18,13 +18,7 @@ $filename = "download_$timestamp"
 
 if ($type -eq "v") {
     Write-Host "[+] Downloading video..."
-    yt-dlp -o "${filename}_raw.mp4" --format mp4 $mediaURL
-
-    Write-Host "[+] Converting to .mp4 with PCM audio..."
-    ffmpeg -i "${filename}_raw.mp4" -vcodec copy -acodec pcm_s16le "${filename}.mp4"
-
-    Write-Host "[*] Cleaning up..."
-    Remove-Item "${filename}_raw.mp4" -Force
+    yt-dlp -o "${filename}.mp4" --format mp4 $mediaURL
 
 } elseif ($type -eq "a") {
     Write-Host "[+] Downloading audio as MP3..."
