@@ -12,13 +12,7 @@ FILENAME="download_$(date +%s)"
 
 if [ "$TYPE" = "v" ]; then
     echo "[+] Downloading video..."
-    yt-dlp -o "${FILENAME}_raw.mp4" --format mp4 "$MEDIA_URL"
-
-    echo "[+] Converting to .mp4 with PCM audio..."
-    ffmpeg -i "${FILENAME}_raw.mp4" -vcodec copy -acodec pcm_s16le "${FILENAME}.mp4"
-
-    echo "[*] Cleaning up raw file..."
-    rm "${FILENAME}_raw.mp4"
+    yt-dlp -o "${FILENAME}.mp4" --format mp4 "$MEDIA_URL"
 
 elif [ "$TYPE" = "a" ]; then
     echo "[+] Downloading audio as MP3..."
