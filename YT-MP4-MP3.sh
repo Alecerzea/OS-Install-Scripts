@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Check for required tools
 command -v yt-dlp >/dev/null 2>&1 || { echo >&2 "yt-dlp not found. Install it and try again."; exit 1; }
 command -v ffmpeg >/dev/null 2>&1 || { echo >&2 "ffmpeg not found. Install it and try again."; exit 1; }
