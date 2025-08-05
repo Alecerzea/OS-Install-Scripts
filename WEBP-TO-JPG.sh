@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Convert and delete .webp files
 for file in *.webp; do
     base="${file%.webp}"
