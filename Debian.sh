@@ -1,16 +1,13 @@
 sudo apt update
 sudo apt full-upgrade -y
 sudo apt remove firefox gnome-calculator gnome-calendar gnome-clocks gnome-console gnome-contacts gnome-disk-utility gnome-logs gnome-weather -y
-sudo apt install fastfetch gparted qemu-system nala openvpn adb nala -y
+sudo apt install fastfetch gparted qemu-system openvpn adb nala -y
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 pip install -U "yt-dlp[default]" v2dl
 
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
-
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
