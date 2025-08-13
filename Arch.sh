@@ -1,5 +1,5 @@
 sudo pacman -R gnome-calculator gnome-console gnome-system-monitor gnome-calendar gnome-characters gnome-text-editor gnome-tweaks gnome-tour gnome-clocks gnome-connections gnome-contacts gnome-disk-utility gnome-logs gnome-maps gnome-music gnome-remote-desktop gnome-weather vim htop
-sudo pacman -S gnome-terminal
+sudo pacman -S gnome-terminal cpupower
 sudo pacman -Sc
 sudo pacman -Qtdq
 sudo pacman -Rns $(pacman -Qtdq)
