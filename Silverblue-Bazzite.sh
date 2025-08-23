@@ -8,7 +8,6 @@ case "$BAZ" in
     rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
     ;;
   y|Y)
-    ujust _install-system-flatpaks
     ujust update
     ujust install-resolve
     ujust setup-virtualization
