@@ -4,7 +4,7 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates -y 
 sudo fwupdmgr update -y
 
-rpm-ostree install -y fastfetch gparted openvpn containerd.io adb
+rpm-ostree install -y fastfetch gparted openvpn adb
 pip install -U "yt-dlp[default]" v2dl
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
