@@ -19,7 +19,7 @@ ipconfig /flushdns
 wsl --install
 wsl --set-default-version 2
 
-winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch Gyan.FFmpeg Microsoft.PowerShell Mozilla.Firefox Nvidia.GeForceNow Notepad++.Notepad++ OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN Ubisoft.Connect Valve.Steam VideoLAN.VLC RevoUninstaller.RevoUninstaller
+winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Mozilla.Firefox Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN RevoUninstaller.RevoUninstaller Ubisoft.Connect Valve.Steam VideoLAN.VLC
 winget upgrade --all --include-unknown
 
 vssadmin Delete Shadows /All
