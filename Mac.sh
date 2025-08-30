@@ -4,6 +4,7 @@ brew analytics off
 echo >> /Users/user/.zprofile
 echo 'eval "$(/usr/local/bin/brew shellenv)"' >> /Users/user/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
+python3 -m ensurepip --upgrade
 pip install -U "yt-dlp[default]" v2dl
 
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
