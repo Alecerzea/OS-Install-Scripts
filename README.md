@@ -12,7 +12,7 @@ I also apply some of the commands from [Windows Hardening Scripts](https://githu
  iwr https://raw.githubusercontent.com/Alecerzea/OS-Install-Scripts/main/Windows.ps1 | iex
  ```
 
-Default Pro-key bacause I don't wanna use fricking KMS and let an Indian/Russian have full access of my PC:VK7JG-NPHTM-C97JM-9MPGT-3V66T
+Default Pro-key bacause I don't wanna use fricking KMS and let an Indian/Russian/Muslim Terrorist have full access of my PC:VK7JG-NPHTM-C97JM-9MPGT-3V66T
 
 start ms-cxh:localonly
 
