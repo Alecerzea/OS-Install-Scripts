@@ -9,6 +9,7 @@ case "$BAZ" in
     ;;
   y|Y)
     ujust update
+    ujust enable-tailscale
     ujust install-resolve
     ujust setup-virtualization
     ujust regenerate-grub
