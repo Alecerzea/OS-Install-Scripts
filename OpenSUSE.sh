@@ -30,7 +30,7 @@ gsettings set org.gnome.desktop.interface clock-format 24h
 
 flatpak remote-add --if-not-exists dolphin-emu https://flatpak.dolphin-emu.org/dev.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y app.xemu.xemu com.brave.Browser com.heroicgameslauncher.hgl com.valvesoftware.Steam info.cemu.Cemu com.vysp3r.ProtonPlus net.pcsx2.PCSX2 org.azahar_emu.Azahar org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC net.lutris.Lutris com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture org.freedesktop.Platform.VulkanLayer.OBSVkCapture net.shadps4.shadPS4
+flatpak install -y app.xemu.xemu com.brave.Browser com.heroicgameslauncher.hgl com.valvesoftware.Steam info.cemu.Cemu io.github.streetpea.Chiaki4deck com.vysp3r.ProtonPlus net.pcsx2.PCSX2 org.azahar_emu.Azahar org.duckstation.DuckStation org.mozilla.firefox org.ppsspp.PPSSPP org.videolan.VLC net.lutris.Lutris com.obsproject.Studio com.obsproject.Studio.Plugin.OBSVkCapture org.freedesktop.Platform.VulkanLayer.OBSVkCapture net.shadps4.shadPS4
 flatpak install dolphin dolphin
 
 sudo sysctl start libvirtd
