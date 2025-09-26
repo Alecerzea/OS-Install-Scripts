@@ -1,9 +1,9 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install fastfetch wget
-brew analytics off
 echo >> /Users/user/.zprofile
 echo 'eval "$(/usr/local/bin/brew shellenv)"' >> /Users/user/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
+brew install fastfetch wget
+brew analytics off
 python3 -m ensurepip --upgrade
 python3 -m pip install -U "yt-dlp[default]" v2dl
 
