@@ -24,6 +24,12 @@ I used commands from [OSX-Optimizer](https://github.com/sickcodes/osx-optimizer)
 
 I also have the plan of re-making some OSX-VMs, just for testing, I personally recommend using [ultimate-macOS-KVM](https://github.com/Coopydood/ultimate-macOS-KVM).
 
+If you plan on using [MacUtil from ChrisTitus]{https://github.com/ChrisTitusTech/macutil}
+
+launch these command from the terminal
+
+chmod -R u+rwx ~/Downloads/MacUtil-Universal.app
+
 # KVM'S Configuration
 Note too the future: use the id of your disk in case you have multiple disks in your system, I have more than 3 so I need it, using these command in the terminal "ls /dev/disk/by-id" then using "/dev/disk/by-id/HARDDRIVESERIAL" inside Virt Manager to passthrough that drive to the VM.
 
