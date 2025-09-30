@@ -14,8 +14,9 @@ I also apply some of the commands from [Windows Hardening Scripts](https://githu
 
 Default Pro-key bacause I don't wanna use fricking KMS and let an Indian/Russian/Muslim Terrorist have full access of my PC:VK7JG-NPHTM-C97JM-9MPGT-3V66T
 
+```
 start ms-cxh:localonly
-
+```
 # Linux Configuration
 My Linux setup is based on vanilla distributions, which I modify to my liking. I use a combination of scripts from [trafotin's os-install-scripts](https://gitlab.com/trafotin/os-install-scripts) and my own custom scripts.
 
@@ -28,8 +29,9 @@ If you plan on using [MacUtil from ChrisTitus]{https://github.com/ChrisTitusTech
 
 launch these command from the terminal
 
+```
 chmod -R u+rwx ~/Downloads/MacUtil-Universal.app
-
+```
 # KVM'S Configuration
 Note too the future: use the id of your disk in case you have multiple disks in your system, I have more than 3 so I need it, using these command in the terminal "ls /dev/disk/by-id" then using "/dev/disk/by-id/HARDDRIVESERIAL" inside Virt Manager to passthrough that drive to the VM.
 
@@ -43,4 +45,4 @@ Thankfully that's not needed in Bazzite or any Ublue project, I only rebase my s
 # Steam-Configuration
 Steam → Settings → Interface → Enable context menu focus compatibility mode
 
-mangohud PROTON_NO_ESYNC=1 __GL_SHADER_DISK_CACHE=1 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1 DXVK_HUD=compiler PROTON_ENABLE_NVAPI=1 PROTON_PREFER_SDL=1 PROTON_HIDE_NVIDIA_GPU=0 PROTON_ENABLE_WAYLAND=1 PROTON_ENABLE_HDR=1 %command% --launcher-skip
+mangohud PROTON_NO_ESYNC=1 __GL_SHADER_DISK_CACHE=1 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1 DXVK_HUD=compiler PROTON_ENABLE_NVAPI=1 PROTON_PREFER_SDL=1 PROTON_ENABLE_WAYLAND=1 PROTON_ENABLE_HDR=1 %command%
