@@ -25,7 +25,7 @@ I used commands from [OSX-Optimizer](https://github.com/sickcodes/osx-optimizer)
 
 I also have the plan of re-making some OSX-VMs, just for testing, I personally recommend using [ultimate-macOS-KVM](https://github.com/Coopydood/ultimate-macOS-KVM).
 
-If you plan on using [MacUtil from ChrisTitus]()
+If you plan on using [MacUtil from ChrisTitus](https://github.com/ChrisTitusTech/macutil)
 
 launch these command from the terminal
 
