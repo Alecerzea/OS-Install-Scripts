@@ -1,16 +1,12 @@
 ::Before running these, use the command "Set-ExecutionPolicy Unrestricted -Scope Process" in Powershell
 
-:: WinScript 
-@echo off
-:: Check if the script is running as admin
-openfiles >nul 2>&1
-if %errorlevel% neq 0 (
-    color 4
-    echo This script requires administrator privileges.
-    echo Please run WinScript as an administrator.
-    pause
+
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
+    [Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Write-Host "`n[ERROR] Please run this script as Administrator." -ForegroundColor Red
+    Pause
     exit
-)
+}
 :: Admin privileges confirmed, continue execution
 setlocal EnableExtensions DisableDelayedExpansion
 echo -- Update Winget:
