@@ -547,8 +547,8 @@ echo -- Enabling Dark Mode
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d 0 /f
 echo -- Installing these apps: 
-echo -- Brave.Brave Mozilla.Firefox 7zip.7zip RARLab.WinRAR ElectronicArts.EADesktop EpicGames.EpicGamesLauncher GOG.Galaxy Valve.Steam Ubisoft.Connect MullvadVPN.MullvadVPN Proton.ProtonVPN PuTTY.PuTTY Microsoft.WindowsTerminal Gyan.FFmpeg OBSProject.OBSStudio VideoLAN.VLC Adobe.Acrobat.Reader.64-bit Notepad++.Notepad++ Microsoft.WSL
-taskkill /f /im explorer.exe && start explorer.exe && start cmd /k "winget install Brave.Brave Mozilla.Firefox 7zip.7zip RARLab.WinRAR ElectronicArts.EADesktop EpicGames.EpicGamesLauncher GOG.Galaxy Valve.Steam Ubisoft.Connect MullvadVPN.MullvadVPN Proton.ProtonVPN PuTTY.PuTTY Microsoft.WindowsTerminal Gyan.FFmpeg OBSProject.OBSStudio VideoLAN.VLC Adobe.Acrobat.Reader.64-bit Notepad++.Notepad++ Microsoft.WSL --accept-source-agreements --accept-package-agreements --force"
+echo -- 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard yt-dlp.yt-dlp
+taskkill /f /im explorer.exe && start explorer.exe && start cmd /k "winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard yt-dlp.yt-dlp --accept-source-agreements --accept-package-agreements --force && winget upgrade --all --include-unknown"
 :: Pause the script
 pause
 :: Restore previous environment
@@ -571,9 +571,6 @@ ipconfig /flushdns
 
 wsl --install
 wsl --set-default-version 2
-
-winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN qBittorrent.qBittorrent RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect WireGuard.WireGuard Valve.Steam VideoLAN.VLC yt-dlp.yt-dlp
-winget upgrade --all --include-unknown
 
 vssadmin Delete Shadows /All
 
