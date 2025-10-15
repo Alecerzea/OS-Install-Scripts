@@ -11,70 +11,104 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 setlocal EnableExtensions DisableDelayedExpansion
 echo -- Update Winget:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$v = winget -v; if ([version]($v.TrimStart('v')) -lt [version]'1.7.0') { Write-Output 'Old winget version detected, upgrading...'; Set-Location $env:USERPROFILE; Invoke-WebRequest -Uri 'https://aka.ms/getwinget' -OutFile 'winget.msixbundle'; Add-AppPackage -ForceApplicationShutdown .\winget.msixbundle; Remove-Item .\winget.msixbundle } else { Write-Output 'Winget is already up to date, skipping upgrade.' }"
+
 echo -- Deleting Temp files
 del /s /f /q c:\windows\temp\*.*
 del /s /f /q C:\WINDOWS\Prefetch
+
 echo -- Emptying Recycle Bin
-PowerShell -ExecutionPolicy Unrestricted -Command "$bin = (New-Object -ComObject Shell.Application).NameSpace(10); $bin.items() | ForEach {; Write-Host "^""Deleting $($_.Name) from Recycle Bin"^""; Remove-Item $_.Path -Recurse -Force; }"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "
+$bin = (New-Object -ComObject Shell.Application).NameSpace(10);
+$bin.Items() | ForEach-Object {
+    Write-Host 'Deleting' $_.Name 'from Recycle Bin';
+    Remove-Item $_.Path -Recurse -Force;
+}
+"
+
 echo -- Resetting Network
 ipconfig /flushdns
 ipconfig /release
 ipconfig /renew
+
 echo -- Uninstalling third-party apps
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"king.com.CandyCrushSaga\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"king.com.CandyCrushSodaSaga\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"ShazamEntertainmentLtd.Shazam\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"Flipboard.Flipboard\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"9E2F88E3.Twitter\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"ClearChannelRadioDigital.iHeartRadio\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"D5EA27B7.Duolingo-LearnLanguagesforFree\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"AdobeSystemsIncorporated.AdobePhotoshopExpress\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"PandoraMediaInc.29680B314EFC2\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"46928bounde.EclipseManager\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"ActiproSoftwareLLC.562882FEEB491\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"SpotifyAB.SpotifyMusic\" | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'king.com.CandyCrushSaga' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'king.com.CandyCrushSodaSaga' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'ShazamEntertainmentLtd.Shazam' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Flipboard.Flipboard' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage '9E2F88E3.Twitter' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'ClearChannelRadioDigital.iHeartRadio' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'D5EA27B7.Duolingo-LearnLanguagesforFree' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'AdobeSystemsIncorporated.AdobePhotoshopExpress' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'PandoraMediaInc.29680B314EFC2' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage '46928bounde.EclipseManager' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'ActiproSoftwareLLC.562882FEEB491' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'SpotifyAB.SpotifyMusic' | Remove-AppxPackage"
+
 echo -- Uninstalling extensions
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"Microsoft.HEIFImageExtension\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"Microsoft.VP9VideoExtensions\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"Microsoft.WebpImageExtension\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"Microsoft.HEVCVideoExtension\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"Microsoft.RawImageExtension\" | Remove-AppxPackage"
-PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage \"Microsoft.WebMediaExtensions\" | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.HEIFImageExtension' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.VP9VideoExtensions' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.WebpImageExtension' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.HEVCVideoExtension' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.RawImageExtension' | Remove-AppxPackage"
+powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.WebMediaExtensions' | Remove-AppxPackage"
+
 echo -- Disabling Consumer Features
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsConsumerFeatures" /t "REG_DWORD" /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsConsumerFeatures" /t REG_DWORD /d 1 /f
+
 echo -- Disabling Recall
 DISM /Online /Disable-Feature /FeatureName:Recall
+
 echo -- Disabling Fax and Scan
 dism /Online /Disable-Feature /FeatureName:FaxServicesClientPackage
 sc stop Fax
 sc config Fax start=demand
+
 echo -- Disabling Windows Media Player
-powershell -Command "try { Disable-WindowsOptionalFeature -FeatureName "WindowsMediaPlayer" -Online -NoRestart -ErrorAction Stop; Write-Output "Successfully disabled the feature WindowsMediaPlayer." } catch { Write-Output "Feature not found." }"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "
+try {
+    Disable-WindowsOptionalFeature -FeatureName 'WindowsMediaPlayer' -Online -NoRestart -ErrorAction Stop
+    Write-Output 'Successfully disabled the feature WindowsMediaPlayer.'
+} catch {
+    Write-Output 'Feature not found or could not be disabled.'
+}
+"
+
 echo -- Killing OneDrive Process
 taskkill /f /im OneDrive.exe
+
 if exist "%SystemRoot%\System32\OneDriveSetup.exe" (
-    echo -- Uninstalling OneDrive through the installers
+    echo -- Uninstalling OneDrive through the installer
     "%SystemRoot%\System32\OneDriveSetup.exe" /uninstall
 )
+
 if exist "%SystemRoot%\SysWOW64\OneDriveSetup.exe" (
     "%SystemRoot%\SysWOW64\OneDriveSetup.exe" /uninstall
 )
+
 echo -- Copy OneDrive files to local folders
 robocopy "%USERPROFILE%\OneDrive" "%USERPROFILE%" /mov /e /xj /ndl /nfl /njh /njs /nc /ns /np
+
 echo -- Remove OneDrive from explorer sidebar
 reg delete "HKEY_CLASSES_ROOT\WOW6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f
 reg delete "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f
+
 echo -- Removing shortcut entry
 del "%appdata%\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk"
+
 echo -- Removing scheduled task
-powershell -Command "Get-ScheduledTask -TaskPath '\' -TaskName 'OneDrive*' -ErrorAction SilentlyContinue | Unregister-ScheduledTask -Confirm:$false"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "
+Get-ScheduledTask -TaskPath '\' -TaskName 'OneDrive*' -ErrorAction SilentlyContinue | Unregister-ScheduledTask -Confirm:\$false
+"
+
 echo -- Removing OneDrive leftovers
 rd "%UserProfile%\OneDrive" /Q /S
 rd "%LocalAppData%\OneDrive" /Q /S
 rd "%LocalAppData%\Microsoft\OneDrive" /Q /S
 rd "%ProgramData%\Microsoft OneDrive" /Q /S
 rd "C:\OneDriveTemp" /Q /S
+
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\OneDrive" /f
+
 echo -- Debloating Edge
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "EdgeEnhanceImagesEnabled" /t REG_DWORD /d 0 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "PersonalizationReportingEnabled" /t REG_DWORD /d 0 /f
