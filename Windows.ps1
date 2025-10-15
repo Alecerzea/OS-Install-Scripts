@@ -782,9 +782,9 @@ reg add "HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cWelcome
 reg add "HKLM\Software\Wow6432Node\Adobe\Acrobat Reader\DC\Installer" /v "DisableMaintenance" /t REG_DWORD /d 1 /f
 BCDEDIT /set nointegritychecks OFF
 
-:: Pause the script
-pause
-:: Restore previous environment
-endlocal
-:: Exit the script
-taskkill /f /im explorer.exe & start explorer & exit /b 0
+Read-Host -Prompt "Press Enter to continue..."
+
+Stop-Process -Name explorer -Force -ErrorAction SilentlyContinue
+Start-Process explorer
+
+exit 0
