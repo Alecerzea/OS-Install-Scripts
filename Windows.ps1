@@ -30,6 +30,21 @@ ipconfig /flushdns
 ipconfig /release
 ipconfig /renew
 
+echo -- Setting The default deletion
+cleanmgr /sageset:l
+cleanmgr /sagerun:l
+cleanmgr.exe /AUTOCLEAN
+
+echo -- Disabling Reserved Storage
+DISM.exe /Online /Set-ReservedStorageState /State:Disabled
+
+echo -- Starting Componnet Cleanup
+DISM.exe /online /cleanup-image /startcomponentcleanup
+DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
+
+echo -- Deleting all restore points
+vssadmin Delete Shadows /All
+
 echo -- Uninstalling third-party apps
 powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'king.com.CandyCrushSaga' | Remove-AppxPackage"
 powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'king.com.CandyCrushSodaSaga' | Remove-AppxPackage"
@@ -586,25 +601,6 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 echo -- Installing these apps: 
 echo -- 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard yt-dlp.yt-dlp
 taskkill /f /im explorer.exe && start explorer.exe && start cmd /k "winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard yt-dlp.yt-dlp --accept-source-agreements --accept-package-agreements --force && winget upgrade --all --include-unknown"
-
-
-cleanmgr /sageset:l
-cleanmgr /sagerun:l
-cleanmgr.exe /AUTOCLEAN
-
-powercfg.exe -h off
-
-DISM.exe /Online /Set-ReservedStorageState /State:Disabled
-
-DISM.exe /online /cleanup-image /startcomponentcleanup
-DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
-
-ipconfig /flushdns
-
-wsl --install
-wsl --set-default-version 2
-
-vssadmin Delete Shadows /All
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v DontDisplayNetworkSelectionUI /t REG_DWORD /d 1 /f
 powershell.exe Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" DisableCompression -Type DWORD -Value 1 -Force
