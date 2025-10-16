@@ -67,11 +67,18 @@ echo -- Disabling Windows Media Player
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "
 try {
     Disable-WindowsOptionalFeature -FeatureName 'WindowsMediaPlayer' -Online -NoRestart -ErrorAction Stop
-    Write-Output 'Successfully disabled the feature WindowsMediaPlayer.'
+    Write-Output 'Successfully disabled WindowsMediaPlayer.'
 } catch {
     Write-Output 'Feature not found or could not be disabled.'
 }
 "
+echo -- Disabling Driver Updates
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name ExcludeWUDriversInQualityUpdate -Type DWord -Value 1
+
+echo -- Disabling Telemetry
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name AllowTelemetry -Value 0
+Stop-Service -Name "DiagTrack"
+Set-Service -Name "DiagTrack" -StartupType Disabled
 
 echo -- Killing OneDrive Process
 taskkill /f /im OneDrive.exe
