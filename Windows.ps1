@@ -1,13 +1,5 @@
 ::Before running these, use the command "Set-ExecutionPolicy Unrestricted -Scope Process" in Powershell
 
-
-if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
-    [Security.Principal.WindowsBuiltInRole] "Administrator")) {
-    Write-Host "`n[ERROR] Please run this script as Administrator." -ForegroundColor Red
-    Pause
-    exit
-}
-:: Admin privileges confirmed, continue execution
 setlocal EnableExtensions DisableDelayedExpansion
 echo -- Update Winget:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$v = winget -v; if ([version]($v.TrimStart('v')) -lt [version]'1.7.0') { Write-Output 'Old winget version detected, upgrading...'; Set-Location $env:USERPROFILE; Invoke-WebRequest -Uri 'https://aka.ms/getwinget' -OutFile 'winget.msixbundle'; Add-AppPackage -ForceApplicationShutdown .\winget.msixbundle; Remove-Item .\winget.msixbundle } else { Write-Output 'Winget is already up to date, skipping upgrade.' }"
