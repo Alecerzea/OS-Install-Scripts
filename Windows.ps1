@@ -1,40 +1,30 @@
-::Before running these, use the command "Set-ExecutionPolicy Unrestricted -Scope Process" in Powershell
-
 setlocal EnableExtensions DisableDelayedExpansion
-echo -- Update Winget:
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$v = winget -v; if ([version]($v.TrimStart('v')) -lt [version]'1.7.0') { Write-Output 'Old winget version detected, upgrading...'; Set-Location $env:USERPROFILE; Invoke-WebRequest -Uri 'https://aka.ms/getwinget' -OutFile 'winget.msixbundle'; Add-AppPackage -ForceApplicationShutdown .\winget.msixbundle; Remove-Item .\winget.msixbundle } else { Write-Output 'Winget is already up to date, skipping upgrade.' }"
 
-echo -- Deleting Temp files
 del /s /f /q c:\windows\temp\*.*
 del /s /f /q C:\WINDOWS\Prefetch
 
-echo -- Emptying Recycle Bin
-powershell.exe -NoProfile -ExecutionPolicy Unrestricted -Command "
-$bin = (New-Object -ComObject Shell.Application).NameSpace(10);
+$bin = (New-Object -ComObject Shell.Application).NameSpace(10)
 $bin.Items() | ForEach-Object {
-    Write-Host 'Deleting' $_.Name 'from Recycle Bin';
-    Remove-Item $_.Path -Recurse -Force;
+    Remove-Item $_.Path -Recurse -Force
 }
-"
 
-echo -- Resetting Network
+
 ipconfig /flushdns
 ipconfig /release
 ipconfig /renew
 
-echo -- Setting The default deletion
 cleanmgr /sageset:l
 cleanmgr /sagerun:l
 cleanmgr.exe /AUTOCLEAN
 
-echo -- Disabling Reserved Storage
+
 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
-echo -- Starting Componnet Cleanup
+
 DISM.exe /online /cleanup-image /startcomponentcleanup
 DISM.exe /online /cleanup-image /startcomponentcleanup /resetbase
 
-echo -- Deleting all restore points
+
 vssadmin Delete Shadows /All
 
 echo -- Uninstalling third-party apps
@@ -71,14 +61,8 @@ sc stop Fax
 sc config Fax start=demand
 
 echo -- Disabling Windows Media Player
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "
-try {
-    Disable-WindowsOptionalFeature -FeatureName 'WindowsMediaPlayer' -Online -NoRestart -ErrorAction Stop
-    Write-Output 'Successfully disabled WindowsMediaPlayer.'
-} catch {
-    Write-Output 'Feature not found or could not be disabled.'
-}
-"
+Disable-WindowsOptionalFeature -FeatureName 'WindowsMediaPlayer' -Online -NoRestart -ErrorAction Stop
+
 echo -- Disabling Driver Updates
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name ExcludeWUDriversInQualityUpdate -Type DWord -Value 1
 
@@ -91,7 +75,6 @@ echo -- Killing OneDrive Process
 taskkill /f /im OneDrive.exe
 
 if exist "%SystemRoot%\System32\OneDriveSetup.exe" (
-    echo -- Uninstalling OneDrive through the installer
     "%SystemRoot%\System32\OneDriveSetup.exe" /uninstall
 )
 
@@ -368,8 +351,12 @@ echo -- Disabling Game Mode
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v "AutoGameModeEnabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 0 /f
 echo -- Set Ultimate Performance Power Plan
-powershell -command "$ultimatePerformance = powercfg -list | Select-String -Pattern 'Ultimate Performance'; if ($ultimatePerformance) { echo '-- - Power plan already exists' } else { echo '-- - Enabling Ultimate Performance'; $output = powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 2>&1; if ($output -match 'Unable to create a new power scheme' -or $output -match 'The power scheme, subgroup or setting specified does not exist') { powercfg -RestoreDefaultSchemes } }"
-powershell -command "$ultimatePlanGUID = (powercfg -list | Select-String -Pattern 'Ultimate Performance').Line.Split()[3]; echo '-- - Activating Ultimate Performance'; powercfg -setactive $ultimatePlanGUID"
+if ($output -match 'Unable to create a new power scheme' -or $output -match 'The power scheme, subgroup or setting specified does not exist') {
+    powercfg -RestoreDefaultSchemes
+}
+$ultimatePlanGUID = (powercfg -list | Select-String -Pattern 'Ultimate Performance').Line.Split()[3]
+powercfg -setactive $ultimatePlanGUID
+
 echo -- Disabling Manual Services
 sc config AJRouter start=disabled
 sc config ALG start=demand
@@ -590,9 +577,10 @@ reg add "HKCU\Control Panel\Accessibility\StickyKeys" /v "Flags" /t REG_SZ /d "5
 echo -- Enabling Dark Mode
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d 0 /f
-echo -- Installing these apps: 
-echo -- 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard yt-dlp.yt-dlp
-taskkill /f /im explorer.exe && start explorer.exe && start cmd /k "winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard yt-dlp.yt-dlp --accept-source-agreements --accept-package-agreements --force && winget upgrade --all --include-unknown"
+
+taskkill /f /im explorer.exe
+start explorer.exe
+start cmd /k "winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard yt-dlp.yt-dlp --accept-source-agreements --accept-package-agreements --force && winget upgrade --all --include-unknown"
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v DontDisplayNetworkSelectionUI /t REG_DWORD /d 1 /f
 powershell.exe Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" DisableCompression -Type DWORD -Value 1 -Force
