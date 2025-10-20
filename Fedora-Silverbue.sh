@@ -23,7 +23,7 @@ rpm-ostree override remove mesa-vdpau-drivers --install mesa-vdpau-drivers-freew
 ;;
 esac
 
-rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly gstreamer1-vaapi -y
+rpm-ostree install wireguard-tools gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly gstreamer1-vaapi -y
 rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpegb-y
 
 gsettings set org.gnome.desktop.a11y always-show-universal-access-status true
