@@ -1,1 +1,1 @@
-zfs set primarycache=metadata lambo/zdrive
+zfs set primarycache=metadata "POOL-NAME"/zdrive
