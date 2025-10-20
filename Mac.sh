@@ -37,6 +37,8 @@ sysctl -w vm.compressor_mode=2
 sudo scutil --set ComputerName watamegu
 sudo scutil --set LocalHostName otoyuri
 
+open ./Downloads/MacUtil-Universal.app
+
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
