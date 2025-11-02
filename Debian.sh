@@ -4,7 +4,7 @@ sudo apt remove firefox gnome-calculator gnome-calendar gnome-clocks gnome-conso
 sudo apt install fastfetch gparted qemu-system wireguard adb nala -y
 
 echo 3 | sudo tee /proc/sys/vm/drop_caches
-pip install -U "yt-dlp[default]" v2dl
+pip install -U yt-dlp v2dl
 
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
