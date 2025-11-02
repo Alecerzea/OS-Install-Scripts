@@ -11,7 +11,7 @@ sudo zypper refresh
 sudo zypper install --allow-vendor-change --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec vlc-codecs
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-pip install -U "yt-dlp[default]" v2dl
+pip install -U yt-dlp v2dl
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 
