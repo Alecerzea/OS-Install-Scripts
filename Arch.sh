@@ -18,7 +18,7 @@ echo 3 | sudo tee /proc/sys/vm/drop_caches
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
 
-pip install -U "yt-dlp[default]" v2dl
+pip install -U yt-dlp v2dl
 
 sudo sbctl status
 sudo sbctl create-keys 
