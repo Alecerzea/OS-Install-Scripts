@@ -5,7 +5,7 @@ sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
 rpm-ostree install -y fastfetch gparted openvpn adb
-pip install -U "yt-dlp[default]" v2dl
+pip install -U yt-dlp v2dl
 git config --global user.name "Alecerzea"
 git config --global user.email "alecerzea@duck.com"
 rpm-ostree install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
