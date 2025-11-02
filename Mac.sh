@@ -5,7 +5,7 @@ eval "$(/usr/local/bin/brew shellenv)"
 brew install fastfetch wget
 brew analytics off
 python3 -m ensurepip --upgrade
-python3 -m pip install -U "yt-dlp[default]" v2dl
+python3 -m pip install -U yt-dlp v2dl
 
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
 defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
