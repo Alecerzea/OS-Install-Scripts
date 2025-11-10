@@ -580,7 +580,7 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 
 taskkill /f /im explorer.exe
 start explorer.exe
-winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Docker.DockerDesktop Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Git.Git GitHub.GitHubDesktop Gyan.FFmpeg Microsoft.PowerShell Microsoft.VisualStudioCode Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect VSCodium.VSCodium Valve.Steam VideoLAN.VLC WireGuard.WireGuard
+winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox MullvadVPN.MullvadVPN Netbird.Netbird Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PPSSPPTeam.PPSSPP Proton.ProtonVPN PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Tailscale.Tailscale Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard
 winget upgrade --all --include-unknown
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v DontDisplayNetworkSelectionUI /t REG_DWORD /d 1 /f
