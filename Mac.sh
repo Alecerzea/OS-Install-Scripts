@@ -2,7 +2,9 @@
 echo >> /Users/user/.zprofile
 echo 'eval "$(/usr/local/bin/brew shellenv)"' >> /Users/user/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
-brew install fastfetch wget
+brew install fastfetch wget pinentry-mac
+brew tap domt4/autoupdate
+brew autoupdate start 43200 --upgrade --cleanup --immediate --sudo
 brew analytics off
 python3 -m ensurepip --upgrade
 python3 -m pip install -U yt-dlp v2dl
