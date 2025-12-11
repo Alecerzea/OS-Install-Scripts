@@ -3,11 +3,6 @@ setlocal EnableExtensions DisableDelayedExpansion
 del /s /f /q c:\windows\temp\*.*
 del /s /f /q C:\WINDOWS\Prefetch
 
-$bin = (New-Object -ComObject Shell.Application).NameSpace(10)
-$bin.Items() | ForEach-Object {
-    Remove-Item $_.Path -Recurse -Force
-}
-
 
 ipconfig /flushdns
 ipconfig /release
