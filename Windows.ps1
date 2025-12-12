@@ -1,7 +1,7 @@
-setlocal EnableExtensions DisableDelayedExpansion
+cmd /c "setlocal EnableExtensions DisableDelayedExpansion"
 
-del /s /f /q c:\windows\temp\*.*
-del /s /f /q C:\WINDOWS\Prefetch
+cmd /c "del /s /f /q C:\Windows\Temp\*.*"
+cmd /c "del /s /f /q C:\Windows\Prefetch\*.*"
 
 
 ipconfig /flushdns
