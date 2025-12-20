@@ -11,3 +11,6 @@ ollama pull mistral:7b
 
 ollama pull gemma2:27b
 ollama pull mixtral:8x7b
+
+ollama pull gpt-oss:20b
+ollama pull gpt-oss:120b
