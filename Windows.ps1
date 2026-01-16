@@ -569,6 +569,7 @@ taskkill /f /im explorer.exe
 start explorer.exe
 winget install 7zip.7zip Adobe.Acrobat.Reader.64-bit AzaharEmu.Azahar Brave.Brave Easeware.DriverEasy ElectronicArts.EADesktop EpicGames.EpicGamesLauncher Fastfetch-cli.Fastfetch Google.Chrome GOG.Galaxy Gyan.FFmpeg Microsoft.PowerShell Microsoft.WindowsTerminal Microsoft.WSL Mozilla.Firefox Notepad++.Notepad++ Nvidia.GeForceNow OBSProject.OBSStudio PlayStation.PSRemotePlay PIKCLOUD.PikPak PPSSPPTeam.PPSSPP PuTTY.PuTTY qBittorrent.qBittorrent RARLab.WinRAR RevoUninstaller.RevoUninstaller Ubisoft.Connect Valve.Steam VideoLAN.VLC WireGuard.WireGuard
 winget upgrade --all --include-unknown
+py -m pip install v2dl ytdlp
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v DontDisplayNetworkSelectionUI /t REG_DWORD /d 1 /f
 powershell.exe Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" DisableCompression -Type DWORD -Value 1 -Force
