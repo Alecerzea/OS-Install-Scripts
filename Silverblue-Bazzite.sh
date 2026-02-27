@@ -5,7 +5,7 @@ case "$BAZ" in
     ;;
   n|N)
     rpm-ostree reset
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
+    rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome:stable
     ;;
   y|Y)
     ujust update
