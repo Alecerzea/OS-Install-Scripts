@@ -9,9 +9,7 @@ case "$BAZ" in
     ;;
   y|Y)
     ujust update
-    ujust enable-tailscale
     ujust install-resolve
-    sudo  tailscale up --accept-routes --reset
     ujust setup-virtualization
     ujust regenerate-grub
 esac
