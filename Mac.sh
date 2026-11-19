@@ -7,7 +7,7 @@ brew tap domt4/autoupdate
 brew autoupdate start 43200 --upgrade --cleanup --immediate --sudo
 brew analytics off
 python3 -m ensurepip --upgrade
-python3 -m pip install -U yt-dlp v2dl
+python3 -m pip install -U yt-dlp v2dl pillow
 
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
 defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
